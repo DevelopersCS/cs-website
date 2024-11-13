@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import HamburgerButton from './HamburgerButton';
+import HamburgerButton from './hamburger.button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black fixed top-0 left-0 right-0 text-white shadow-md h-[100px] flex justify-center items-center">
+    <header className="bg-black bg-opacity-70 backdrop-blur-lg fixed top-0 left-0 right-0 text-white shadow-md h-[100px] flex justify-center items-center">
       <div className="max-w-[1216px] mx-auto px-4 w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -42,8 +42,8 @@ const Header = () => {
 
           {/* Botão de Menu Hambúrguer (Mobile) */}
           <div className='flex gap-6'>
-            <Link className="text-white bg-black hover:bg-[#25A8FF] transition-colors duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-full" href="/contato">
-                Saiba Mais
+            <Link className="text-white bg-black hover:bg-[#25A8FF] transition-colors duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-[30px] hidden minMobile:flex" href="/contato">
+              Saiba Mais
             </Link>
             <HamburgerButton className={"lg:hidden"} onClick={toggleMenu} isOpen={isMenuOpen}/>
           </div>

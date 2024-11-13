@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens:{
+        minMobile: "425px"
+      }
     },
   },
   plugins: [],
