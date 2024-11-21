@@ -35,8 +35,8 @@ const ITEMS = [
 const WhyUsSection = () => {
 
   return (
-    <BaseSection title="Por Que Escolher Nossa Empresa?" titleStyle="md:max-w-[50%] max-w-[100%]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-h-[309px] gap-4 h-full">
+    <BaseSection title="Por Que Escolher Nossa Empresa?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
       {
         ITEMS.map(({id, description,icon, title})=>(
           <ItemCard title={title} icon={{

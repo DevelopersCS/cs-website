@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BrandsSection } from "./brands.section";
 
 const BRANDS = [
   {
@@ -50,16 +51,7 @@ const HeadlineSection = () => {
           <Image width={500} height={500} alt="Headline" src={"/assets/images/headline-image.png"}/>
         </div>
       </div>
-      <div className="w-full max-w-[1216px] flex gap-4 flex-col m pt-[56px]">
-        <h3 className="text-white">CONFIADO PELOS MELHORES</h3>
-        <div className="flex justify-between flex-row flex-wrap">
-          {
-            BRANDS.map(({alt,id,img, isLittle})=>(
-              <Image width={200} height={100} className={!isLittle ? ("max-w-[120px]"): "max-w-[180px]"} alt={alt} src={img} key={id}/>
-            ))
-          }
-        </div>
-      </div>
+      <BrandsSection title={"Confiado pelos melhores!".toUpperCase()} brands={BRANDS} />
     </section>
   );
 };
