@@ -40,8 +40,8 @@ const ITEMS = [
 const DepoimentsSection = () => {
 
   return (
-    <BaseSection title="Depoimentos" description="Empresas em Angola que confiam na nossa expertise para proteger seus dados e garantir a continuidade dos negócios." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-[394px]  w-full gap-4">
+    <BaseSection rootStyle="bg-white" title="Depoimentos" description="Empresas em Angola que confiam na nossa expertise para proteger seus dados e garantir a continuidade dos negócios." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:max-h-[394px] h-full  w-full gap-4">
       {
         ITEMS.map(({id, depoiments,name, avatar, role})=>(
           <DepoimentCard name={name} depoiments={depoiments} role={role} avatar={{

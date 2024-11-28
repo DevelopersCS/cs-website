@@ -3,7 +3,7 @@ import BaseSection from "./base.section";
 const ProtectYourInvestSection = () => {
 
   return (
-    <BaseSection title="Proteja os seus investimentos com maior precisão" titleStyle="md:max-w-[80%] lg:max-w-[55%] max-w-[100%] md:text-4xl">
+    <BaseSection rootStyle="bg-white" title="Proteja os seus investimentos com maior precisão" titleStyle="md:max-w-[80%] lg:max-w-[55%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
         <div className="bg-[#000F20] h-[408px] lg:max-w-[396px] max-w-full md:col-start-1 md:col-end-3 lg:col-end-2 rounded-xl flex flex-col p-10">
           <h3 className="text-white text-[20px] font-bold text-center w-full">

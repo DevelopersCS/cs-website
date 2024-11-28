@@ -1,8 +1,11 @@
 import { BrandsSection } from "./components/brands.section";
 import DepoimentsSection from "./components/depoiments.section";
+import FAQSection from "./components/faq.section";
+import { Footer } from "./components/footer";
 import Header from "./components/header";
 import HeadlineSection from "./components/headline.section";
 import ProtectYourInvestSection from "./components/protect-investi.section";
+import { SecurityForYourBussinessSection } from "./components/securityForYourBussiness.section";
 import ServicesSection from "./components/services.section";
 import { TeamSection } from "./components/team.section";
 import { VideoSection } from "./components/video.section";
@@ -91,18 +94,21 @@ const CERTS = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black">
       <Header />
-      <div className="flex flex-col">
+      <div className="flex flex-col pb-20 relative">
         <HeadlineSection />
         <WhyUsSection />
         <ProtectYourInvestSection />
-        <BrandsSection title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px]" brandsStyle="flex-wrap" />
+        <BrandsSection  title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] bg-white" brandsStyle="flex-wrap" />
         <ServicesSection />
         <VideoSection />
         <DepoimentsSection />
-        <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px]" brandsStyle="flex-wrap scale-[.7]" />
+        <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white" brandsStyle="flex-wrap scale-[.7]" />
         <TeamSection />
+        <SecurityForYourBussinessSection/>
+        <FAQSection />
+        <Footer />
       </div>
     </main>
   );

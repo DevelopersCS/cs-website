@@ -47,16 +47,18 @@ type BrandsSectionType = {
 }
 export function BrandsSection({title, brands, className, brandsStyle, titleStyle}:BrandsSectionType){
     return(
-        <section className={twMerge("w-full max-w-[1216px] flex gap-4 flex-col mx-auto pt-[56px]", className)}>
-            <h3 className={twMerge("text-white mix-blend-difference", titleStyle)}>{title}</h3>
-            <div className={twMerge("flex justify-between flex-row flex-wrap", brandsStyle)}>
-                {
-                    brands.map(({alt,id,img, isLittle, isFlare})=>(
-                        isFlare ? 
-                        <Image width={200} height={100} className={"max-w-[130px]"} alt={alt} src={img} key={id}/> :
-                        <Image width={200} height={100} className={!isLittle ? ("max-w-[120px]") : "max-w-[180px]"} alt={alt} src={img} key={id}/>
-                    ))
-                }
+        <section className={twMerge("w-full items-center flex gap-4  flex-col mx-auto pt-[56px]", className)}>
+            <div className="w-full  max-w-[1216px]">
+              <h3 className={twMerge("text-white mix-blend-difference", titleStyle)}>{title}</h3>
+              <div className={twMerge("flex justify-between flex-row flex-wrap", brandsStyle)}>
+                  {
+                      brands.map(({alt,id,img, isLittle, isFlare})=>(
+                          isFlare ? 
+                          <Image width={200} height={100} className={"max-w-[130px]"} alt={alt} src={img} key={id}/> :
+                          <Image width={200} height={100} className={!isLittle ? ("max-w-[120px]") : "max-w-[180px]"} alt={alt} src={img} key={id}/>
+                      ))
+                  }
+              </div>
             </div>
       </section>
     )

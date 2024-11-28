@@ -44,7 +44,7 @@ const ITEMS = [
 const ServicesSection = () => {
 
   return (
-    <BaseSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+    <BaseSection rootStyle="bg-white" title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 h-full">
       {
         ITEMS.map(({id, description,icon, title})=>(
