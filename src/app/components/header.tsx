@@ -1,48 +1,55 @@
 "use client"
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import HamburgerButton from './hamburger.button';
+import ThemeToggleButton from './ThemeToggleButton';
+import { ThemeContext } from '../context/ThemeContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const themeContext = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsMenuOpen((state)=>!state);
   };
 
   return (
-    <header className="bg-black bg-opacity-70 backdrop-blur-lg fixed z-50 top-0 left-0 right-0 text-white shadow-md h-[80px] flex justify-center items-center">
+    <header className="bg-black bg-opacity-40 backdrop-blur-lg fixed z-50 top-0 left-0 right-0 text-white shadow-sm h-[80px] flex justify-center items-center">
       <div className="max-w-[1216px] mx-auto px-4 w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image className='max-w-[70%]' src={"assets/brands/cybersecur-logo.svg"} width={200} height={200} alt='Logo CyberSecur' />
+            <Link className="text-gray-300 hover:text-white" href="/">
+              <Image className='max-w-[70%]' src={"assets/brands/cybersecur-logo.svg"} width={200} height={200} alt='Logo CyberSecur' />
+            </Link>
             {/* <h1 className="text-xl font-semibold">CyberSecur</h1> */}
           </div>
 
           {/* Menu para Desktop */}
           <div className="hidden lg:flex gap-4">
             <Link className="text-gray-300 hover:text-white" href="/">
-                Página Inicial
+              Página Inicial
             </Link>
-            <Link className="text-gray-300 hover:text-white" href="/sobre">
-                CyberSecur
+            <Link className="text-gray-300 hover:text-white" href="/about">
+              CyberSecur
             </Link>
-            <Link className="text-gray-300 hover:text-white" href="/servicos">
-                Soluções
+            <Link className="text-gray-300 hover:text-white" href="/services">
+              Serviços
             </Link>
-            <Link className="text-gray-300 hover:text-white" href="/contato">
-                Notícias e Artigos
+            <Link className="text-gray-300 hover:text-white" href="/blog">
+              Notícias e Artigos
             </Link>
-            <Link className="text-gray-300 hover:text-white" href="/contato">
-                Contacte-nos
+            <Link className="text-gray-300 hover:text-white" href="/contact">
+              Contacte-nos
             </Link>
+            <ThemeToggleButton />
+
           </div>
 
           {/* Botão de Menu Hambúrguer (Mobile) */}
           <div className='flex gap-6'>
-            <Link className="text-white bg-black hover:bg-[#25A8FF] transition-colors duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-[30px] hidden minMobile:flex" href="/contato">
+            <Link className="text-white hover:bg-[#5fbfff] bg-[#25A8FF] transition-colors duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-2 rounded-lg hidden minMobile:flex" href="/contato">
               Saiba Mais
             </Link>
             <HamburgerButton className={"lg:hidden"} onClick={toggleMenu} isOpen={isMenuOpen}/>

@@ -5,9 +5,14 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "selector",
   theme: {
     extend: {
+      cursor: {
+        'custom': 'url("/assets/cursor.svg"), pointer',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -16,6 +21,7 @@ export default {
         'graph-gradient-blue': 'linear-gradient(5deg, #094B76 16%, #25A8FF 57%)',
         'gray-gradient': 'linear-gradient(10deg, #000000 1%, #666666 40%)',
         'team': 'url("/assets/images/team/5.jpg")',
+        'background-light': 'url("/assets/images/background.png")',
       },
       screens:{
         minMobile: "425px"
@@ -31,6 +37,9 @@ export default {
         'grow-[50]': 'grow 1s ease-in-out forwards',
         'grow-[100]': 'grow 1s ease-in-out forwards',
       },
+      transitionTimingFunction: {
+        "custom": "cubic-bezier(1, 0, 0, 1.01)"
+      }
     },
   },
   plugins: [],

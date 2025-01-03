@@ -41,10 +41,14 @@ const ITEMS = [
     description:"Treinamentos interativos que educam sua equipe a reconhecer e reagir a ameaças, criando uma cultura de segurança.",
   }
 ]
-const ServicesSection = () => {
+type ServicesSectionType = {
+  title: string
+  description: string
+}
+const ServicesSection = ({ title, description }: ServicesSectionType) => {
 
   return (
-    <BaseSection rootStyle="bg-white" title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+    <BaseSection rootStyle="bg-white" title={title} description={description} titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-4 h-full">
       {
         ITEMS.map(({id, description,icon, title})=>(

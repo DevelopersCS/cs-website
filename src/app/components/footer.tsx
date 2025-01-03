@@ -110,36 +110,36 @@ let MENU:MenuType[] = [
 export function Footer () {
     return (
         <footer 
-            className="w-full h-[500px] flex items-center justify-center bottom-0 relative mx-auto bg-black"
-            style={{
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-            }}
+        className="w-full clear-both h-[800px] flex items-center justify-center mx-auto relative dark:bg-[#0E141D] py-24 bottom-0 bg-white"
+            // style={{
+            //     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+            // }}
         >
             {/* <div className="fixed max-w-[1216px] mx-auto h-[calc(100vh+800px)] -top-[100vh] w-full bottom-0 bg-black"> */}
-                <div className="fixed w-full bottom-0 h-[500px] max-w-[1216px] mx-auto flex flex-col gap-[129px]">
+                <div className="w-full bottom-0 h-fit max-w-[1216px] px-8 mx-auto flex flex-col gap-[129px]">
                     <div className="max-w-[481px] w-full">
-                        <h2 className="text-4xl font-bold text-white">CYBERSECUR</h2>
-                        <p className="text-[#AEAEAE] font-medium text-sm">
+            <h2 className="text-4xl font-bold dark:text-white leading-[130%] text-black">CYBERSECUR</h2>
+            <p className="dark:text-[#A4B1CD] text-[#5E5E5F] fon-regular text-sm leading-[130%]">
                             Protegemos o futuro digital da sua empresa com soluções inovadoras e confiáveis em cibersegurança. Segurança que você pode confiar, 24/7.
                         </p>
                     </div>
                     <div className="">
-                        <ul className="flex justify-between">
+                        <ul className="flex justify-between flex-wrap">
                             {
                                 MENU.map((item)=>(
                                     <li key={item.id}>
                                         <div className="flex flex-col max-w-[298px]">
-                                            <h3 className="text-white mb-3 font-semibold text-lg">{item.title}</h3>
+                                            <h3 className="dark:text-white text-black mb-3 font-semibold text-lg">{item.title}</h3>
                                             {
                                                 item.links.map((link)=>(
                                                     <div key={link.id}>
                                                         {
                                                             link.href != "" ? 
-                                                            <Link href={link.href} className="text-[#949494] underline font-medium text-base">{link.text}</Link> :
-                                                            <span className="text-[#949494] font-medium text-base">{link.text}</span>
+                                                        <Link href={link.href} className="dark:text-[#A4B1CD] text-[#5E5E5F] underline fon-regular text-base">{link.text}</Link> :
+                                                        <span className="dark:text-[#A4B1CD] text-[#5E5E5F] fon-regular text-base">{link.text}</span>
                                                         }
-                                                        {link.phone && <span className="text-[#25A8FF]"><br /><span className="text-white">Telefone: </span>{link.phone}</span>}
-                                                        {link.email && <span className="text-[#25A8FF]"><br /><span className="text-white">E-Mail: </span>{link.email}</span>}
+                                                        {link.phone && <span className="text-[#25A8FF]"><br /><span className="dark:text-white text-black">Telefone: </span>{link.phone}</span>}
+                                                        {link.email && <span className="text-[#25A8FF]"><br /><span className="dark:text-white text-black">E-Mail: </span>{link.email}</span>}
                                                     </div>
                                                 ))
                                             }

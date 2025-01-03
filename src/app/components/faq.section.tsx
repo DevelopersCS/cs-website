@@ -68,13 +68,13 @@ const FAQItem = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="border border-gray-300 border-x-0 border-y-0 border-t-2 last:border-b-2 w-full">
+    <div className="border dark:border-[#A4B1CD] border-x-0 border-y-0 border-t-[0.5px] darK:border-opacity-20 last:border-b-2 w-full">
       <button
         className="p-4 transition-all cursor-pointer w-full"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center w-full py-1">
-          <h3 className="text-lg font-medium">
+          <h3 className="text-base md:text-lg font-medium text-left text-black dark:text-white">
             <span className="text-blue-400 pr-2">{id}</span>
             {question}
           </h3>
@@ -83,7 +83,7 @@ const FAQItem = ({
               isOpen ? "rotate-180" : "rotate-0"
             }`}
           >
-            <Image src={"/assets/icons/CaretDown.svg"} width={24} height={24} alt="Icone de seta" />
+            <Image src={"/assets/icons/CaretDown.svg"} className="md:h-[24px] md:w-[24px] h-[16px] w-[16px]" width={24} height={24} alt="Icone de seta" />
           </span>
         </div>
       </button>

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
-
+import Header from "./components/header";
+import { Footer } from "./components/footer";
+import { ThemeProvider } from './context/ThemeContext';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -15,12 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <ThemeProvider>
+        <html lang="en">
+          <body
+            className={`${inter.className} antialiased`}
+          >
+            <main className="bg-[#06070A] relative">
+                <Header />
+                <div className="flex flex-col pb-20 relative min-h-screen">
+                  {children}
+                  <Footer />
+                </div>
+            </main>
+          </body>
+        </html>
+      </ThemeProvider>
+    </>
   );
 }

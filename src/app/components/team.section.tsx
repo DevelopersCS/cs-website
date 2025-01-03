@@ -1,4 +1,4 @@
-import { CardCEO, MemberCard } from "./team.card"
+import { MemberCard } from "./team.card"
 
 type TeamCardTypes = {
     id: number,
@@ -56,28 +56,14 @@ const MEMBERS:TeamCardTypes[] = [
 
 export function TeamSection() {
     return (
-        <section className="w-full py-10 h-auto lg:px-8 bg-white">
+        <section className="w-full py-10 h-auto lg:px-8 bg-white dark:bg-[#06070A]">
             <div className="max-w-[1216px] w-full mx-auto">
-                <div className="w-full flex max-w-[1216px] gap-3 items-center flex-col pb-[56px]">
-                    <h2 className={"font-bold text-center text-3xl"}>Liderança Que Inspira Segurança</h2>
-                    <p className={"text-base text-[#4F4F4F] text-center font-normal max-w-[604px]"}>Conheça as mentes por trás da nossa missão de proteger o seu negócio</p>
+                <div className="w-full flex max-w-[1216px] gap-3 items-center justify-between pb-[56px]">
+                    <h2 className={"font-bold text-3xl dark:text-white"}>Liderança Que <br /> Inspira Segurança</h2>
+                    <p className={"text-base text-[#4F4F4F] dark:text-[#A4B1CD] text-center font-normal max-w-[604px]"}>Conheça as mentes por trás da nossa missão de proteger o seu negócio</p>
                 </div>
-                <div className="">
-                    {MEMBERS[0] && (
-                        <CardCEO
-                            name={MEMBERS[0].name}
-                            description={MEMBERS[0].description}
-                            role={MEMBERS[0].role}
-                            avatar={MEMBERS[0].avatar}
-                        />
-                    )}
-                </div>
-                <div className="flex justify-between flex-col lg:flex-row py-12 px-6 xl:px-0">
-                    <h2 className="font-bold text-[32px] w-full">Conselho de Diretores</h2>
-                    <p className="leading-[150%] text-[#4d4d4d] font-medium text-left">Nosso conselho é formado por profissionais com ampla experiência e visão estratégica, comprometidos em levar a Cybersecur a novos patamares de excelência.</p>
-                </div>
-                <div className="gap-6 grid grid-cols-1 lg:grid-cols-3">
-                    {MEMBERS.slice(1).map(({ id, avatar, description, name, role }) => (
+                <div className="gap-6 grid grid-cols-1 lg:grid-cols-4">
+                    {MEMBERS.map(({ id, avatar, description, name, role }) => (
                         <div key={id} className="w-full">
                             <MemberCard
                                 name={name}

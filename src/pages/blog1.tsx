@@ -1,0 +1,112 @@
+"use client"
+import { BrandsSection } from "../app/components/brands.section";
+import DepoimentsSection from "../app/components/depoiments.section";
+import FAQSection from "../app/components/faq.section";
+import { Footer } from "../app/components/footer";
+import Header from "../app/components/header";
+import HeadlineSection from "../app/components/headline.section";
+import ProtectYourInvestSection from "../app/components/protect-investi.section";
+import { SecurityForYourBussinessSection } from "../app/components/securityForYourBussiness.section";
+import ServicesSection from "../app/components/services.section";
+import { TeamSection } from "../app/components/team.section";
+import { VideoSection } from "../app/components/video.section";
+import WhyUsSection from "../app/components/why-us.section";
+
+const BRANDS = [
+  {
+    id:1,
+    img: "/assets/brands/splunk.svg",
+    alt:"Logotipo oficial da splunk",
+    isLittle: true,
+
+  },
+  {
+    id:2,
+    img: "/assets/brands/cloudflare.svg",
+    alt:"Logotipo oficial da cloudflare",
+    isLittle: true,
+    isFlare: true,
+
+  },
+  {
+    id:3,
+    img: "/assets/brands/sophos.svg",
+    alt:"Logotipo oficial da sophos",
+    isLittle: true,
+
+  },
+  {
+    id:4,
+    img: "/assets/brands/crowdstrike.svg",
+    alt:"Logotipo oficial da crowdstrike",
+    isLittle: true,
+
+  },
+  {
+    id:5,
+    img: "/assets/brands/paloalto.svg",
+    alt:"Logotipo oficial da paloalto",
+    isLittle: true,
+  },
+  {
+    id:6,
+    img: "/assets/brands/commvault.svg",
+    alt:"Logotipo oficial da commvault",
+    isLittle: true,
+  }
+]
+
+const CERTS = [
+  {
+    id:1,
+    img: "/assets/icons/certifications/iso.png",
+    alt:"Logotipo oficial da splunk",
+
+  },
+  {
+    id:2,
+    img: "/assets/icons/certifications/nse.png",
+    alt:"Logotipo oficial da cloudflare",
+
+  },
+  {
+    id:3,
+    img: "/assets/icons/certifications/iasc.png",
+    alt:"Logotipo oficial da sophos",
+
+  },
+  {
+    id:4,
+    img: "/assets/icons/certifications/idsc.png",
+    alt:"Logotipo oficial da crowdstrike",
+
+  },
+  {
+    id:5,
+    img: "/assets/icons/certifications/dark-trace.png",
+    alt:"Logotipo oficial da paloalto",
+  },
+  {
+    id:6,
+    img: "/assets/icons/certifications/ccsa.png",
+    alt:"Logotipo oficial da commvault",
+  }
+]
+
+export default function Services() {
+  return (
+    <>
+      <HeadlineSection />
+      <WhyUsSection />
+      <ProtectYourInvestSection />
+      <BrandsSection  title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] bg-white" brandsStyle="flex-wrap" />
+      <ServicesSection />
+      <VideoSection />
+      <DepoimentsSection />
+      <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white" brandsStyle="flex-wrap scale-[.7]" />
+      <TeamSection />
+      <SecurityForYourBussinessSection/>
+      <FAQSection />
+    </>
+  );
+}

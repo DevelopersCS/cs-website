@@ -3,6 +3,7 @@ import Link from "next/link";
 import BaseSection from "./base.section";
 import ItemCard from "./item.card";
 import DepoimentCard from "./depoiment.card";
+import DepoimentSlider from "./depoiment";
 
 const ITEMS = [
   {
@@ -38,18 +39,15 @@ const ITEMS = [
   
 ]
 const DepoimentsSection = () => {
-
   return (
-    <BaseSection rootStyle="bg-white" title="Depoimentos" description="Empresas em Angola que confiam na nossa expertise para proteger seus dados e garantir a continuidade dos negócios." titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:max-h-[394px] h-full  w-full gap-4">
-      {
-        ITEMS.map(({id, depoiments,name, avatar, role})=>(
-          <DepoimentCard name={name} depoiments={depoiments} role={role} avatar={{
-            alt: avatar.alt,
-            src: avatar.src
-          }} key={id}/>
-        ))
-      }
+    <BaseSection
+      rootStyle="bg-[#06070A] cursor-custom"
+      title="Depoimentos"
+      description="Empresas em Angola que confiam na nossa expertise para proteger seus dados e garantir a continuidade dos negócios."
+      titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl"
+    >
+      <div className="h-full w-full flex items-center justify-center flex-col gap-4">
+        <DepoimentSlider />
       </div>
     </BaseSection>
   );
