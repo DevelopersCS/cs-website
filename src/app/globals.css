@@ -16,6 +16,44 @@
   }
 }
 
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+  @keyframes autoRun {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes reversePlay {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-scroll {
+    animation: autoRun 10s linear infinite;
+  }
+
+  .animate-scroll-reverse {
+    animation: reversePlay 10s linear infinite;
+  }
+
+  .slider {
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  }
+
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

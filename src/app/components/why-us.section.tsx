@@ -38,8 +38,11 @@ const WhyUsSection = () => {
     <BaseSection rootStyle="bg-[#F9F9F9]" title="Por Que Escolher Nossa Empresa?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
       {
-        ITEMS.map(({id, description,icon, title})=>(
-          <ItemCard title={title} icon={{
+        ITEMS.map(({id, description,icon, title}, index)=>(
+          <ItemCard 
+            id={index}
+            title={title} 
+            icon={{
             alt: icon.alt,
             src: icon.src
           }} description={description} key={id}/>

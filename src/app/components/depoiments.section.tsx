@@ -41,7 +41,7 @@ const ITEMS = [
 const DepoimentsSection = () => {
   return (
     <BaseSection
-      rootStyle="bg-[#06070A] cursor-custom"
+      rootStyle="dark:bg-[#06070A] bg-white cursor-custom"
       title="Depoimentos"
       description="Empresas em Angola que confiam na nossa expertise para proteger seus dados e garantir a continuidade dos negócios."
       titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl"

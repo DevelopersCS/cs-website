@@ -1,4 +1,5 @@
-import { useContext } from "react";
+"use client"
+import { useContext, useEffect, useRef } from "react";
 import { BrandsSection } from "./components/brands.section";
 import DepoimentsSection from "./components/depoiments.section";
 import FAQSection from "./components/faq.section";
@@ -12,6 +13,9 @@ import { TeamSection } from "./components/team.section";
 import { VideoSection } from "./components/video.section";
 import WhyUsSection from "./components/why-us.section";
 import { ThemeContext } from "./context/ThemeContext";
+import Lenis from "lenis";
+import SmoothScroll from "@/hooks/smooth-scroll";
+
 
 const BRANDS = [
   {
@@ -28,7 +32,7 @@ const BRANDS = [
     dark: "/assets/brands/dark/cloudflare.svg",
     alt:"Logotipo oficial da cloudflare",
     isLittle: true,
-    isFlare: true,
+    // isFlare: true,
 
   },
   {
@@ -112,12 +116,16 @@ const CERTS = [
 ]
 
 export default function Home() {
+  const container = useRef();
+  const circle = useRef();
+
   return (
     <>
+      <SmoothScroll />
       <HeadlineSection />
       <WhyUsSection />
       <ProtectYourInvestSection />
-      <BrandsSection  title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] bg-white dark:bg-black" brandsStyle="flex-wrap" />
+      <BrandsSection title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" brandsStyle="flex-wrap" />
       <ServicesSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
       <DepoimentsSection />

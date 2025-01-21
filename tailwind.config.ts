@@ -10,6 +10,7 @@ export default {
   darkMode: "selector",
   theme: {
     extend: {
+
       cursor: {
         'custom': 'url("/assets/cursor.svg"), pointer',
       },
@@ -31,11 +32,17 @@ export default {
           '0%': { height: '0%' },
           '100%': { height: 'var(--grow-height)' },
         },
+        slide: {
+          '0%': { left: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation: {
         'grow-[80]': 'grow 1s ease-in-out forwards',
         'grow-[50]': 'grow 1s ease-in-out forwards',
         'grow-[100]': 'grow 1s ease-in-out forwards',
+        'slide': 'slide 20s linear infinite',
+        'paused': 'animation-play-state: paused',
       },
       transitionTimingFunction: {
         "custom": "cubic-bezier(1, 0, 0, 1.01)"

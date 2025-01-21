@@ -21,7 +21,7 @@ const sectionData = [
     },
     {
         id: 2,
-        imageSrc: '/assets/images/team-working-tablet.jpg',
+        imageSrc: '/assets/images/1.jpg',
         imageAlt: 'Equipe trabalhando',
         title: 'Serviços Oferecidos',
         listItems: [
@@ -32,7 +32,7 @@ const sectionData = [
     },
     {
         id: 3,
-        imageSrc: '/assets/images/team-working-tablet.jpg',
+        imageSrc: '/assets/images/2.jpg',
         imageAlt: 'Equipe trabalhando',
         title: 'Entregáveis Personalizados',
         listItems: [
@@ -55,16 +55,17 @@ const ConsultSection = () => {
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
                 <div className="flex flex-col items-center py-6 max-w-[70%] gap-6 mx-auto">
-                    <h1 className="font-bold text-white text-[32px] leading-[120%] text-center">
+                    <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%] text-center">
                         Consultorias em Segurança da Informação
                     </h1>
-                    <p className="text-[#A4B1CD] text-[18px] text-center leading-[120%] font-medium">
+                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] text-center leading-[120%] font-medium">
                         Fortaleça sua organização com uma análise estratégica e recomendações práticas em conformidade com os mais altos padrões do mercado.
                     </p>
                 </div>
                 <div className="flex flex-col gap-32">
-                    {sectionData.map(({ imageAlt, imageSrc, listItems, reverse, subtitle, title, id }) => (
+                    {sectionData.map(({ imageAlt, imageSrc, listItems, reverse, subtitle, title, id }, index) => (
                         <ContentWithImageSection
+                            index={index}
                             title={title}
                             imageAlt={imageAlt}
                             imageSrc={imageSrc}
@@ -79,26 +80,30 @@ const ConsultSection = () => {
                     <h1 className="font-bold text-white text-[32px] w-full text-center leading-[120%]">
                         Por Que Escolher Nossas <br /> Consultorias?
                     </h1>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-2 px-6">
                         <BoxItem
+                            index={1}
                             title="Análise Precisa"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
                             description="Avaliação detalhada dos riscos e lacunas de segurança."
                         />
                         <BoxItem
+                            index={2}
                             title="Expertise Reconhecida"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
                             description="Aplicação de metodologias baseadas em normas internacionais."
                         />
                         <BoxItem
+                            index={3}
                             title="Resultados Mensuráveis"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
                             description="Relatórios claros que orientam ações estratégicas."
                         />
                         <BoxItem
+                            index={4}
                             title="Adaptabilidade"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"

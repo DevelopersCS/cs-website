@@ -110,7 +110,7 @@ let MENU:MenuType[] = [
 export function Footer () {
     return (
         <footer 
-        className="w-full clear-both h-[800px] flex items-center justify-center mx-auto relative dark:bg-[#0E141D] py-24 bottom-0 bg-white"
+        className="w-full clear-both h-[800px] mb-[-100px] flex items-center justify-center mx-auto relative dark:bg-[#0E141D] py-24 bottom-0 bg-white"
             // style={{
             //     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
             // }}

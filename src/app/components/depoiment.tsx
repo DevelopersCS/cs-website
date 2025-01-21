@@ -100,7 +100,7 @@ const DepoimentSlider = () => {
                                 height={96}
                                 alt={slide.name}
                             />
-                            <h2 className="text-[#0098FD] font-semibold text-[14px]">
+                            <h2 className="text-[#42b4ff] font-semibold text-[14px]">
                                 {slide.name}
                             </h2>
                             <span className="text-[#fff] text-[14px]">{slide.role}</span>

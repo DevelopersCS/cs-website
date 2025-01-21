@@ -90,7 +90,7 @@ const FAQItem = ({
       <div
         ref={contentRef}
         className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-screen" : "max-h-0"
+          isOpen ? "max-h-screen" : "max-h-[40px]"
         }`}
         style={{
           maxHeight: isOpen
@@ -98,7 +98,7 @@ const FAQItem = ({
             : "0px",
         }}
       >
-        <p className="mt-2 text-gray-600 text-start p-4">{answer}</p>
+        <p className="mt-2 text-gray-600 text-start p-4 max-w-[60%]">{answer}</p>
       </div>
     </div>
   );

@@ -142,7 +142,81 @@ const OFENSIVE_OBJECT = {
     ]
 }
 
+const CONSULT = {
+    title2: "Soluções para Segurança Ofensiva",
+    title: "Segurança Ofensiva",
+    cover: "/assets/images/hacker-server.jpg",
+    description2: "Ferramentas líderes no mercado para proteger sua organização contra ameaças digitais.",
+    subTitle: "Teste e Exploração de Vulnerabilidades",
+    description: "Descubra vulnerabilidades antes que elas sejam exploradas. Nossa abordagem ofensiva permite que sua empresa esteja sempre um passo à frente dos hackers.",
+    tabs: [
+        {
+            id: 1,
+            title: "Firewall",
+            slides: [
+                {
+                    image: '/assets/images/girl-tablet.jpg',
+                    title: 'ThreatLocker',
+                    description: 'Controle granular de permissões para evitar execuções não autorizadas de software e reduzir a superfície de ataque.'
+                },
+                {
+                    image: '/assets/images/girl-tablet.jpg',
+                    title: 'CyberSecurity',
+                    description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
+                },
+                {
+                    image: '/assets/images/girl-tablet.jpg',
+                    title: 'CyberSecurity3',
+                    description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
+                }
+            ]
+        },
+        {
+            id: 2,
+            title: "Endpoint",
+            slides: [
+                {
+                    image: '/assets/images/girl-tablet.jpg',
+                    title: 'Team Collaboration',
+                    description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
+                },
+                {
+                    image: '/assets/images/girl-tablet.jpg',
+                    title: 'Team Collaboration1',
+                    description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
+                }
+            ]
+        }
+    ],
+    items: [
+        {
+            id: 1,
+            Icon: <Detective size={24} color="#010400" />,
+            title: "Testes de Penetração (Pentest)",
+            description: "Simulação de ataques reais para identificar e corrigir falhas."
+        },
+        {
+            id: 2,
+            Icon: <FlagCheckered size={24} color="#010400" />,
+            title: "Red Teaming",
+            description: "Avaliação profunda e estratégica para medir a prontidão de sua organização contra ataques sofisticados."
+        },
+        {
+            id: 3,
+            Icon: <User size={24} color="#010400" />,
+            title: "Engenharia Social",
+            description: "Teste a resiliência de sua equipe contra ataques baseados em manipulação humana."
+        },
+    ]
+}
+
+const SERVICES = [
+    DEFENSIVE_OBJECT,
+    OFENSIVE_OBJECT,
+    CONSULT
+]
 export {
     DEFENSIVE_OBJECT,
-    OFENSIVE_OBJECT
+    OFENSIVE_OBJECT,
+    SERVICES
 }

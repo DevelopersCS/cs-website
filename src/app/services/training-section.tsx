@@ -7,7 +7,7 @@ import BoxItem from "./box-item";
 const sectionData = [
     {
         id: 1,
-        imageSrc: '/assets/images/team-working.jpg',
+        imageSrc: '/assets/images/3.jpg',
         imageAlt: 'Equipe trabalhando',
         title: 'Público-Alvo',
         subtitle: 'Nossos treinamentos são projetados para atender',
@@ -53,17 +53,18 @@ const TrainingSection = () => {
             className="dark:bg-[#071324] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
-                <div className="flex flex-row items-start py-6">
-                    <h1 className="font-bold text-white text-[32px] leading-[120%]">
+                <div className="flex xl:flex-row flex-col xl:items-start py-6 items-center">
+                    <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%]">
                         Treinamentos Especializados em Segurança da Informação
                     </h1>
-                    <p className="text-[#A4B1CD] text-[18px] leading-[120%] font-medium">
+                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] leading-[120%] font-medium">
                         Desenvolva competências estratégicas e técnicas para proteger sua organização.
                     </p>
                 </div>
                 <div className="flex flex-col gap-32">
-                    {sectionData.map(({ imageAlt, imageSrc, listItems, reverse, subtitle, title, id }) => (
+                    {sectionData.map(({ imageAlt, imageSrc, listItems, reverse, subtitle, title, id }, index) => (
                         <ContentWithImageSection
+                            index={index}
                             title={title}
                             imageAlt={imageAlt}
                             imageSrc={imageSrc}
@@ -78,24 +79,28 @@ const TrainingSection = () => {
                     <h1 className="font-bold text-white text-[32px] w-full text-center leading-[120%]">
                         Por Que Escolher Nosso <br /> Treinamento?
                     </h1>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-2 px-6">
                         <BoxItem
-                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
+                            index={1}
+                            Icon={<Star width={24} weight="fill" />}
                             color="#fff"
                             description="Abordagem prática e relevante para o mercado."
                         />
                         <BoxItem
-                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
+                            index={2}
+                            Icon={<Star width={24} weight="fill" />}
                             color="#fff"
                             description="Instrutores experientes e dinâmicos."
                         />
                         <BoxItem
-                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
+                            index={3}
+                            Icon={<Star width={24} weight="fill" />}
                             color="#fff"
                             description="Flexibilidade para adaptar conteúdos às necessidades."
                         />
                         <BoxItem
-                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
+                            index={4}
+                            Icon={<Star width={24} weight="fill" />}
                             color="#fff"
                             description="Flexibilidade para adaptar conteúdos às necessidades específicas."
                         />

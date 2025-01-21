@@ -48,7 +48,7 @@ const ServicesSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
                 {
                     ITEMS.map(({ id, description, icon, title }) => (
-                        <ItemCard title={title} icon={{
+                        <ItemCard id={id} title={title} icon={{
                             alt: icon.alt,
                             src: icon.src
                         }} description={description} key={id} />

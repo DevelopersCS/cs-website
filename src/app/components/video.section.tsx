@@ -63,7 +63,9 @@ export function VideoSection() {
                     className="absolute top-0 left-0 w-full h-full rounded-xl object-fill cursor-pointer"
                     src="/assets/videos/cybersecur.mp4"
                     onClick={handleVideoClick}
-                />
+                >
+                    <track src="captions_pt.vtt" kind="captions" srcLang="pt" label="portuguese_captions" />
+                </video>
             </div>
         </section>
     );
