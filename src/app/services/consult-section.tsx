@@ -5,7 +5,7 @@ import BoxItem from "./box-item";
 const sectionData = [
     {
         id: 1,
-        imageSrc: '/assets/images/team-working-postit.jpg',
+        imageSrc: '/assets/images/team-working-postit.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Vantagens Principais dos nossos Serviços de Consultoria e Outsourcing',
         subtitle: 'Nossos serviços são projectados para oferecer',
@@ -20,7 +20,7 @@ const sectionData = [
     },
     {
         id: 2,
-        imageSrc: '/assets/images/1.jpg',
+        imageSrc: '/assets/images/1.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Serviços Oferecidos',
         listItems: [
@@ -32,7 +32,7 @@ const sectionData = [
     },
     {
         id: 3,
-        imageSrc: '/assets/images/2.jpg',
+        imageSrc: '/assets/images/2.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Entregáveis Personalizados',
         listItems: [
