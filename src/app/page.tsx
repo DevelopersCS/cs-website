@@ -1,7 +1,6 @@
 "use client"
-import { useContext, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { BrandsSection } from "./components/brands.section";
-import DepoimentsSection from "./components/depoiments.section";
 import FAQSection from "./components/faq.section";
 import { Footer } from "./components/footer";
 import Header from "./components/header";
@@ -128,7 +127,7 @@ export default function Home() {
       <BrandsSection title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" brandsStyle="flex-wrap" />
       <ServicesSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
-      <DepoimentsSection />
+      {/* <DepoimentsSection /> */}
       <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white dark:bg-black py-20" brandsStyle="flex-wrap scale-[.7]" />
       <TeamSection />
       <SecurityForYourBussinessSection/>

@@ -1,14 +1,13 @@
 "use client"
-import { FileLock, Graph, SecurityCamera, UserFocus } from "@phosphor-icons/react";
 import ServicesSection from "../components/services.section";
 import HeadlineServiceSection from "./headline";
 import ServiceGetting from "./service-card";
-import { DEFENSIVE_OBJECT, OFENSIVE_OBJECT, SERVICES } from "./data";
+import { DEFENSIVE_OBJECT } from "./data";
 import FAQSection from "../components/faq.section";
 import TrainingSection from "./training-section";
 import ConsultSection from "./consult-section";
-import DepoimentsSection from "../components/depoiments.section";
 import SmoothScroll from "@/hooks/smooth-scroll";
+import SOCSection from "./soc-section";
 
 
 export default function Services() {
@@ -28,21 +27,10 @@ export default function Services() {
         items={DEFENSIVE_OBJECT.items}
         toLeft={false}
       />
-      <ServiceGetting
-        cover={OFENSIVE_OBJECT.cover}
-        tabs={OFENSIVE_OBJECT.tabs}
-        title2={OFENSIVE_OBJECT.title2}
-        title={OFENSIVE_OBJECT.title}
-        description2={OFENSIVE_OBJECT.description2}
-        subTitle={OFENSIVE_OBJECT.subTitle}
-        description={OFENSIVE_OBJECT.description}
-        items={OFENSIVE_OBJECT.items}
-        toLeft={true}
-      />
-      
+      <SOCSection />
       <TrainingSection />
       <ConsultSection />
-      <DepoimentsSection />
+      {/* <DepoimentsSection /> */}
       <FAQSection />
     </>
   );

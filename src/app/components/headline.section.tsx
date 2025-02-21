@@ -43,8 +43,18 @@ const HeadlineSection = () => {
 
   return (
     <section
-      className={"dark:bg-[#06070A] dark:text-[#A4B1CD] bg-white relative pt-[140px] lg:bg-background-light bg-no-repeat bg-right-bottom bg-cover mx-auto pb-4 w-full flex justify-center items-center flex-col lg:px-8 px-6"}
+      className={"dark:bg-[#06070A] dark:text-[#A4B1CD] bg-white relative pt-[140px] mx-auto pb-4 w-full flex justify-center items-center flex-col lg:px-8 px-6"}
     >
+      <div className="absolute inset-0 z-10">
+        <Image
+          src="/assets/images/background.webp"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+          quality={70}
+        />
+      </div>
       <div className="w-full flex max-w-[1216px]  z-20 gap-10 justify-between items-center flex-col lg:flex-row">
         <div className="text-white flex gap-6  minMobile:max-w-[600px] lg:max-w-[520px] w-full flex-col minMobile:justify-center  minMobile:items-center lg:items-start minMobile:text-center lg:text-start">
           <motion.span 
@@ -69,7 +79,7 @@ const HeadlineSection = () => {
               opacity: { duration: 1.3, delay: 0.5 * 2, ease: "easeInOut" }
             }}
           >
-              Defenda seus dados e operações com nossa expertise.
+              Proteja o Futuro do Seu Negócio com Segurança de Confiança.
             </motion.h1>
           <motion.p 
             className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#333232] text-opacity-70"

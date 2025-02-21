@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import BaseSection from "../components/base.section";
 import ItemCard from "../components/item.card";
 

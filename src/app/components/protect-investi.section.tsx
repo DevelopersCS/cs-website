@@ -1,6 +1,15 @@
 import BaseSection from "./base.section";
 import {motion} from "framer-motion"
 
+export const cardAnimation = (delayMultiplier: any) => ({
+  initial: { translateY: 10, opacity: 0 },
+  whileInView: { translateY: 0, opacity: 1 },
+  viewport: { once: true },
+  transition: {
+    translateY: { duration: 0.1, delay: 0.5 * delayMultiplier, ease: "easeOut" },
+    opacity: { duration: 1.5, delay: 0.5 * delayMultiplier, ease: "easeInOut" }
+  }
+});
 
 const ProtectYourInvestSection = () => {
 
@@ -12,13 +21,7 @@ const ProtectYourInvestSection = () => {
       >
         <motion.div 
           className="dark:bg-[#0E141D] bg-white h-[408px] lg:max-w-[396px] max-w-full md:col-start-1 md:col-end-3 lg:col-end-2 rounded-xl flex flex-col p-10"
-          initial={{ translateY: 10, opacity: 0, }}
-          whileInView={{ translateY: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            translateY: { duration: 0.1, delay: 0.5, ease: "easeOut" },
-            opacity: { duration: 1.5, delay: 0.5 * 1, ease: "easeInOut" }
-          }}
+          {...cardAnimation(1)}
           >
           <h3 className="dark:dark:text-white text-[#5E5E5F] text-[20px] font-bold text-center w-full">
             Crescimento de Ataques de <span className="text-[#FF5A5C]">Ransomware</span>
@@ -44,13 +47,7 @@ const ProtectYourInvestSection = () => {
 
         <motion.div 
           className="dark:bg-[#0E141D] bg-white h-[408px] lg:max-w-[396px] max-w-full md:col-start-1 md:col-end-2 lg:col-start-2 lg:col-end-3 rounded-xl flex items-center justify-center flex-col p-10"
-          initial={{ translateY: 10, opacity: 0, }}
-          whileInView={{ translateY: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            translateY: { duration: 0.1, delay: 0.5, ease: "easeOut" },
-            opacity: { duration: 1.5, delay: 0.5 * 2, ease: "easeInOut" }
-          }}
+          {...cardAnimation(2)}
           >
           <h3 className="dark:text-white text-[#5E5E5F] text-[24px] font-bold text-center w-full max-w-[75%]">
             Vulnerabilidade por <span className="text-[#25A8FF]">Erro Humano</span>
@@ -71,13 +68,7 @@ const ProtectYourInvestSection = () => {
 
         <motion.div 
           className="dark:bg-[#0E141D] bg-white h-[408px]  lg:max-w-[396px] max-w-full md:col-start-2 md:col-end-3 lg:col-start-3 lg:col-end-4 rounded-xl flex flex-col p-10"
-          initial={{ translateY: 10, opacity: 0, }}
-          whileInView={{ translateY: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            translateY: { duration: 0.1, delay: 0.5, ease: "easeOut" },
-            opacity: { duration: 1.5, delay: 0.5 * 3, ease: "easeInOut" }
-          }}
+          {...cardAnimation(3)}
         >
           <h3 className="dark:text-white text-[#5E5E5F] text-[24px] font-bold text-center w-full">
             Tempo Médio para <span className="text-[#FF5A5C]">Detectar Ameaças</span>

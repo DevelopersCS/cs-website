@@ -1,5 +1,4 @@
-import { Check, Star } from "@phosphor-icons/react";
-import Image from "next/image";
+import { Star } from "@phosphor-icons/react";
 import ContentWithImageSection from "./ContentWithImageSection";
 import BoxItem from "./box-item";
 
@@ -8,12 +7,12 @@ const sectionData = [
         id: 1,
         imageSrc: '/assets/images/team-working-postit.jpg',
         imageAlt: 'Equipe trabalhando',
-        title: 'Vantagens Principais da Consultoria em Segurança da Informação',
-        subtitle: 'Nossos treinamentos são projetados para atender',
+        title: 'Vantagens Principais dos nossos Serviços de Consultoria e Outsourcing',
+        subtitle: 'Nossos serviços são projectados para oferecer',
         listItems: [
-            { title: 'Identificação e Mitigação de Riscos', description: 'Avaliação precisa de vulnerabilidades e implementação de ações corretivas para minimizar ameaças cibernéticas.' },
-            { title: 'Conformidade com Normas e Regulamentos', description: 'Alinhamento com padrões internacionais, como ISO/IEC 27001, garantindo credibilidade e segurança operacional.' },
-            { title: 'Relatórios Estratégicos', description: 'Entregáveis claros que orientam decisões informadas e auxiliam no planejamento de segurança a longo prazo.' },
+            { title: 'Identificação e Mitigação de Riscos', description: 'Avaliação precisa de vulnerabilidades e implementação de acções corretivas para minimizar ameaças cibernéticas.' },
+            { title: 'Conformidade com Normas e Regulamentos', description: 'Alinhamento com padrões internacionais, como ISO/IEC 27001, garantindo a credibilidade e segurança operacional.' },
+            { title: 'Relatórios Estratégicos', description: 'Entregáveis claros que orientam decisões informadas e auxiliam no planeamento de segurança a longo prazo.' },
 
             { title: 'Melhoria Contínua da Segurança', description: 'Implementação de práticas que promovem a evolução constante da maturidade em segurança da organização.' }
         ],
@@ -25,8 +24,9 @@ const sectionData = [
         imageAlt: 'Equipe trabalhando',
         title: 'Serviços Oferecidos',
         listItems: [
-            { description: 'Implementação e gestão de SGSI (Sistemas de Gestão de Segurança da Informação).' },
-            { description: 'Avaliação de Maturidade em Segurança da Informação.' }
+            { title: "Gestão de Projectos de Segurança", description: 'Planeamento, execução e monitorização de iniciativas de cibersegurança.' },
+            { title: "Outsourcing de Especialistas", description: 'Alocação de profissionais qualificados para reforçar a sua equipa de TI.' },
+            { title: "Análise e Planeamento Estratégico", description: 'Identificação de riscos e definição de prioridades em segurança.' },
         ],
         reverse: true
     },
@@ -36,9 +36,9 @@ const sectionData = [
         imageAlt: 'Equipe trabalhando',
         title: 'Entregáveis Personalizados',
         listItems: [
-            { description: 'Relatórios técnicos e executivos.' },
-            { description: 'Recomendações práticas.' },
-            { description: 'Documentação adicional conforme necessidade do cliente.' },
+            { title: "Relatórios Detalhados", description: 'Diagnósticos claros e acções recomendadas para optimizar a segurança da informação.' },
+            { title:"Equipa Técnica Dedicada", description: 'Especialistas focados nas necessidades específicas da sua organização.' },
+            { title: "Documentação Estruturada", description: 'Políticas e procedimentos alinhados aos padrões internacionais.' },
         ],
         reverse: false
     }
@@ -56,10 +56,10 @@ const ConsultSection = () => {
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
                 <div className="flex flex-col items-center py-6 max-w-[70%] gap-6 mx-auto">
                     <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%] text-center">
-                        Consultorias em Segurança da Informação
+                        Consultoria e Outsourcing <br /> em segurança da informação
                     </h1>
                     <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] text-center leading-[120%] font-medium">
-                        Fortaleça sua organização com uma análise estratégica e recomendações práticas em conformidade com os mais altos padrões do mercado.
+                        Fortaleça a sua organização com soluções estratégicas e serviços de outsourcing especializados, garantindo conformidade e protecção avançada contra ameaças cibernéticas.
                     </p>
                 </div>
                 <div className="flex flex-col gap-32">
@@ -78,7 +78,7 @@ const ConsultSection = () => {
                 </div>
                 <div className="flex flex-col items-start py-6 gap-10">
                     <h1 className="font-bold text-white text-[32px] w-full text-center leading-[120%]">
-                        Por Que Escolher Nossas <br /> Consultorias?
+                        Por Que Escolher Os Nossos Serviços <br /> de Consultoria e Outsourcing? 
                     </h1>
                     <div className="grid xl:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-2 px-6">
                         <BoxItem
@@ -86,28 +86,28 @@ const ConsultSection = () => {
                             title="Análise Precisa"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
-                            description="Avaliação detalhada dos riscos e lacunas de segurança."
+                            description="Identificamos riscos e criamos estratégias personalizadas para mitigá-los."
                         />
                         <BoxItem
                             index={2}
-                            title="Expertise Reconhecida"
-                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
-                            color="#fff"
-                            description="Aplicação de metodologias baseadas em normas internacionais."
-                        />
-                        <BoxItem
-                            index={3}
                             title="Resultados Mensuráveis"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
-                            description="Relatórios claros que orientam ações estratégicas."
+                            description="Soluções adaptadas ao tamanho e à complexidade da sua organização."
+                        />
+                        <BoxItem
+                            index={3}
+                            title="Equipa Capacitada"
+                            Icon={<Star color="#E5E90F" width={24} weight="fill" />}
+                            color="#fff"
+                            description="Profissionais altamente capacitados para atender às suas necessidades operacionais."
                         />
                         <BoxItem
                             index={4}
-                            title="Adaptabilidade"
+                            title="Flexibilidade Total"
                             Icon={<Star color="#E5E90F" width={24} weight="fill" />}
                             color="#fff"
-                            description="Consultorias personalizadas e adaptadas às necessidades."
+                            description="Soluções adaptadas ao tamanho e à complexidade da sua organização. "
                         />
                     </div>
                 </div>

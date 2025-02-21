@@ -7,20 +7,20 @@ import {motion} from "framer-motion"
 
 
 type ServiceGettingTypes = {
-    title: string,
-    title2: string,
-    subTitle: string, 
-    description: string,
-    description2: string,
-    cover: string,
-    toLeft: boolean,
-    items: {
+    title?: string,
+    title2?: string,
+    subTitle?: string, 
+    description?: string,
+    description2?: string,
+    cover?: string,
+    toLeft?: boolean,
+    items?: {
         id: number,
         Icon: React.ReactElement,
         title: string,
         description: string
     }[],
-    tabs: {
+    tabs?: {
         id: number,
         title: string,
         slides: {
@@ -42,7 +42,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
     };
 
     const nextSlide = () => {
-        const activeTabData = tabs.find(tab => tab.id === activeTab);
+        const activeTabData = tabs?.find(tab => tab.id === activeTab);
         if (activeTabData) {
             if (currentSlide < activeTabData?.slides.length - 1) {
                 setCurrentSlide(currentSlide + 1);
@@ -52,7 +52,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
 
     const prevSlide = () => {
 
-        const activeTabData = tabs.find(tab => tab.id === activeTab);
+        const activeTabData = tabs?.find(tab => tab.id === activeTab);
         if (activeTabData) {
             if (currentSlide > 0) {
                 setCurrentSlide(currentSlide - 1);
@@ -60,7 +60,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
         }
     };
 
-    const activeSlides = tabs.find(tab => tab.id === activeTab)?.slides || [];
+    const activeSlides = tabs ? tabs.find(tab => tab.id === activeTab)?.slides : [];
     return (
         <section className="w-full flex items-center justify-center py-12 bg-white dark:bg-[#06070A]">
             <div className="max-w-[1216px] w-full gap-8 mx-auto flex items-center flex-col justify-center">
@@ -107,9 +107,13 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                         </Link>
                        </div>
                     </div>
-                    <div className={`${toLeft ? 'order-[-1]' : 'order-[1]'} h-full w-full xl:w-full`}>
-                        <Image src={cover} width={488} height={474} className="w-full max-h-[420px] xl:max-h-[520px] object-contain" alt="Mulher com tablet na mão" />
-                    </div>
+                    {
+                        cover && (
+                            <div className={`${toLeft ? 'order-[-1]' : 'order-[1]'} h-full w-full xl:w-full`}>
+                                <Image src={cover} width={488} height={474} className="w-full max-h-[420px] xl:max-h-[520px] object-contain" alt="Mulher com tablet na mão" />
+                            </div>
+                        )
+                    }
                 </div>
 
                 <div className="flex flex-col gap-2 max-w-[1216px] w-full text-center py-16">
@@ -117,20 +121,24 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                         <h2 className="text-[32px] dark:text-white text-black font-bold">{title2}</h2>
                     </div>
                     <p className="text-[#A4B1CD] font-medium">{description2}</p>
-                    <div className="flex justify-center items-center">
-                        <ul className="flex gap-4">
-                            {tabs.map((tab) => (
-                                <li key={tab.id}>
-                                    <button
-                                        aria-label="Button"
-                                        onClick={() => handleTabClick(tab.id)}
-                                        className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-black' : 'bg-[#0E141D] text-white'}`}>
-                                        {tab.title}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {
+                        tabs && (
+                            <div className="flex justify-center items-center">
+                                <ul className="flex gap-4">
+                                    {tabs.map((tab) => (
+                                        <li key={tab.id}>
+                                            <button
+                                                aria-label="Button"
+                                                onClick={() => handleTabClick(tab.id)}
+                                                className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-black' : 'bg-[#0E141D] text-white'}`}>
+                                                {tab.title}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )
+                    }
                     
                     <div className="flex justify-between items-center pt-12 max-w-[90%] relative mx-auto xl:gap-8">
                         <div className="flex gap-2 items-end justify-end  absolute right-0 top-0">
@@ -160,7 +168,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                 className="flex transition-transform duration-500 ease-in-out"
                                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                             >
-                                {activeSlides.map((slide, index) => (
+                                {activeSlides?.map((slide, index) => (
                                     <div className="min-w-full flex items-center flex-col md:flex-row gap-8" key={index}>
                                         <div className="w-full">
                                             <Image

@@ -19,7 +19,7 @@ const MEMBERS:TeamCardTypes[] = [
         description: "Geral garante que todas as operações internas da Cybersecur funcionem com eficiência e transparência. Com uma abordagem orientada a resultados, ele mantém os processos financeiros e administrativos em perfeita ordem para apoiar nosso crescimento sustentável.",
         avatar: {
             alt: "Geral Pereira",
-            src: "/assets/images/team/1.png",
+            src: "/assets/images/team/1.webp",
         }
     },
     {
@@ -29,7 +29,7 @@ const MEMBERS:TeamCardTypes[] = [
         description: "Edison garante que todas as operações internas da Cybersecur funcionem com eficiência e transparência. Com uma abordagem orientada a resultados, ele mantém os processos financeiros e administrativos em perfeita ordem para apoiar nosso crescimento sustentável.",
         avatar: {
             alt: "Edison Pereira",
-            src: "/assets/images/team/2.png",
+            src: "/assets/images/team/2.webp",
         }
     },
     {
@@ -39,7 +39,7 @@ const MEMBERS:TeamCardTypes[] = [
         description: "Irina é responsável por construir e fortalecer parcerias estratégicas na Cybersecur. Com uma visão voltada para o cliente, ela lidera a equipe comercial, garantindo que cada cliente receba um atendimento personalizado e soluções que agreguem valor ao negócio.",
         avatar: {
             alt: "Irina Gama",
-            src: "/assets/images/team/3.png",
+            src: "/assets/images/team/3.webp",
         }
     },
     {
@@ -49,7 +49,7 @@ const MEMBERS:TeamCardTypes[] = [
         description: "Com ampla experiência em cibersegurança e infraestrutura tecnológica, Alberto lidera as operações de segurança e TI da Cybersecur. Ele garante que nossos sistemas estejam sempre protegidos contra ameaças e prontos para atender às demandas tecnológicas dos clientes.",
         avatar: {
             alt: "Alberto Afonso",
-            src: "/assets/images/team/4.png",
+            src: "/assets/images/team/4.webp",
         }
     }
 ]

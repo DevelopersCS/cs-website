@@ -21,8 +21,8 @@ export default {
       backgroundImage: {
         'graph-gradient-blue': 'linear-gradient(5deg, #094B76 16%, #25A8FF 57%)',
         'gray-gradient': 'linear-gradient(10deg, #000000 1%, #666666 40%)',
-        'team': 'url("/assets/images/team/5.jpg")',
-        'background-light': 'url("/assets/images/background.png")',
+        'team': 'url("/assets/images/team/5.webp")',
+        'background-light': 'url("/assets/images/background.webp")',
       },
       screens:{
         minMobile: "425px"

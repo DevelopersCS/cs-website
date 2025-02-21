@@ -19,37 +19,49 @@ const FAQS = [
   },
   {
     id: "03",
-    question: "Como posso contratar os serviços da Cybersecur?",
+    question: "Em que mercados ou regiões a CyberSecur actua?",
     answer:
       "Você pode contratar os serviços da Cybersecur entrando em contato através do nosso site, e-mail ou telefone. Nossa equipe está pronta para ajudar!",
   },
   {
     id: "04",
-    question: "A Cybersecur atende empresas de quais setores?",
+    question: "Como posso entrar em contacto com a CyberSecur?",
     answer:
       "Atendemos empresas de diversos setores, como financeiro, saúde, tecnologia, educação e governo, personalizando soluções para cada necessidade.",
   },
   {
     id: "05",
-    question: "A Cybersecur oferece suporte 24/7?",
+    question: "O que é segurança defensiva e como funciona? ",
     answer:
       "Sim, a Cybersecur possui uma equipe de suporte disponível 24 horas por dia, 7 dias por semana, para garantir a proteção contínua dos nossos clientes.",
   },
   {
     id: "06",
-    question: "A Cybersecur realiza testes de invasão (pentests)?",
+    question: "Quais os benefícios dos serviços de segurança ofensiva?",
     answer:
       "Sim, realizamos testes de invasão para identificar vulnerabilidades nos sistemas e ajudar sua empresa a corrigir possíveis falhas de segurança.",
   },
   {
     id: "07",
-    question: "Como a Cybersecur garante a confidencialidade dos dados?",
+    question: "Como funcionam os programas de conscientização e Consultoria?",
     answer:
       "Seguimos rigorosos padrões de segurança e conformidade, como a ISO 27001, garantindo que todos os dados dos clientes sejam tratados com a máxima confidencialidade.",
   },
   {
     id: "08",
-    question: "A Cybersecur oferece treinamentos em cibersegurança?",
+    question: "A CyberSecur realiza consultorias personalizadas?",
+    answer:
+      "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
+  },
+  {
+    id: "09",
+    question: "Quais tecnologias e ferramentas são utilizadas nos serviços?",
+    answer:
+      "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
+  },
+  {
+    id: "10",
+    question: "Não encontrei a resposta para a minha questão. Como posso contactar a CyberSecur?",
     answer:
       "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
   },
@@ -79,11 +91,11 @@ const FAQItem = ({
             {question}
           </h3>
           <span
-            className={`transform transition-transform duration-300 ${
+            className={`transform transition-transform duration-300 dark:text-white ${
               isOpen ? "rotate-180" : "rotate-0"
             }`}
           >
-            <Image src={"/assets/icons/CaretDown.svg"} className="md:h-[24px] md:w-[24px] h-[16px] w-[16px]" width={24} height={24} alt="Icone de seta" />
+            <Image src={"/assets/icons/CaretDown.svg"} className="md:h-[24px] dark:invert md:w-[24px] h-[16px] w-[16px]" width={32} height={32} alt="Icone de seta" />
           </span>
         </div>
       </button>

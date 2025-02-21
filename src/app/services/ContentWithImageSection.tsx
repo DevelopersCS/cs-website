@@ -6,7 +6,7 @@ import {motion} from "framer-motion"
 
 interface ListItem {
     title?: string;
-    description: string;
+    description?: string;
 }
 
 interface ContentWithImageSectionProps {

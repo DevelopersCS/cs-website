@@ -2,6 +2,8 @@ import BaseSection from "./base.section";
 import ItemCard from "./item.card";
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import { cardAnimation } from "./protect-investi.section";
+
 
 const ITEMS = [
   {
@@ -11,7 +13,7 @@ const ITEMS = [
       alt:"Icone de Equipe Especializada",
     },
     title:"Segurança Defensiva",
-    description:"Fortaleça sua infraestrutura com firewalls e sistemas de detecção de intrusões para bloquear ameaças externas.",
+    description:"Protegemos sistemas contra ameaças, detectámos e mitigamos incidentes com soluções adaptadas às necessidades da sua organização.",
   },
   {
     id:2,
@@ -20,7 +22,7 @@ const ITEMS = [
       alt:"Icone de CPU",
     },
     title:"Segurança Ofensiva",
-    description:"Identificação de vulnerabilidades através de testes de penetração, fortalecendo suas defesas antes que atacantes possam agir.",
+    description:"Realizamos testes controlados para identificar e corrigir falhas de segurança antes que sejam exploradas.",
   },
   {
     id:3,
@@ -28,8 +30,8 @@ const ITEMS = [
       src: "/assets/icons/HeadCircuit.svg",
       alt:"Icone de Escudo",
     },
-    title:"Consultorias",
-    description:"Estratégias personalizadas para atender suas necessidades de segurança e garantir conformidade regulatória.",
+    title:"Consultoria e Outsourcing",
+    description:"Oferecemos orientação especializada e implementamos processos alinhados às normas e legislação de segurança.",
   },
   {
     id:4,
@@ -37,8 +39,8 @@ const ITEMS = [
       src: "/assets/icons/Medal.svg",
       alt:"Icone de Escudo",
     },
-    title:"Treinamentos",
-    description:"Treinamentos interativos que educam sua equipe a reconhecer e reagir a ameaças, criando uma cultura de segurança.",
+    title:"Conscientização",
+    description:"Capacitamos equipas e utilizadores com formação para reduzir riscos cibernéticos de forma proativa.",
   }
 ]
 type ServicesSectionType = {
@@ -64,6 +66,7 @@ const ServicesSection = ({ title, description }: ServicesSectionType) => {
               }} 
               description={description} 
               key={index}
+            {...cardAnimation(id)}
             />
         ))
       }

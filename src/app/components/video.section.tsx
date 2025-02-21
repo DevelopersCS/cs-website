@@ -55,7 +55,8 @@ export function VideoSection() {
     };
 
     return (
-        <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex">
+        <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
+            <h1 className="text-4xl dark:text-white text-black font-bold pb-5">CyberSecur Summit</h1>
             <div className="w-full max-w-[1216px] aspect-video rounded-xl mx-auto relative overflow-hidden">
                 <video
                     ref={videoRef}

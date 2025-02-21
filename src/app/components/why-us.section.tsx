@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import BaseSection from "./base.section";
 import ItemCard from "./item.card";
+import { cardAnimation } from "./protect-investi.section";
 
 const ITEMS = [
   {
@@ -11,7 +10,7 @@ const ITEMS = [
       alt:"Icone de Equipe Especializada",
     },
     title:"Equipe Especializada",
-    description:"Profissionais certificados com experiência em proteger empresas de vários setores.",
+    description:"Profissionais especializados com experiência em proteger empresas de vários sectores.",
   },
   {
     id:2,
@@ -28,20 +27,21 @@ const ITEMS = [
       src: "/assets/icons/ShieldCheckered.svg",
       alt:"Icone de Escudo",
     },
-    title:"Atendimento",
-    description:"Estratégias de segurança feitas sob medida para atender às necessidades do seu negócio.",
+    title:"Soluções Personalizadas",
+    description:"Adaptamos as nossas estratégias às necessidades e desafios específicos do seu negócio.",
   }
 ]
 const WhyUsSection = () => {
 
   return (
-    <BaseSection rootStyle="bg-[#F9F9F9]" title="Por Que Escolher Nossa Empresa?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+    <BaseSection rootStyle="bg-[#F9F9F9]" title="O que nos deferencia?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
       {
         ITEMS.map(({id, description,icon, title}, index)=>(
           <ItemCard 
             id={index}
             title={title} 
+            {...cardAnimation(id)}
             icon={{
             alt: icon.alt,
             src: icon.src
