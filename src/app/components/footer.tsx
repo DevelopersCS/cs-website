@@ -118,7 +118,7 @@ export function Footer () {
             {/* <div className="fixed max-w-[1216px] mx-auto h-[calc(100vh+800px)] -top-[100vh] w-full bottom-0 bg-black"> */}
                 <div className="w-full bottom-0 h-fit max-w-[1216px] px-8 mx-auto flex flex-col gap-[129px]">
                     <div className="max-w-[481px] w-full">
-            <h2 className="text-4xl font-bold dark:text-white leading-[130%] text-black">CYBERSECUR</h2>
+            <h3 className="text-4xl font-bold dark:text-white leading-[130%] text-black">CYBERSECUR</h3>
             <p className="dark:text-[#A4B1CD] text-[#5E5E5F] fon-regular text-sm leading-[130%]">
                             Protegemos o futuro digital da sua empresa com soluções inovadoras e confiáveis em cibersegurança. Segurança que você pode confiar, 24/7.
                         </p>
@@ -129,7 +129,7 @@ export function Footer () {
                                 MENU.map((item)=>(
                                     <li key={item.id}>
                                         <div className="flex flex-col max-w-[298px]">
-                                            <h3 className="dark:text-white text-black mb-3 font-semibold text-lg">{item.title}</h3>
+                                            <h2 className="dark:text-white text-black mb-3 font-semibold text-lg">{item.title}</h2>
                                             {
                                                 item.links.map((link)=>(
                                                     <div key={link.id}>

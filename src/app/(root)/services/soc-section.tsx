@@ -1,11 +1,8 @@
-import { Check, Star } from "@phosphor-icons/react";
-import Image from "next/image";
 import ContentWithImageSection from "./ContentWithImageSection";
-import BoxItem from "./box-item";
 
 const sectionData = {
     id: 1,
-    imageSrc: '/assets/images/team-working-postit.jpg',
+    imageSrc: '/assets/images/team-working-postit.webp',
     imageAlt: 'Equipe trabalhando',
     title: 'Por que escolher o nosso serviço Cybersecur SOC?',
     listItems: [

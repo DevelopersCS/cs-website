@@ -1,9 +1,10 @@
+"use client"
 import { SecurityCamera, Graph, UserFocus, FileLock, Detective, FlagCheckered, User } from "@phosphor-icons/react";
 
 const DEFENSIVE_OBJECT = {
     title2: "Soluções para Segurança Defensiva",
     title: "Segurança Defensiva",
-    cover: "/assets/images/girl-tablet.jpg",
+    cover: "/assets/images/girl-tablet.webp",
     description2: "Ferramentas líderes no mercado para proteger sua organização contra ameaças digitais.",
     subTitle: "Construindo Barreiras Intransponíveis",
     description: "Defenda seus sistemas contra ameaças cibernéticas com soluções robustas que garantem proteção contínua e resiliência organizacional.",
@@ -13,27 +14,27 @@ const DEFENSIVE_OBJECT = {
             title: "Proteção local",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Checkpoint',
                     description: 'Monitora o tráfego de rede em tempo real, analisando pacotes de dados para garantir o tratamento seguro e eficaz de informações críticas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Sophos firewall',
                     description: 'Fornece protecção abrangente com aprendizado profundo e segurança sincronizada, identificando riscos ocultos e respondendo automaticamente a incidentes.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Fortigate',
                     description: 'Combina firewall, VPN, prevenção de intrusões e filtragem de conteúdo para proteger a rede contra ameaças e garantir conectividade segura.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Delinea',
                     description: 'Gestão centralizada de credenciais e palavras-passe críticas. Elimine pontos fracos locais com controlo total.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Commvault',
                     description: 'Solução líder em backup e recuperação de dados. Os seus dados protegidos e sempre disponíveis para recuperação.'
                 }
@@ -44,17 +45,17 @@ const DEFENSIVE_OBJECT = {
             title: "Proteção Web",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Imperva',
                     description: 'Uma solução projetada para monitorar, filtrar e bloquear o tráfego de rede direccionado às aplicações web.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Cloudflare',
                     description: 'Oferece segurança protegendo activos da internet contra actividades maliciosas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Fortiweb',
                     description: 'Defende aplicativos e APIs da web contra ameaças do OWASP, ataques DDoS e bots maliciosos.'
                 }
@@ -65,17 +66,17 @@ const DEFENSIVE_OBJECT = {
             title: "Proteção Endpoint",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Harmony Endpoint',
                     description: 'Criada para proteger a força de trabalho ao complexo cenário de ameaças actual e evitar as ameaças mais iminentes ao endpoint. Sua defesa abrangente bloqueia ataques antes que afetem os usuários, garantindo a continuidade do trabalho sem interrupções.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Sophos Intercept X Advance with XDR',
                     description: 'Desenvolvido para operações de segurança de TI e caça a ameaças, o Intercept X detecta e investiga actividades suspeitas com análise direccionada por IA. Revela ameaças ocultas e corrige vulnerabilidades antes que se transformem em crises de segurança.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'CS Locker',
                     description: 'Com foco na abordagem de Zero Trust, o CS Locker coloca a segurança no centro das operações, permitindo apenas o que é necessário e rejeitando o desconhecido.'
                 }
@@ -86,22 +87,22 @@ const DEFENSIVE_OBJECT = {
             title: "SIEM",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Seceon',
                     description: 'Uma plataforma de cibersegurança alimentada por inteligência artificial, projetada para detectar, prevenir e eliminar ameaças em tempo real. Com sua abordagem proativa e automatizada, a Seceon capacita organizações a manterem-se um passo à frente dos cibercriminosos, reduzindo riscos e custos operacionais'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Splunk',
                     description: 'Recolhe e analisa registos para detectar e responder a incidentes de segurança. Transforma dados em informações acionáveis.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Darktrace',
                     description: 'Monitora ameaças em tempo real com IA autoaprendente. Protecção contínua e adaptável para ambientes modernos.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Rapid7 Metasploit',
                     description: 'Identifica e explora vulnerabilidades com precisão. Esteja sempre um passo à frente dos cibercriminosos.'
                 }
@@ -139,7 +140,7 @@ const DEFENSIVE_OBJECT = {
 const OFENSIVE_OBJECT = {
     title2: "Soluções para Segurança Ofensiva",
     title: "CyberSecur SOC",
-    cover: "/assets/images/hacker-server.jpg",
+    cover: "/assets/images/hacker-server.webp",
     description2: "Ferramentas líderes no mercado para proteger sua organização contra ameaças digitais.",
     subTitle: "Teste e Exploração de Vulnerabilidades",
     description: "Protegemos activamente sistemas de informação contra ameaças, detectamos e mitigamos incidentes de segurança, através de soluções de segurança, estruturas e processos de segurança à sua medida A integração inteligente entre tecnologias permite identificar vulnerabilidades antes que se transformem em incidentes, assegurando a protecção contínua do ambiente corporativo.",
@@ -149,17 +150,17 @@ const OFENSIVE_OBJECT = {
             title: "Firewall",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'ThreatLocker',
                     description: 'Controle granular de permissões para evitar execuções não autorizadas de software e reduzir a superfície de ataque.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'CyberSecurity',
                     description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'CyberSecurity3',
                     description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
                 }
@@ -170,12 +171,12 @@ const OFENSIVE_OBJECT = {
             title: "Endpoint",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Team Collaboration',
                     description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Team Collaboration1',
                     description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
                 }
@@ -207,7 +208,7 @@ const OFENSIVE_OBJECT = {
 const CONSULT = {
     title2: "Soluções para Segurança Ofensiva",
     title: "Segurança Ofensiva",
-    cover: "/assets/images/hacker-server.jpg",
+    cover: "/assets/images/hacker-server.webp",
     description2: "Ferramentas líderes no mercado para proteger sua organização contra ameaças digitais.",
     subTitle: "Teste e Exploração de Vulnerabilidades",
     description: "Descubra vulnerabilidades antes que elas sejam exploradas. Nossa abordagem ofensiva permite que sua empresa esteja sempre um passo à frente dos hackers.",
@@ -217,17 +218,17 @@ const CONSULT = {
             title: "Firewall",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'ThreatLocker',
                     description: 'Controle granular de permissões para evitar execuções não autorizadas de software e reduzir a superfície de ataque.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'CyberSecurity',
                     description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'CyberSecurity3',
                     description: 'Soluções completas para proteger seus dados contra ameaças cibernéticas.'
                 }
@@ -238,12 +239,12 @@ const CONSULT = {
             title: "Endpoint",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Team Collaboration',
                     description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.jpg',
+                    image: '/assets/images/girl-tablet.webp',
                     title: 'Team Collaboration1',
                     description: 'Ferramentas para aumentar a produtividade e colaboração entre equipes.'
                 }

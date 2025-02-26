@@ -19,6 +19,7 @@ const HamburgerButton = ({onClick, className}:HamburgerButtonType) => {
 
   return (
     <button
+      aria-label="hamburger-button"
       onClick={handleClick}
       className={twMerge("space-y-2 flex flex-col justify-center items-center", className)}
     >

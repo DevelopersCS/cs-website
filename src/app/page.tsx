@@ -1,9 +1,7 @@
 "use client"
-import { useRef } from "react";
 import { BrandsSection } from "./components/brands.section";
 import FAQSection from "./components/faq.section";
 import { Footer } from "./components/footer";
-import Header from "./components/header";
 import HeadlineSection from "./components/headline.section";
 import ProtectYourInvestSection from "./components/protect-investi.section";
 import { SecurityForYourBussinessSection } from "./components/securityForYourBussiness.section";
@@ -14,6 +12,11 @@ import WhyUsSection from "./components/why-us.section";
 import { ThemeContext } from "./context/ThemeContext";
 import Lenis from "lenis";
 import SmoothScroll from "@/hooks/smooth-scroll";
+import SEO from "./components/SEO";
+import { getAllPosts, getPostBySlug, Post } from "@/lib/posts";
+import { RecentPosts } from "./components/blog/recentPosts";
+import { NextSeo } from "next-seo";
+import { Metadata } from "next";
 
 
 const BRANDS = [
@@ -114,10 +117,9 @@ const CERTS = [
   }
 ]
 
-export default function Home() {
-  const container = useRef();
-  const circle = useRef();
 
+export default function Home() {
+  
   return (
     <>
       <SmoothScroll />
@@ -131,6 +133,9 @@ export default function Home() {
       <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white dark:bg-black py-20" brandsStyle="flex-wrap scale-[.7]" />
       <TeamSection />
       <SecurityForYourBussinessSection/>
+      <div className="max-w-[1216px] mx-auto px-4 w-full">
+        <RecentPosts />
+      </div>
       <FAQSection />
     </>
   );

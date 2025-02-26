@@ -1,3 +1,4 @@
+"use client"
 import { Star } from "@phosphor-icons/react";
 import ContentWithImageSection from "./ContentWithImageSection";
 import BoxItem from "./box-item";

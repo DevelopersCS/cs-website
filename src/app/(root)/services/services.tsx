@@ -1,5 +1,5 @@
-import BaseSection from "../components/base.section";
-import ItemCard from "../components/item.card";
+import BaseSection from "../../components/base.section";
+import ItemCard from "../../components/item.card";
 
 const ITEMS = [
     {

@@ -98,12 +98,12 @@ const HeadlineSection = () => {
           </Link>
         </div>
         <div className="max-w-[346px] lg:max-w-[446px] ">
-          <Image width={500} height={500} alt="Headline" src={"/assets/images/headline-image.png"}/>
+          <Image width={500} height={500} alt="Headline" priority src={"/assets/images/headline-image.webp"}/>
         </div>
       </div>
 
       <BrandsSection title={"Confiado pelos melhores!".toUpperCase()} brands={BRANDS} />
-      {/* <Image width={1440} height={1007} className="absolute -z-2 w-full object-cover" alt="Headline" src={"/assets/images/background.png"}/> */}
+      {/* <Image width={1440} height={1007} className="absolute -z-2 w-full object-cover" alt="Headline" src={"/assets/images/background.webp"}/> */}
     </section>
   );
 };

@@ -1,9 +1,10 @@
+
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { CaretRight, CaretLeft } from "@phosphor-icons/react";
 import { useState } from "react";
 import {motion} from "framer-motion"
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 
 
 type ServiceGettingTypes = {
@@ -118,7 +119,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
 
                 <div className="flex flex-col gap-2 max-w-[1216px] w-full text-center py-16">
                     <div className="flex flex-col">
-                        <h2 className="text-[32px] dark:text-white text-black font-bold">{title2}</h2>
+                        <h4 className="text-[32px] dark:text-white text-black font-bold">{title2}</h4>
                     </div>
                     <p className="text-[#A4B1CD] font-medium">{description2}</p>
                     {
@@ -198,3 +199,4 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
 };
 
 export default ServiceGetting;
+

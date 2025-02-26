@@ -1,3 +1,4 @@
+"use client"
 import { Check, Star } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +8,7 @@ import BoxItem from "./box-item";
 const sectionData = [
     {
         id: 1,
-        imageSrc: '/assets/images/3.jpg',
+        imageSrc: '/assets/images/3.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Público-Alvo',
         subtitle: 'Nossos treinamentos são projetados para atender',
@@ -19,7 +20,7 @@ const sectionData = [
     },
     {
         id: 2,
-        imageSrc: '/assets/images/team-working-tablet.jpg',
+        imageSrc: '/assets/images/team-working-tablet.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Formato Personalizado',
         subtitle: 'Oferecemos flexibilidade para atender às necessidades específicas da sua empresa',
@@ -32,7 +33,7 @@ const sectionData = [
     ,
     {
         id: 3,
-        imageSrc: '/assets/images/cybersecur-cert-ilustr.jpg',
+        imageSrc: '/assets/images/cybersecur-cert-ilustr.webp',
         imageAlt: 'Equipe trabalhando',
         title: 'Certificação e Métricas',
         subtitle: 'Nossas acções de conscientização são projectadas para entregar',

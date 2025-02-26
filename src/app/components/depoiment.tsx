@@ -11,19 +11,19 @@ interface depoimentType {
 
 const DEPOIMENTS = [
     {
-        image: "/assets/images/hacker-server.jpg",
+        image: "/assets/images/hacker-server.webp",
         name: "João Pedro",
         role: "CEO, Empresa X",
         depoiment: "Serviço excelente, recomendo fortemente!",
     },
     {
-        image: "/assets/images/hacker-server.jpg",
+        image: "/assets/images/hacker-server.webp",
         name: "Maria Silva",
         role: "CTO, Empresa Y",
         depoiment: "Equipe muito atenciosa e eficiente.",
     },
     {
-        image: "/assets/images/hacker-server.jpg",
+        image: "/assets/images/hacker-server.webp",
         name: "Carlos Santos",
         role: "Gerente, Empresa Z",
         depoiment: "A CyberSecur é uma empresa parceira da nossa distribuição, que tem demonstrado compromentimento e empenho nas suas funções de empresa de consultoria de Segurança e TI.Como parceiros de negócios temos...",

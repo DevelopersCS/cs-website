@@ -1,6 +1,7 @@
+"use client"
+
 import BaseSection from "./base.section";
 import ItemCard from "./item.card";
-import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { cardAnimation } from "./protect-investi.section";
 

@@ -9,7 +9,7 @@ const ITEMS = [
   {
     id:1,
     avatar: {
-      src: "/assets/images/depoiments/1.jpg",
+      src: "/assets/images/depoiments/1.webp",
       alt:"Alexandre Cipriano",
     },
     name:"Alexandre Cipriano",
@@ -19,7 +19,7 @@ const ITEMS = [
   {
     id:2,
     avatar: {
-      src: "/assets/images/depoiments/3.jpg",
+      src: "/assets/images/depoiments/3.webp",
       alt:"Icone de Equipe Especializada",
     },
     name:"Feras Al Taoam",
@@ -29,7 +29,7 @@ const ITEMS = [
   {
     id:3,
     avatar: {
-      src: "/assets/images/depoiments/2.jpg",
+      src: "/assets/images/depoiments/2.webp",
       alt:"Icone de Equipe Especializada",
     },
     name:"Felipe Batista Retke",
