@@ -4,40 +4,55 @@ import EditorRender from "@/app/components/editorRender";
 import SEO from "@/app/components/SEO";
 import { getAllPosts, getPostBySlug, Post } from "@/lib/posts";
 import Output from "editorjs-react-renderer"
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import sanitizeHtml from "sanitize-html";
 // import { getPostBySlug } from "@/lib/posts";
 
-export const generateMetadata = () => ({
-  title: "Blog | Cybersecur",
-  description: "Artigos e novidades sobre segurança cibernética.",
-  keywords: ["Blog Cyber Security", "Proteção Digital", "Segurança na Internet"],
-  openGraph: {
-    title: "Blog | Cybersecur",
-    description: "Artigos e novidades sobre segurança cibernética.",
-    url: "https://cybersecur.co.ao/blog",
-    images: [
-      {
-        url: "https://cybersecur.co.ao/blog-og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Cybersecur Blog",
-      },
-    ],
-  },
-});
+type Props = {
+  params: Promise<{ slug: string }>
+}
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug);
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
+  const slug = (await params).slug
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "Post não encontrado | Cybersecur",
+      description: "O post que você está procurando não existe.",
+    };
+  }
+
+  return {
+    title: `${post.title} | Cybersecur`,
+    description: post.excerpt || "Artigo sobre segurança cibernética.",
+    keywords: ["Blog Cyber Security", "Proteção Digital", "Segurança na Internet", post.title],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || "Artigo sobre segurança cibernética.",
+      url: `https://cybersecur.co.ao/blog/artigos/${slug}`,
+      images: [
+        {
+          url: sanitizeHtml(post.coverImage),
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+  };
+};
+
+export default async function BlogPostPage({ params }: Props) {
+  const post = await getPostBySlug((await params).slug);
   
-  console.log(post)
   if (!post) {
     return <p className="text-white text-center mt-10">Post não encontrado.</p>;
   }
-
-  
 
   return (
     <div className="mt-24 mx-auto w-full text-white">
@@ -49,15 +64,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             <Image
               className="w-10 object-contain h-10 rounded-full border-2 border-gray-600"
               src={
-                
                 post.author.fullName === "Administrador" ? "/assets/brands/cyber-profile.svg":
                 sanitizeHtml(post.author.avatarUrl)
               }
-
               alt={sanitizeHtml(post.author.fullName)}
               width={40}
               height={40}
-              
             />
             <div className="border-l-2 border-slate-800 pl-4">
               {
@@ -68,12 +80,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
                 ):
                 (
                   <>
-                      <p className="text-base font-semibold">{sanitizeHtml(post.author.avatarUrl)}</p>
-                      <p className="text-sm text-orange-400">{sanitizeHtml(post.author.function)}</p>
+                    <p className="text-base font-semibold">{sanitizeHtml(post.author.avatarUrl)}</p>
+                    <p className="text-sm text-orange-400">{sanitizeHtml(post.author.function)}</p>
                   </>
                 )
               }
-              
             </div>
           </div>
         </div>

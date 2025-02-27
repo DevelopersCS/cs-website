@@ -1,12 +1,20 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, searchPosts } from "@/lib/posts";
 import CardPost from "@/app/components/blog/card-post";
+import { useParams } from "next/navigation";
 
 const API_ITEMS_PER_PAGE = 20; // A API retorna 20 itens por página
 const UI_ITEMS_PER_PAGE = 6; // Exibir apenas 6 itens no frontend
 
-export default async function BlogArtigos({ searchParams }: { searchParams: { page?: string; search?: string } }) {
+export default function BlogArtigos() {
+    const searchParams = useParams<{ page: string; search: string }>();
+    const [posts, setPosts] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [totalPages, setTotalPages] = useState(1);
+
     const currentPage = Number(searchParams.page) || 1;
     const searchTerm = searchParams.search || "";
 
@@ -18,47 +26,71 @@ export default async function BlogArtigos({ searchParams }: { searchParams: { pa
     const startApiPage = Math.floor(startIndex / API_ITEMS_PER_PAGE) + 1;
     const endApiPage = Math.floor((endIndex - 1) / API_ITEMS_PER_PAGE) + 1;
 
-    let allPosts: any[] = [];
+    useEffect(() => {
+        async function fetchPosts() {
+            setLoading(true);
 
-    if (startApiPage === endApiPage) {
-        // Se os dados necessários estão em uma única página da API
-        const response = searchTerm ? await searchPosts(searchTerm, startApiPage) : await getAllPosts(startApiPage);
-        allPosts = response.data;
-    } else {
-        // Se precisar pegar dados de múltiplas páginas da API
-        const response1 = searchTerm ? await searchPosts(searchTerm, startApiPage) : await getAllPosts(startApiPage);
-        allPosts = [...response1.data]; // Primeiro, guardamos os dados da página inicial
+            try {
+                let allPosts: any[] = [];
 
-        // Só busca a segunda página da API se não houver dados suficientes
-        if (allPosts.length < endIndex) {
-            const response2 = searchTerm ? await searchPosts(searchTerm, endApiPage) : await getAllPosts(endApiPage);
-            allPosts = [...allPosts, ...response2.data]; // Junta os dados da segunda página
+                if (startApiPage === endApiPage) {
+                    const response = searchTerm
+                        ? await searchPosts(searchTerm, startApiPage)
+                        : await getAllPosts(startApiPage);
+                    allPosts = response.data;
+                } else {
+                    const response1 = searchTerm
+                        ? await searchPosts(searchTerm, startApiPage)
+                        : await getAllPosts(startApiPage);
+                    allPosts = [...response1.data];
+
+                    if (allPosts?.length < endIndex) {
+                        const response2 = searchTerm
+                            ? await searchPosts(searchTerm, endApiPage)
+                            : await getAllPosts(endApiPage);
+                        allPosts = [...allPosts, ...response2.data];
+                    }
+                }
+
+                // Pegamos apenas os 6 itens necessários para exibir na UI
+                const paginatedPosts = allPosts?.slice(
+                    startIndex % API_ITEMS_PER_PAGE,
+                    (startIndex % API_ITEMS_PER_PAGE) + UI_ITEMS_PER_PAGE
+                ) || [];
+
+                setPosts(paginatedPosts);
+
+                // Calcular total de páginas
+                const totalItems = (endApiPage - 1) * API_ITEMS_PER_PAGE + allPosts?.length;
+                setTotalPages(Math.ceil(totalItems / UI_ITEMS_PER_PAGE));
+            } catch (error) {
+                console.error("Erro ao buscar posts:", error);
+            }
+
+            setLoading(false);
         }
-    }
 
-    // Depuração para verificar quantos itens foram carregados
-    console.log("Total items fetched:", allPosts.length);
-
-    // Pegamos apenas os 6 itens necessários para exibir na UI
-    const paginatedPosts = allPosts.slice(startIndex % API_ITEMS_PER_PAGE, (startIndex % API_ITEMS_PER_PAGE) + UI_ITEMS_PER_PAGE);
-    console.log("Total items paginatedPosts:", paginatedPosts.length);
-
-    // Estimativa do total de páginas
-    const totalItems = (endApiPage - 1) * API_ITEMS_PER_PAGE + allPosts.length;
-    const totalPages = Math.ceil(totalItems / UI_ITEMS_PER_PAGE);
+        fetchPosts();
+    }, [searchTerm, currentPage]);
 
     return (
         <div className="max-w-[1216px] mx-auto w-full mt-24 text-white">
             <h1 className="text-2xl font-bold my-6">
                 {searchTerm ? `Resultados para "${searchTerm}"` : "Nossos últimos artigos"}
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {paginatedPosts.length > 0 ? (
-                    paginatedPosts.map((post: any) => <CardPost post={post} key={post.id} />)
-                ) : (
-                    <p className="text-gray-400">Nenhum artigo encontrado.</p>
-                )}
-            </div>
+
+            {/* Mostra um indicador de carregamento enquanto busca os posts */}
+            {loading ? (
+                <p className="text-gray-400">Carregando artigos...</p>
+            ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {posts?.length > 0 ? (
+                        posts.map((post: any) => <CardPost post={post} key={post.id} />)
+                    ) : (
+                        <p className="text-gray-400">Nenhum artigo encontrado.</p>
+                    )}
+                </div>
+            )}
 
             {/* Paginação */}
             <div className="flex justify-center items-center gap-2 mt-8">

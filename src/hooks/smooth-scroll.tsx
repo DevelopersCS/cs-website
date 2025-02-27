@@ -3,9 +3,13 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-const SmoothScroll = ({ smooth = 0.075 }) => {
+interface SmoothScrollProps {
+    lerp?: number; // 'lerp' é a opção correta no Lenis
+}
+
+const SmoothScroll: React.FC<SmoothScrollProps> = ({ lerp = 0.075 }) => {
     useEffect(() => {
-        const lenis = new Lenis({ smooth });
+        const lenis = new Lenis({ lerp });
 
         function raf(time: number) {
             lenis.raf(time);
@@ -17,7 +21,7 @@ const SmoothScroll = ({ smooth = 0.075 }) => {
         return () => {
             lenis.destroy(); // Remove o efeito ao desmontar
         };
-    }, [smooth]);
+    }, [lerp]);
 
     return null;
 };
