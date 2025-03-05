@@ -40,6 +40,10 @@ module.exports = {
             key: "Permissions-Policy",
             value: "geolocation=(), microphone=(), camera=()",
           },
+          {
+            key: "Content-Security-Policy",
+            value: "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+          }
         ],
       },
     ];

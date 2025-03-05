@@ -36,13 +36,13 @@ const Header = () => {
             <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/services">
               Serviços
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/about">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Sobre
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/blog/artigos">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Notícias e Artigos
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/contact">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Contacte-nos
             </Link>
             <ThemeToggleButton />
@@ -66,16 +66,16 @@ const Header = () => {
             <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Página Inicial
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/sobre">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               CyberSecur
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/servicos">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/services">
               Soluções
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/contato">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Notícias e Artigos
             </Link>
-            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/contato">
+            <Link className="dark:text-[#A4B1CD] text-black text-opacity-80  dark:hover:text-white hover:text-blue-500" href="/">
               Contacte-nos
             </Link>
         </div>
