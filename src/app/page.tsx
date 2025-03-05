@@ -133,9 +133,9 @@ export default function Home() {
       <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white dark:bg-black py-20" brandsStyle="flex-wrap scale-[.7]" />
       <TeamSection />
       <SecurityForYourBussinessSection/>
-      <div className="max-w-[1216px] mx-auto px-4 w-full">
+      {/* <div className="max-w-[1216px] mx-auto px-4 w-full">
         <RecentPosts />
-      </div>
+      </div> */}
       <FAQSection />
     </>
   );

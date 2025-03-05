@@ -1,5 +1,4 @@
-"use client"
-import { SecurityCamera, Graph, UserFocus, FileLock, Detective, FlagCheckered, User } from "@phosphor-icons/react";
+import { SecurityCamera, Graph, UserFocus, FileLock, Detective, FlagCheckered, User } from "@phosphor-icons/react/dist/ssr";
 
 const DEFENSIVE_OBJECT = {
     title2: "Soluções para Segurança Defensiva",
@@ -11,30 +10,25 @@ const DEFENSIVE_OBJECT = {
     tabs: [
         {
             id: 1,
-            title: "Proteção local",
+            title: "Proteção local (On Primeses Security)",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.webp',
-                    title: 'Checkpoint',
+                    image: '/assets/images/checkpoint.jpg',
+                    title: 'Checkpoint Next Generation Firewall',
                     description: 'Monitora o tráfego de rede em tempo real, analisando pacotes de dados para garantir o tratamento seguro e eficaz de informações críticas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
-                    title: 'Sophos firewall',
+                    image: '/assets/images/sophos.jpg',
+                    title: 'Sophos Next Generation Firewall',
                     description: 'Fornece protecção abrangente com aprendizado profundo e segurança sincronizada, identificando riscos ocultos e respondendo automaticamente a incidentes.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/fortinet.jpg',
                     title: 'Fortigate',
                     description: 'Combina firewall, VPN, prevenção de intrusões e filtragem de conteúdo para proteger a rede contra ameaças e garantir conectividade segura.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
-                    title: 'Delinea',
-                    description: 'Gestão centralizada de credenciais e palavras-passe críticas. Elimine pontos fracos locais com controlo total.'
-                },
-                {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/commvault.jpg',
                     title: 'Commvault',
                     description: 'Solução líder em backup e recuperação de dados. Os seus dados protegidos e sempre disponíveis para recuperação.'
                 }
@@ -42,20 +36,20 @@ const DEFENSIVE_OBJECT = {
         },
         {
             id: 2,
-            title: "Proteção Web",
+            title: "Proteção Web (Cloud Security)",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.webp',
-                    title: 'Imperva',
-                    description: 'Uma solução projetada para monitorar, filtrar e bloquear o tráfego de rede direccionado às aplicações web.'
+                    image: '/assets/images/imperva.jpg',
+                    title: 'Imperva WAF',
+                    description: 'Solução projectada para monitorar, filtrar e bloquear o tráfego de rede direccionado às aplicações web.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/cloudflare.jpg',
                     title: 'Cloudflare',
                     description: 'Oferece segurança protegendo activos da internet contra actividades maliciosas.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/fortinet.jpg',
                     title: 'Fortiweb',
                     description: 'Defende aplicativos e APIs da web contra ameaças do OWASP, ataques DDoS e bots maliciosos.'
                 }
@@ -63,17 +57,17 @@ const DEFENSIVE_OBJECT = {
         },
         {
             id: 3,
-            title: "Proteção Endpoint",
+            title: "Endpoint Security",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/harmony.jpg',
                     title: 'Harmony Endpoint',
                     description: 'Criada para proteger a força de trabalho ao complexo cenário de ameaças actual e evitar as ameaças mais iminentes ao endpoint. Sua defesa abrangente bloqueia ataques antes que afetem os usuários, garantindo a continuidade do trabalho sem interrupções.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/sophos.jpg',
                     title: 'Sophos Intercept X Advance with XDR',
-                    description: 'Desenvolvido para operações de segurança de TI e caça a ameaças, o Intercept X detecta e investiga actividades suspeitas com análise direccionada por IA. Revela ameaças ocultas e corrige vulnerabilidades antes que se transformem em crises de segurança.'
+                    description: 'Desenvolvido para operações de segurança de TI e Threat Hunting, investiga actividades suspeitas com análise direccionada por IA, e e corrige vulnerabilidades antes que se transformem em crises de segurança.'
                 },
                 {
                     image: '/assets/images/girl-tablet.webp',
@@ -84,27 +78,27 @@ const DEFENSIVE_OBJECT = {
         },
         {
             id: 4,
-            title: "SIEM",
+            title: "Seceon aiSIEM",
             slides: [
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/seceon.jpg',
                     title: 'Seceon',
                     description: 'Uma plataforma de cibersegurança alimentada por inteligência artificial, projetada para detectar, prevenir e eliminar ameaças em tempo real. Com sua abordagem proativa e automatizada, a Seceon capacita organizações a manterem-se um passo à frente dos cibercriminosos, reduzindo riscos e custos operacionais'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/splunk.jpg',
                     title: 'Splunk',
-                    description: 'Recolhe e analisa registos para detectar e responder a incidentes de segurança. Transforma dados em informações acionáveis.'
+                    description: 'Recolhe e analisa registos para detectar e responder a incidentes de segurança.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/Darktrace.jpg',
                     title: 'Darktrace',
-                    description: 'Monitora ameaças em tempo real com IA autoaprendente. Protecção contínua e adaptável para ambientes modernos.'
+                    description: 'Utiliza inteligência artificial para monitorizar ameaças em tempo real, detectar e responder a comportamentos anómalos de forma autónoma e proactiva. Proporciona uma protecção contínua e adaptável, que reforça a segurança em ambientes dinâmicos e modernos.'
                 },
                 {
-                    image: '/assets/images/girl-tablet.webp',
+                    image: '/assets/images/rapid7.jpg',
                     title: 'Rapid7 Metasploit',
-                    description: 'Identifica e explora vulnerabilidades com precisão. Esteja sempre um passo à frente dos cibercriminosos.'
+                    description: 'permite a identificação de vulnerabilidades, simulação de ataques e validação da eficácia dos controlos de segurança. de forma estratégica facilita a automação de testes e a formação de equipas em técnicas de exploração.'
                 }
             ]
         }
@@ -114,26 +108,26 @@ const DEFENSIVE_OBJECT = {
             id: 1,
             Icon: <SecurityCamera size={24} color="#010400" />,
             title: "Monitoramento e Detecção de Ameaças",
-            description: "Monitorização contínua para identificar vulnerabilidades críticas e agir rapidamente, prevenindo riscos antes que se tornem ameaças. "
+            description: "Monitorização contínua para identificar vulnerabilidades críticas e agir rapidamente, prevenindo riscos antes que se tornem ameaças."
         },
         {
             id: 2,
             Icon: <Graph size={24} color="#010400" />,
             title: "Resposta a Incidentes",
-            description: "Implementação imediata de planos de resposta para restaurar operações críticas com o mínimo de interrupção. "
+            description: "auxiliamos nossos clientes e parceiros a implementar, de forma proactiva, planos de resposta para restaurar operações críticas com o mínimo de impacto possível."
         },
         {
             id: 3,
             Icon: <UserFocus size={24} color="#010400" />,
             title: "Gestão de Identidade e Acessos",
-            description: "Gestão inteligente de acessos com monitoramento centralizado para prevenir violações e garantir conformidade."
+            description: "Gestão inteligente de acessos com monitoramento centralizado para prevenir acessos indevidos e salvaguardar os dados e informações dos nossos clientes."
         },
-        {
-            id: 4,
-            Icon: <FileLock size={24} color="#010400" />,
-            title: "Protecção de Dados",
-            description: "Protecção avançada com firewalls, criptografia de ponta a ponta e backups resilientes contra perda de dados."
-        }
+        // {
+        //     id: 4,
+        //     Icon: <FileLock size={24} color="#010400" />,
+        //     title: "Protecção de Dados",
+        //     description: "Protecção avançada com firewalls, criptografia de ponta a ponta e backups resilientes contra perda de dados."
+        // }
     ]
 }
 

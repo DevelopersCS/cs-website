@@ -14,6 +14,18 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 
+// ✅ Geração de páginas estáticas (SSG)
+// export async function generateStaticParams() {
+//   const posts = await getAllPosts();
+
+//   return posts
+//     .filter((post: Post) => typeof post.slug === "string" && post.slug.trim() !== "") // Remove inválidos
+//     .map((post: Post) => ({ slug: post.slug }));
+// }
+
+
+
+// ✅ Configuração de metadados dinâmicos
 export async function generateMetadata(
   { params }: Props,
 ): Promise<Metadata> {
@@ -98,11 +110,14 @@ export default async function BlogPostPage({ params }: Props) {
           />
         </div>
         <div className="mt-8 text-gray-300 max-w-[90%] mx-auto leading-relaxed">
-          <EditorRender data={JSON.parse(post.content).content} />
+          {/* <EditorRender data={JSON.parse(post.content).content} /> */}
         </div>
-        <RecentPosts />
+        {/* <RecentPosts /> */}
 
       </div>
     </div>
   );
 }
+
+// 🔄 Atualiza os posts a cada 1 hora sem precisar rebuildar o site
+export const revalidate = 3600;

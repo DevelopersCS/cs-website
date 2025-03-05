@@ -9,7 +9,7 @@ const FAQS = [
     id: "01",
     question: "O que é a Cybersecur?",
     answer:
-      "A Cybersecur é uma empresa especializada em cibersegurança, oferecendo soluções e serviços para proteger sistemas, redes e dados contra ameaças digitais.",
+      "A CyberSecur é uma empresa 100% focada em Estratégia de Defesa Cibernética e Riscos Corporativos ligados às Novas Tecnologias.O foco principal é fornecer suporte local e em língua portuguesa, garantindo uma comunicação eficiente e um atendimento personalizado aos nossos clientes.A nossa competência em segurança da informação e cibersegurança é baseada em boas práticas alinhadas às principais normas internacionais, para assegurar a excelência na execução de todos os serviços.",
   },
   {
     id: "02",
@@ -21,7 +21,7 @@ const FAQS = [
     id: "03",
     question: "Em que mercados ou regiões a CyberSecur actua?",
     answer:
-      "Você pode contratar os serviços da Cybersecur entrando em contato através do nosso site, e-mail ou telefone. Nossa equipe está pronta para ajudar!",
+      "A CyberSecur actua em Angola, estando localizada em Luanda, onde oferece soluções de cibersegurança para empresas e organizações.",
   },
   {
     id: "04",
@@ -33,13 +33,13 @@ const FAQS = [
     id: "05",
     question: "O que é segurança defensiva e como funciona? ",
     answer:
-      "Sim, a Cybersecur possui uma equipe de suporte disponível 24 horas por dia, 7 dias por semana, para garantir a proteção contínua dos nossos clientes.",
+      "A Segurança Defensiva envolve a implementação de medidas para proteger sistemas, redes e dados contra ataques cibernéticos. Inclui soluções como firewalls, monitorização contínua, detecção de ameaças e resposta a incidentes. O objectivo é prevenir, identificar e mitigar riscos antes que possam comprometer a segurança da organização.",
   },
   {
     id: "06",
     question: "Quais os benefícios dos serviços de segurança ofensiva?",
     answer:
-      "Sim, realizamos testes de invasão para identificar vulnerabilidades nos sistemas e ajudar sua empresa a corrigir possíveis falhas de segurança.",
+      "A Segurança Ofensiva foca-se em testar a resistência das defesas de uma empresa através de técnicas como testes de intrusão (pentests) e análises de vulnerabilidades.Os principais benefícios incluem: •	Identificação de vulnerabilidades antes que sejam exploradas por atacantes.•	Melhoria das defesas através de relatórios detalhados e planos de mitigação.•	Conformidade com regulamentos e padrões de segurança.",
   },
   {
     id: "07",
@@ -63,7 +63,7 @@ const FAQS = [
     id: "10",
     question: "Não encontrei a resposta para a minha questão. Como posso contactar a CyberSecur?",
     answer:
-      "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
+      "Caso a sua dúvida não tenha sido esclarecida, entre em contacto connosco através do e-mail info@cybersecur.co.ao, telefone [+244 924 101 146], ou visite o nosso website www.cybersecur.co.ao",
   },
 ];
 
@@ -110,7 +110,7 @@ const FAQItem = ({
             : "0px",
         }}
       >
-        <p className="mt-2 text-gray-600 text-start p-4 max-w-[60%]">{answer}</p>
+        <p className="mt-2 text-gray-400 text-start p-4 max-w-[60%]">{answer}</p>
       </div>
     </div>
   );

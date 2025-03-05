@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import {motion} from "framer-motion"
-import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
 
 
 type ServiceGettingTypes = {
@@ -36,7 +36,7 @@ type ServiceGettingTypes = {
 const ServiceGetting = ({ title, description, cover, subTitle, title2, description2, items, tabs, toLeft }: ServiceGettingTypes) => {
     const [activeTab, setActiveTab] = useState(1);
     const [currentSlide, setCurrentSlide] = useState(0);
-
+    console.log(items)
     const handleTabClick = (tabId: number) => {
         setActiveTab(tabId);
         setCurrentSlide(0);
@@ -111,7 +111,16 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                     {
                         cover && (
                             <div className={`${toLeft ? 'order-[-1]' : 'order-[1]'} h-full w-full xl:w-full`}>
-                                <Image src={cover} width={488} height={474} className="w-full max-h-[420px] xl:max-h-[520px] object-contain" alt="Mulher com tablet na mão" />
+                                <Image 
+                                    quality={100} 
+                                    src={cover} 
+                                    width={500} 
+                                    height={500} 
+                                    objectFit="cover"
+                                    priority
+                                    className="w-full max-h-[420px] xl:max-h-[520px] object-contain" 
+                                    alt="Mulher com tablet na mão" 
+                                />
                             </div>
                         )
                     }
@@ -175,17 +184,19 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                             <Image
                                                 src={slide.image}
                                                 className="max-w-[492px] max-h-[295px] w-full h-full object-cover"
-                                                width={388}
-                                                height={374}
+                                                width={935.86}
+                                                height={580}
+                                                priority
+                                                
                                                 alt={slide.title}
                                             />
                                         </div>
                                         <div className="flex flex-col gap-4 justify-start items-start w-full text-start">
                                             <h2 className="dark:text-white text-black text-[32px]">{slide.title}</h2>
                                             <p className="font-medium dark:text-[#A4B1CD] text-[#5E5E5F] leading-[150%]">{slide.description}</p>
-                                            <button aria-label="Button" className="flex justify-center w-fit px-6 py-3 items-center text-center font-medium text-white bg-[#0E141D] transition-colors duration-300 rounded-lg">
+                                            {/* <button aria-label="Button" className="flex justify-center w-fit px-6 py-3 items-center text-center font-medium text-white bg-[#0E141D] transition-colors duration-300 rounded-lg">
                                                 Saiba Mais
-                                            </button>
+                                            </button> */}
                                         </div>
                                     </div>
                                 ))}

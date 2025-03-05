@@ -1,5 +1,4 @@
 "use client"; // Agora é um Client Component
-
 import { useEffect } from "react";
 import Lenis from "lenis";
 

@@ -31,7 +31,14 @@ export interface Post {
     slug: string;
 }
 
-
+export interface postResponse {
+    totalItems: number,
+    totalPages: number,
+    currentPage: number,
+    pageSize: number,
+    data: Post[]
+}
+// ✅ Tratamento de erros de requisição
 function handleRequestError(error: any) {
     if (axios.isAxiosError(error)) {
         if (!error.response) {
@@ -45,38 +52,47 @@ function handleRequestError(error: any) {
     return []; // Retorna um array vazio para evitar erro na UI
 }
 
-// ✅ Buscar todos os posts
-export async function getAllPosts(pageNumber: number = 1) {
+// ✅ Buscar todos os posts (para gerar páginas estaticamente)
+export async function getAllPosts(page: number = 1) {
     try {
-        const response = await API.get(`/news?pageNumber=${pageNumber}`);
-        return response.data ?? [];
-    } catch (error) {
-        if (axios.isAxiosError(error)) {
-            console.warn("⚠️ Erro ao buscar posts: API pode estar offline.");
-        } else {
-            console.warn("⚠️ Erro inesperado ao buscar posts.");
+        const response = await API.get(`/news?pageNumber=${page}`);
+
+        if (!Array.isArray(response.data.data)) {
+            console.warn("Erro: getAllPosts não retornou um array!", response.data);
+            return [];
         }
-        return []; // Retorna um array vazio para evitar erros no React
-    }
-}
-// ✅ Buscar posts por termo de pesquisa
-export async function searchPosts(searchTerm = "", pageNumber = 1) {
-    try {
-        const { data } = await API.get(`/news/search`, {
-            params: { term: searchTerm, pageNumber },
-        });
-        return data || [];
+
+        // Filtra apenas os posts que têm um slug válido
+        const filteredPosts = response.data.data.filter((post: Post) =>
+            typeof post.slug === "string" && post.slug.trim() !== ""
+        );
+        // console.log(filteredPosts)
+        return filteredPosts;
     } catch (error) {
-        return handleRequestError(error);
+        console.error("Erro ao buscar posts:", error);
+        return [];
     }
 }
+
+
 
 // ✅ Buscar post por slug
 export async function getPostBySlug(slug: string) {
     try {
         const { data } = await API.get(`/news/news/${slug}`);
-        return data || [];
+        return data || null; // Retorna null para tratamento correto na UI
     } catch (error) {
         return handleRequestError(error);
+    }
+}
+
+
+export async function searchPosts(searchTerm: string, page: number) {
+    try {
+        const response = await axios.get(`/news?search=${searchTerm}&page=${page}`);
+        return response.data.data;
+    } catch (error) {
+        console.error("Erro ao buscar posts com termo:", searchTerm, error);
+        return { data: [], total: 0 };
     }
 }

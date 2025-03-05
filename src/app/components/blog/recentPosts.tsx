@@ -14,11 +14,12 @@ export const RecentPosts = () => {
         const fetchPosts = async () => {
             try {
                 const response = await getAllPosts();
-                if (!Array.isArray(response.data)) {
+                if (!Array.isArray(response)) {
                     console.warn("Resposta inválida da API");
                     setRecentPosts([])
                 }
-                setRecentPosts(response.data.slice(0, 3)); // Pegamos apenas os 3 primeiros posts
+                // console.log("SSSS, ",response)
+                setRecentPosts(response.slice(0, 3)); // Pegamos apenas os 3 primeiros posts
             } catch (error) {
                 console.warn("Erro ao buscar posts:", error);
                 setError(true);

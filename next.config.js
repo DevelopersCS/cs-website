@@ -44,4 +44,13 @@ module.exports = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/blog/',
+        destination: '/404',
+        permanent: false,
+      },
+    ];
+  },
 };

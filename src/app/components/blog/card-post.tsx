@@ -22,6 +22,7 @@ export default function CardPost({post}: CardPostType){
             <div className="bg-[#0c0e14] overflow-hidden h-full rounded-lg shadow-lg transition transform flex flex-col gap-4 hover:bg-[#11141d] pb-8 ease-in duration-150">
                 <Image
                     src={sanitizeHtml(post.coverImage)}
+                    priority
                     alt={sanitizeHtml(post.title)}
                     width={320}
                     height={200}
