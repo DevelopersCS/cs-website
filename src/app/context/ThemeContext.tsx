@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { createContext, useState, useEffect, ReactNode } from 'react';
 
 interface ThemeContextType {
@@ -13,12 +13,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
     useEffect(() => {
         const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-            setIsDarkMode(true);
-        } else {
+        if (theme === 'light') {
             document.documentElement.classList.remove('dark');
             setIsDarkMode(false);
+        } else {
+            document.documentElement.classList.add('dark');
+            setIsDarkMode(true);
         }
 
         // Observar mudanças no DOM
