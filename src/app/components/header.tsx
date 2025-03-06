@@ -59,7 +59,12 @@ const Header = () => {
         </div>
       </div>
 
-      <MenuMobile isDarkMode={themeContext?.isDarkMode ?? true} toggleTheme={themeContext?.toggleTheme} isOpen={isMenuOpen} />
+      <MenuMobile 
+        isDarkMode={themeContext?.isDarkMode ?? true} 
+        toggleTheme={themeContext?.toggleTheme} 
+        isOpen={isMenuOpen} 
+        toggleMenu={() => setIsMenuOpen(false)}
+      />
       {/* Menu Mobile */}
       <div className={`lg:hidden absolute top-[100px] left-0 right-0 h-[500px] ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="space-y-2 py-4 px-4 bg-gray-700 h-full flex flex-col">

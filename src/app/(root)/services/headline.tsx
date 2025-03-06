@@ -11,7 +11,7 @@ const HeadlineServiceSection = () => {
                     muted
                     autoPlay
                     loop
-                    className="w-full h-full object-cover brightness-[.3]"
+                    className="w-full h-full cursor-none pointer-events-none object-cover brightness-[.3]"
                     src="/assets/videos/hacker.mp4"
                 />
             </div>

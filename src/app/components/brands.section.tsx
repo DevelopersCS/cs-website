@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { ThemeContext } from "../context/ThemeContext";
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 
 const BRANDS = [
   { id: 1, img: "/assets/brands/logo-bai.svg", dark: "/assets/brands/dark/logo-bai.svg", alt: "Logotipo oficial do Banco BAI" },
@@ -38,28 +38,34 @@ export function BrandsSection({
   const { isDarkMode } = useContext(ThemeContext) || {};
 
   return (
-    <section className={twMerge("w-full flex flex-col items-center gap-4 pt-[56px] mx-auto", className)}>
+    <section
+      className={twMerge(
+        "w-full flex flex-col items-center gap-4 pt-[56px] mx-auto",
+        className
+      )}
+    >
       <div className="w-full max-w-[1216px]">
         <span className={twMerge("text-white mix-blend-difference", titleStyle)}>
           {title}
         </span>
-        <div
-          className={twMerge(
-            "flex w-full ",
-            brandsStyle
-          )}
-        >
-          <div className="overflow-hidden w-full relative flex items-center justify-start h-[140px]">
-            <div className="flex gap-14 absolute animate-slide hover:pause min-w-full">
+        <div className={twMerge("flex w-full", brandsStyle)}>
+          <div className="overflow-hidden w-full relative flex items-center justify-start h-[140px] perspective-[1000px]">
+            <div className="flex gap-14 absolute animate-slide hover:pause min-w-full transform-style-3d">
               {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
                 <Image
                   key={id}
                   width={200}
                   height={100}
                   alt={alt}
-                  src={!isDarkMode ? dark : img}
+                  src={isDarkMode ? dark : img}
                   className={twMerge(
-                    isFlare ? "max-w-[130px]" : isLittle ? "max-w-[180px]" : "max-w-[120px]"
+                    "transition-transform duration-75 ease-out",
+                    "transform translate3d(0px, 0px, 50px) scale3d(1,1,1) rotateX(10deg) rotateY(-10deg) rotateZ(0deg)",
+                    isFlare
+                      ? "max-w-[130px]"
+                      : isLittle
+                        ? "max-w-[180px]"
+                        : "max-w-[120px]"
                   )}
                 />
               ))}
@@ -69,9 +75,15 @@ export function BrandsSection({
                   width={200}
                   height={100}
                   alt={alt}
-                  src={!isDarkMode ? dark : img}
+                  src={isDarkMode ? dark : img}
                   className={twMerge(
-                    isFlare ? "max-w-[130px]" : isLittle ? "max-w-[180px]" : "max-w-[120px]"
+                    "transition-transform duration-500 ease-out",
+                    "transform translate3d(0px, 0px, 50px) scale3d(1,1,1) rotateX(10deg) rotateY(-10deg) rotateZ(0deg)",
+                    isFlare
+                      ? "max-w-[130px]"
+                      : isLittle
+                        ? "max-w-[180px]"
+                        : "max-w-[120px]"
                   )}
                 />
               ))}

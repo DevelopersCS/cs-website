@@ -23,12 +23,12 @@ const SOCSection = () => {
             className="dark:bg-[#06070A] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
-                <div className="flex flex-col items-center py-6 max-w-[70%] gap-6 mx-auto">
+                <div className="flex flex-col  px-4 items-center py-6 lg:max-w-[70%] gap-6 mx-auto">
                     <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%] text-center">
                         CyberSecur SOC
                     </h1>
-                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] text-center leading-[120%] font-medium">
-                        Protegemos activamente sistemas de informação contra ameaças, detectamos e mitigamos incidentes de segurança, através de soluções de segurança, estruturas e processos de segurança à sua medida A integração inteligente entre tecnologias permite identificar vulnerabilidades antes que se transformem em incidentes, assegurando a protecção contínua do ambiente corporativo. 
+                    <p className="dark:text-[#e7edf9]  text-[#5E5E5F] text-base text-center leading-[120%] font-normal">
+                        Protegemos activamente sistemas de informação contra ameaças, detectamos e mitigamos incidentes de segurança, através de soluções de segurança, estruturas e processos de segurança. 
                     </p>
                 </div>
                 <div className="flex flex-col gap-32">

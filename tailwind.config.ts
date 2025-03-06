@@ -41,7 +41,7 @@ export default {
         'grow-[80]': 'grow 1s ease-in-out forwards',
         'grow-[50]': 'grow 1s ease-in-out forwards',
         'grow-[100]': 'grow 1s ease-in-out forwards',
-        'slide': 'slide 20s linear infinite',
+        'slide': 'slide 30s linear infinite',
         'paused': 'animation-play-state: paused',
       },
       transitionTimingFunction: {

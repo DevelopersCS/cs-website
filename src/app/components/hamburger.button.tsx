@@ -9,18 +9,12 @@ type HamburgerButtonType = {
 
 }
 
-const HamburgerButton = ({onClick, className}:HamburgerButtonType) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen((state)=> !state);
-    onClick();
-  };
+const HamburgerButton = ({ onClick, className, isOpen }:HamburgerButtonType) => {
 
   return (
     <button
       aria-label="hamburger-button"
-      onClick={handleClick}
+      onClick={onClick}
       className={twMerge("space-y-2 flex flex-col justify-center items-center", className)}
     >
       <div

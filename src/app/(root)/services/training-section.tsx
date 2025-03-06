@@ -54,11 +54,11 @@ const TrainingSection = () => {
             className="dark:bg-[#071324] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
-                <div className="flex xl:flex-row flex-col xl:items-start py-6 items-center justify-between">
+                <div className="flex px-4 xl:flex-row flex-col xl:items-start py-6 items-center justify-between">
                     <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%]">
                         Conscientização
                     </h1>
-                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] leading-[120%] font-medium">
+                    <p className="dark:text-[#A4B1CD] xl:text-left text-center text-[#5E5E5F] text-[18px] leading-[120%] font-medium">
                         Desenvolvemos competências estratégicas <br /> e técnicas para proteger a sua organização.
                     </p>
                 </div>

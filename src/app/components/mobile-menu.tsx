@@ -14,6 +14,7 @@ interface MenuMobileTypes {
     isOpen: boolean
     isDarkMode: boolean
     toggleTheme: any
+    toggleMenu: any
 }
 
 
@@ -21,7 +22,7 @@ const MENU: IMenu[] = [
     {
         id: 1,
         content: 'Página Inicial',
-        target: 'home'
+        target: '/'
     },
     {
         id: 2,
@@ -31,21 +32,21 @@ const MENU: IMenu[] = [
     {
         id: 3,
         content: 'Notícias e Artigos',
-        target: 'news'
+        target: '/'
     },
     {
         id: 4,
         content: 'Contacte-nos',
-        target: 'contacts'
+        target: '/'
     }, {
         id: 5,
         content: 'Cybersecur',
-        target: 'about'
+        target: '/'
     },
 ]
 
 
-const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme }: MenuMobileTypes) => {
+const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme, toggleMenu }: MenuMobileTypes) => {
     return (
         <div className={`dark:bg-black bg-white duration-300 lg:hidden absolute left-0 top-[78px] flex gap-8 flex-col transition-all h-dvh overflow-x-scroll py-8 ${isOpen ? 'w-full px-6 pointer-events-auto z-50' : 'w-0 px-0 pointer-events-none z-[-1]'}`}>
             <nav className='flex flex-col gap-4 lg:hidden'>
@@ -56,6 +57,7 @@ const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme }: MenuMobileTypes
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: id / 4 + 0.2 }}
                         key={id}
+                        className=""
                     >
                         {/* <ReactScrollLink
                             to={target}
@@ -69,7 +71,8 @@ const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme }: MenuMobileTypes
                         </ReactScrollLink> */}
                         <Link
                             href={target}
-                            className='dark:text-white text-black font-medium text-base cursor-pointer duration-150 hover:text-[#d0d0d0e8] uppercase'
+                            onClick={toggleMenu}
+                            className='dark:text-white py-4 px-2 block w-full h-full text-black font-medium text-base cursor-pointer duration-150 hover:text-[#d0d0d0e8] uppercase'
                         >
                             {content}
                         </Link>

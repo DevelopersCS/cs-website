@@ -7,34 +7,34 @@ import {motion} from "framer-motion"
 const BRANDS = [
   {
     id:1,
-    img: "/assets/brands/logo-bai.svg",
-    dark: "/assets/brands/dark/logo-bai.svg",
+    dark: "/assets/brands/logo-bai.svg",
+    img: "/assets/brands/dark/logo-bai.svg",
     alt:"Logotipo oficial do Banco BAI",
   },
   {
     id:2,
-    img: "/assets/brands/logo-bpc.svg",
-    dark: "/assets/brands/dark/logo-bpc.svg",
+    dark: "/assets/brands/logo-bpc.svg",
+    img: "/assets/brands/dark/logo-bpc.svg",
     alt:"Logotipo oficial do Banco BAI",
   },
   {
     id:3,
-    img: "/assets/brands/logo-sic.svg",
-    dark: "/assets/brands/dark/logo-sic.svg",
+    dark: "/assets/brands/logo-sic.svg",
+    img: "/assets/brands/dark/logo-sic.svg",
     alt:"Logotipo oficial do SIC",
   },
   {
     id:4,
-    img: "/assets/brands/logo-banco-sol.svg",
-    dark: "/assets/brands/dark/logo-banco-sol.svg",
+    dark: "/assets/brands/logo-banco-sol.svg",
+    img: "/assets/brands/dark/logo-banco-sol.svg",
     alt:"Logotipo oficial do Banco SOL",
     isLittle: true,
 
   },
   {
     id:5,
-    img: "/assets/brands/logo-apd.svg",
-    dark: "/assets/brands/dark/logo-apd.svg",
+    dark: "/assets/brands/logo-apd.svg",
+    img: "/assets/brands/dark/logo-apd.svg",
     alt:"Logotipo oficial da APD",
     isLittle: true,
   }

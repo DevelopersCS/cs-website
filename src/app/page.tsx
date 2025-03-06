@@ -17,6 +17,7 @@ import { getAllPosts, getPostBySlug, Post } from "@/lib/posts";
 import { RecentPosts } from "./components/blog/recentPosts";
 import { NextSeo } from "next-seo";
 import { Metadata } from "next";
+import { CertsSection } from "./components/cert.section";
 
 
 const BRANDS = [
@@ -53,18 +54,60 @@ const BRANDS = [
     isLittle: true,
 
   },
+  // {
+  //   id:5,
+  //   img: "/assets/brands/paloalto.svg",
+  //   dark: "/assets/brands/dark/paloalto.svg",
+  //   alt:"Logotipo oficial da paloalto",
+  //   isLittle: true,
+  // },
+  // {
+  //   id:6,
+  //   img: "/assets/brands/commvault.svg",
+  //   dark: "/assets/brands/dark/commvault.svg",
+  //   alt:"Logotipo oficial da commvault",
+  //   isLittle: true,
+  // },
   {
-    id:5,
-    img: "/assets/brands/paloalto.svg",
-    dark: "/assets/brands/dark/paloalto.svg",
-    alt:"Logotipo oficial da paloalto",
+    id: 7,
+    img: "/assets/brands/seceon.svg",
+    dark: "/assets/brands/dark/seceon.svg",
+    alt: "Logotipo oficial da Seceon",
     isLittle: true,
   },
   {
-    id:6,
-    img: "/assets/brands/commvault.svg",
-    dark: "/assets/brands/dark/commvault.svg",
-    alt:"Logotipo oficial da commvault",
+    id: 8,
+    img: "/assets/brands/fortinet.svg",
+    dark: "/assets/brands/dark/fortinet.svg",
+    alt: "Logotipo oficial da fortinet",
+    isLittle: true,
+  },
+  {
+    id: 9,
+    img: "/assets/brands/darktrace.svg",
+    dark: "/assets/brands/dark/darktrace.svg",
+    alt: "Logotipo oficial da darktrace",
+    isLittle: true,
+  },
+  {
+    id: 10,
+    img: "/assets/brands/rapid7.svg",
+    dark: "/assets/brands/dark/rapid7.svg",
+    alt: "Logotipo oficial da rapid7",
+    isLittle: true,
+  },
+  // {
+  //   id: 11,
+  //   img: "/assets/brands/harmony.svg",
+  //   dark: "/assets/brands/dark/harmony.svg",
+  //   alt: "Logotipo oficial da harmony",
+  //   isLittle: false,
+  // },
+  {
+    id: 12,
+    img: "/assets/brands/check-point.svg",
+    dark: "/assets/brands/dark/check-point.svg",
+    alt: "Logotipo oficial da Check Point",
     isLittle: true,
   }
 ]
@@ -72,48 +115,54 @@ const BRANDS = [
 const CERTS = [
   {
     id:1,
-    img: "/assets/icons/certifications/iso.png",
-    dark: "/assets/icons/certifications/iso.png",
+    img: "/assets/icons/certifications/iso.svg",
+    dark: "/assets/icons/certifications/iso.svg",
     alt:"Logotipo oficial da splunk",
 
   },
   {
     id:2,
-    img: "/assets/icons/certifications/nse.png",
-    dark: "/assets/icons/certifications/nse.png",
+    img: "/assets/icons/certifications/nse.svg",
+    dark: "/assets/icons/certifications/nse.svg",
 
-    alt:"Logotipo oficial da cloudflare",
+    alt:"Logotipo oficial da Fortinet NSE 4",
 
   },
   {
     id:3,
-    img: "/assets/icons/certifications/iasc.png",
-    dark: "/assets/icons/certifications/iasc.png",
+    img: "/assets/icons/certifications/iasc.svg",
+    dark: "/assets/icons/certifications/iasc.svg",
 
-    alt:"Logotipo oficial da sophos",
+    alt:"Logotipo oficial da certificação Imperva IASC",
 
   },
   {
     id:4,
-    img: "/assets/icons/certifications/idsc.png",
-    dark: "/assets/icons/certifications/idsc.png",
+    img: "/assets/icons/certifications/idsc.svg",
+    dark: "/assets/icons/certifications/idsc.svg",
 
-    alt:"Logotipo oficial da crowdstrike",
+    alt:"Logotipo oficial da certificação Imperva IDSC",
 
   },
   {
     id:5,
-    img: "/assets/icons/certifications/dark-trace.png",
-    dark: "/assets/icons/certifications/dark-trace.png",
-
+    img: "/assets/icons/certifications/dark-trace.svg",
+    dark: "/assets/icons/certifications/dark-trace.svg",
     alt:"Logotipo oficial da paloalto",
+    isLittle: true
   },
   {
     id:6,
-    img: "/assets/icons/certifications/ccsa.png",
-    dark: "/assets/icons/certifications/ccsa.png",
+    img: "/assets/icons/certifications/ccsa.svg",
+    dark: "/assets/icons/certifications/ccsa.svg",
 
-    alt:"Logotipo oficial da commvault",
+    alt:"Logotipo oficial da CCSA",
+  },
+  {
+    id: 7,
+    img: "/assets/icons/certifications/azure.svg",
+    dark: "/assets/icons/certifications/azure.svg",
+    alt: "Logotipo oficial da azure",
   }
 ]
 
@@ -130,8 +179,7 @@ export default function Home() {
       <ServicesSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
       {/* <DepoimentsSection /> */}
-
-      <BrandsSection 
+      <CertsSection 
         title="Reconhecimento e certificação em padrões globais de segurança" 
         brands={CERTS} 
         className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" 

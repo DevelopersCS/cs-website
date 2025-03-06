@@ -55,11 +55,11 @@ const ConsultSection = () => {
             className="dark:bg-[#06070A] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
-                <div className="flex flex-col items-center py-6 max-w-[70%] gap-6 mx-auto">
-                    <h1 className="font-bold dark:text-white text-black text-[32px] leading-[120%] text-center">
+                <div className="flex flex-col w-full items-center py-6 px-4 lg:max-w-[70%] gap-6 mx-auto">
+                    <h1 className="font-bold dark:text-white text-black text-3xl leading-[120%] text-center">
                         Consultoria e Outsourcing <br /> em segurança da informação
                     </h1>
-                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-[18px] text-center leading-[120%] font-medium">
+                    <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-base text-center leading-[120%] font-medium">
                         Fortaleça a sua organização com soluções estratégicas e serviços de outsourcing especializados, garantindo conformidade e protecção avançada contra ameaças cibernéticas.
                     </p>
                 </div>

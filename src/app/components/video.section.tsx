@@ -80,35 +80,35 @@ import { useState, useEffect } from "react";
 
 export function VideoSection() {
     // https://www.youtube.com/embed/HPeeat7int0?si=HIpqLl1edAsE2X-z
-    const [isVisible, setIsVisible] = useState(false);
+    // const [isVisible, setIsVisible] = useState(false);
     const videoId = "HPeeat7int0"; // Substitua pelo ID do vídeo do YouTube
     const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`;
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting);
-            },
-            { threshold: 0.5 }
-        );
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setIsVisible(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.5 }
+    //     );
 
-        const videoContainer = document.getElementById("video-container");
-        if (videoContainer) {
-            observer.observe(videoContainer);
-        }
+    //     const videoContainer = document.getElementById("video-container");
+    //     if (videoContainer) {
+    //         observer.observe(videoContainer);
+    //     }
 
-        return () => {
-            if (videoContainer) {
-                observer.unobserve(videoContainer);
-            }
-        };
-    }, []);
+    //     return () => {
+    //         if (videoContainer) {
+    //             observer.unobserve(videoContainer);
+    //         }
+    //     };
+    // }, []);
 
     return (
         <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
             <h1 className="text-4xl dark:text-white text-black font-bold pb-5">CyberSecur Summit</h1>
             <div id="video-container" className="w-full max-w-[1216px] aspect-video rounded-xl mx-auto relative overflow-hidden">
-                {isVisible && (
+                {/* {isVisible && ( */}
                     <iframe
                         className="absolute top-0 left-0 w-full h-full rounded-xl"
                         src={videoUrl}
@@ -116,7 +116,7 @@ export function VideoSection() {
                         allow="autoplay; encrypted-media"
                         allowFullScreen
                     ></iframe>
-                )}
+                {/* )} */}
             </div>
         </section>
     );
