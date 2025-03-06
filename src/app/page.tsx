@@ -130,7 +130,13 @@ export default function Home() {
       <ServicesSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
       {/* <DepoimentsSection /> */}
-      <BrandsSection titleStyle="text-center" title="Reconhecimento e certificação em padrões globais de segurança" brands={CERTS} className="flex-wrap px-[24px] bg-white dark:bg-black py-20" brandsStyle="flex-wrap scale-[.7]" />
+
+      <BrandsSection 
+        title="Reconhecimento e certificação em padrões globais de segurança" 
+        brands={CERTS} 
+        className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" 
+        brandsStyle="flex-wrap " 
+      />
       <TeamSection />
       <SecurityForYourBussinessSection/>
       {/* <div className="max-w-[1216px] mx-auto px-4 w-full">

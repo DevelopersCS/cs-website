@@ -80,9 +80,9 @@ const FAQItem = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="border dark:border-[#A4B1CD] border-x-0 border-y-0 border-t-[0.5px] darK:border-opacity-20 last:border-b-2 w-full">
+    <div className="border dark:border-[#A4B1CD]  border-x-0 border-y-0 border-t-[0.5px] dark:border-opacity-20 last:border-b-2 w-full">
       <button
-        className="p-4 transition-all cursor-pointer w-full"
+        className="lg:p-4 py-4 transition-all cursor-pointer w-full"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center w-full py-1">
@@ -110,7 +110,7 @@ const FAQItem = ({
             : "0px",
         }}
       >
-        <p className="mt-2 text-gray-400 text-start p-4 max-w-[60%]">{answer}</p>
+        <p className="mt-2 text-gray-400 text-start p-4 lg:max-w-[75%]">{answer}</p>
       </div>
     </div>
   );
@@ -121,7 +121,7 @@ const FAQItem = ({
 const FAQSection = () => {
 
   return (
-    <BaseSection headerStyle="!items-start pb-[48px] gap-2" rootStyle="flex bg-white" title="FAQ" description="Perguntas e respostas mais frequentes" descriptionStyle="text-start w-full text-2xl" titleStyle="text-start md:max-w-[50%] max-w-[100%] md:text-4xl">
+    <BaseSection headerStyle="!items-start pb-[48px] gap-2" rootStyle="flex bg-white" title="FAQ" description="Perguntas e respostas mais frequentes" descriptionStyle="text-start w-full text-2xl" titleStyle="text-start md:max-w-full max-w-[50%]  max-w-[100%] md:text-4xl">
       <div className="w-full h-full">
         <div className="space-y-4 w-full">
           {FAQS.map((faq, index) => (

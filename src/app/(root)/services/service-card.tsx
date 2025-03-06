@@ -72,8 +72,8 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                     </div>
                     <p className="dark:text-[#A4B1CD] text-[#5E5E5F] font-medium">{description}</p>
                 </div>
-                <div className={`flex justify-between  gap-14 xl:gap-2 items-center xl:items-start flex-col-reverse xl:flex-row`}>
-                    <div className={`flex flex-col gap-8 xl:w-full p-6 xl:p-0 w-full ${toLeft ? 'order-[1] items' : 'order-[-1]'}`}>
+                <div className={`flex px-8 justify-between  gap-14 lg:gap-2 items-center xl:items-start flex-col-reverse lg:flex-row`}>
+                    <div className={`flex flex-col gap-8 xl:w-full p-0 xl:p-0 w-full ${toLeft ? 'order-[1] items' : 'order-[-1]'}`}>
                         <div className={`flex  flex-col gap-6 w-full ${toLeft ? 'xl:pl-10':''}`}>
                             {
                                 items?.map(({Icon,title,description, id}, index)=>(
@@ -88,16 +88,16 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                             opacity: { duration: 1.5, delay: 0.5 * index, ease: "easeInOut" }
                                         }}
                                     >
-                                        <div className="flex gap-2 ">
+                                        <div className="flex w-full gap-2 flex-col lg:flex-row">
                                             <div className="bg-[#4FC0FF] flex items-center justify-center p-2 rounded max-w-12 max-h-12 w-full h-full border-none">
                                                 {Icon}
                                             </div>
-                                            <div className="flex gap-1 flex-col">
-                                                <h3 className="font-bold dark:text-white text-black text-lg">{title}</h3>
-                                                <p className="dark:text-[#A4B1CD] text-[#5E5E5F] font-medium text-base leading-[150%]">{description}</p>
+                                            <div className="flex gap-1 flex-col w-full">
+                                                <h3 className="font-bold  w-full dark:text-white text-black text-lg">{title}</h3>
+                                                <p className="dark:text-[#A4B1CD]  w-full text-[#5E5E5F] font-medium text-base leading-[150%]">{description}</p>
                                             </div>
                                         </div>
-                                        <div className="flex group-hover:translate-x-3 group-hover:opacity-40 items-center justify-center w-8 h-8">
+                                        <div className="hidden group-hover:translate-x-3 group-hover:opacity-40 items-center justify-center w-8 h-8">
                                             <CaretRight color="#A4B1CD" weight="bold" size={24} />
                                         </div>
                                     </motion.div>
@@ -116,9 +116,9 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                     src={cover} 
                                     width={500} 
                                     height={500} 
-                                    objectFit="cover"
+                                    objectFit=" "
                                     priority
-                                    className="w-full max-h-[420px] xl:max-h-[520px] object-contain" 
+                                    className="w-full max-h-[576px] aspect-video! max-w-full xl:max-h-[520px] object-cover!" 
                                     alt="Mulher com tablet na mão" 
                                 />
                             </div>
@@ -128,20 +128,20 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
 
                 <div className="flex flex-col gap-2 max-w-[1216px] w-full text-center py-16">
                     <div className="flex flex-col">
-                        <h4 className="text-[32px] dark:text-white text-black font-bold">{title2}</h4>
+                        <h4 className="lg:text-3xl text-2xl dark:text-white text-black font-bold">{title2}</h4>
                     </div>
-                    <p className="text-[#A4B1CD] font-medium">{description2}</p>
+                    <p className="text-[#A4B1CD] font-medium text-sm lg:text-base">{description2}</p>
                     {
                         tabs && (
-                            <div className="flex justify-center items-center">
-                                <ul className="flex gap-4">
+                            <div className="flex justify-center items-center max-w-full px-4 overflow-scroll">
+                                <ul className="flex gap-4 w-full p-4">
                                     {tabs.map((tab) => (
                                         <li key={tab.id}>
                                             <button
                                                 aria-label="Button"
                                                 onClick={() => handleTabClick(tab.id)}
-                                                className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-black' : 'bg-[#0E141D] text-white'}`}>
-                                                {tab.title}
+                                                className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium text-sm transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-black' : 'bg-[#0E141D] text-white'}`}>
+                                                <p className="whitespace-nowrap"> {tab.title}</p>
                                             </button>
                                         </li>
                                     ))}

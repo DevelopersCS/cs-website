@@ -49,8 +49,8 @@ export function BrandsSection({
             brandsStyle
           )}
         >
-          <div className="overflow-hidden relative flex items-center justify-start w-[100%] h-[140px]">
-            <div className="flex gap-14 absolute animate-slide hover:pause min-w-[900px]">
+          <div className="overflow-hidden w-full relative flex items-center justify-start h-[140px]">
+            <div className="flex gap-14 absolute animate-slide hover:pause min-w-full">
               {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
                 <Image
                   key={id}
