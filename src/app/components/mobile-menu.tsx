@@ -80,7 +80,7 @@ const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme, toggleMenu }: Men
                 ))}
             </nav>
             <div className={`flex flex-col gap-4 w-full duration-1000 delay-75 ${isOpen ? " opacity-100" : "opacity-0"}`}>
-                <div
+                {/* <div
                     // initial={{ opacity: 0 }}
                     // animate={isOpen ? { opacity: 1 } : { opacity: 0 }}
                     // viewport={{ once: true }}
@@ -88,7 +88,7 @@ const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme, toggleMenu }: Men
                     className='w-full  flex justify-center hover:bg-[#5fbfff] bg-[#25A8FF]'
                 >
                     <Link className='text-white text-center cursor-pointer px-6 h-fit py-[14px] w-full' href={'/'}>Saiba Mais</Link>
-                </div>
+                </div> */}
                 <div
                     // initial={{ opacity: 0 }}
                     // animate={isOpen ? { opacity: 1 } : { opacity: 0 }}

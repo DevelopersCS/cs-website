@@ -6,11 +6,13 @@ const HeadlineServiceSection = () => {
             className="dark:bg-[#06070A] dark:text-[#A4B1CD] h-full w-full bg-black relative py-[140px] pb-[100px] flex justify-center items-center flex-col overflow-hidden"
         >
             {/* Vídeo de fundo */}
-            <div className="absolute top-0 left-0 w-full h-full z-0">
+            <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
                 <video
                     muted
                     autoPlay
                     loop
+                    playsInline
+                    tabIndex={-1}
                     className="w-full h-full cursor-none pointer-events-none object-cover brightness-[.3]"
                     src="/assets/videos/hacker.mp4"
                 />

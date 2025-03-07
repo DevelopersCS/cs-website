@@ -82,7 +82,7 @@ const HeadlineSection = () => {
               Proteja o Futuro do Seu Negócio com Segurança de Confiança.
             </motion.h1>
           <motion.p 
-            className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#333232] text-opacity-85"
+            className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#1a1a1a] text-opacity-100 text-red-300! "
             initial={{ translateY: 10, opacity: 0, }}
             whileInView={{ translateY: 0, opacity: 1 }}
             viewport={{ once: true }}

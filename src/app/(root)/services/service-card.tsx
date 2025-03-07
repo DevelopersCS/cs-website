@@ -36,7 +36,6 @@ type ServiceGettingTypes = {
 const ServiceGetting = ({ title, description, cover, subTitle, title2, description2, items, tabs, toLeft }: ServiceGettingTypes) => {
     const [activeTab, setActiveTab] = useState(1);
     const [currentSlide, setCurrentSlide] = useState(0);
-    console.log(items)
     const handleTabClick = (tabId: number) => {
         setActiveTab(tabId);
         setCurrentSlide(0);
