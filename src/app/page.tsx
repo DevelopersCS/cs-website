@@ -146,10 +146,9 @@ const CERTS = [
   },
   {
     id:5,
-    img: "/assets/icons/certifications/dark-trace.svg",
-    dark: "/assets/icons/certifications/dark-trace.svg",
-    alt:"Logotipo oficial da paloalto",
-    isLittle: true
+    img: "/assets/icons/certifications/dark-trace.png",
+    dark: "/assets/icons/certifications/dark-trace.png",
+    alt:"Logotipo oficial da Dark Trace",
   },
   {
     id:6,

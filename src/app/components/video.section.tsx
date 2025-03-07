@@ -107,10 +107,10 @@ export function VideoSection() {
     return (
         <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
             <h1 className="text-4xl dark:text-white text-black font-bold pb-5">CyberSecur Summit</h1>
-            <div id="video-container" className="w-full max-w-[1216px] aspect-video rounded-xl mx-auto relative overflow-hidden">
+            <div id="video-container" className="w-full max-w-[1216px] aspect-video mx-auto relative overflow-hidden">
                 {/* {isVisible && ( */}
                     <iframe
-                        className="absolute top-0 left-0 w-full h-full rounded-xl"
+                        className="absolute top-0 left-0 w-full h-full"
                         src={videoUrl}
                         title="CyberSecur Summit Video"
                         allow="autoplay; encrypted-media"

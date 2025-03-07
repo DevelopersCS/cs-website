@@ -45,12 +45,12 @@ export function CertsSection({
       )}
     >
       <div className="w-full max-w-[1216px]">
-        <span className={twMerge("text-white mix-blend-difference", titleStyle)}>
+        <span className={twMerge("text-white text-center w-full! pb-6 block mix-blend-difference", titleStyle)}>
           {title}
         </span>
         <div className={twMerge("flex w-full", brandsStyle)}>
-          <div className="overflow-hidden w-full relative flex items-center justify-start h-[140px] perspective-[1000px]">
-            <div className="flex gap-14 absolute transform-style-3d">
+          <div className="overflow-hidden w-full  relative flex items-center justify-start h-full perspective-[1000px]">
+            <div className="flex gap-2 items-center w-full justify-center relative transform-style-3d flex-wrap h-full">
               {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
                 <Image
                   key={id}
@@ -59,16 +59,16 @@ export function CertsSection({
                   alt={alt}
                   src={isDarkMode ? dark : img}
                   className={twMerge(
-                    "transition-transform duration-75 ease-out scale-90",
+                    "transition-transform duration-75 ease-out scale-75 bg-green-2001",
                     isFlare
                       ? "max-w-[130px]"
                       : isLittle
                         ? "max-w-[180px]"
-                        : "max-w-[120px]"
+                        : "max-w-[120px]",
                   )}
                 />
               ))}
-              {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
+              {/* {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
                 <Image
                   key={id}
                   width={200}
@@ -85,7 +85,7 @@ export function CertsSection({
                         : "max-w-[120px]"
                   )}
                 />
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
