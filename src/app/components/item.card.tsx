@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { motion } from 'framer-motion'
@@ -25,7 +26,7 @@ const ItemCard = ({ title, description, icon, id, className, ...rest}:ItemCardTy
       </div>
     )}
     <h3 className="font-medium text-2xl dark:text-white text-black">{title}</h3>
-      <p className="dark:text-[#A4B1CD] text-base leading-[130%] font-normal text-[#5E5E5F]">{description}</p>
+      <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-base leading-[130%] font-normal ">{description}</p>
     </motion.div>
   );
 };

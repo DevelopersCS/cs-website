@@ -87,6 +87,25 @@ export function BrandsSection({
                   )}
                 />
               ))}
+              {brands.map(({ alt, id, img, dark, isLittle, isFlare }) => (
+                <Image
+                  key={id}
+                  width={200}
+                  height={100}
+                  alt={alt}
+                  src={isDarkMode ? dark : img}
+                  className={twMerge(
+                    "transition-transform duration-500 ease-out",
+                    "transform translate3d(0px, 0px, 50px) scale3d(1,1,1) rotateX(10deg) rotateY(-10deg) rotateZ(0deg)",
+                    isFlare
+                      ? "max-w-[130px]"
+                      : isLittle
+                        ? "max-w-[180px]"
+                        : "max-w-[120px]"
+                  )}
+                />
+              ))}
+              
             </div>
           </div>
         </div>

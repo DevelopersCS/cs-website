@@ -79,7 +79,7 @@ const HeadlineSection = () => {
               opacity: { duration: 1.3, delay: 0.5 * 2, ease: "easeInOut" }
             }}
           >
-              Proteja o Futuro do Seu Negócio com Segurança de Confiança.
+            Defenda seus dados e operações com nossa expertise.
             </motion.h1>
           <motion.p 
             className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#1a1a1a] text-opacity-100 text-red-300! "

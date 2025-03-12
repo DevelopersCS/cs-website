@@ -43,6 +43,10 @@ module.exports = {
           {
             key: "Content-Security-Policy",
             value: "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com;",
           }
         ],
       },

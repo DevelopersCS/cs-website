@@ -54,20 +54,20 @@ const BRANDS = [
     isLittle: true,
 
   },
-  // {
-  //   id:5,
-  //   img: "/assets/brands/paloalto.svg",
-  //   dark: "/assets/brands/dark/paloalto.svg",
-  //   alt:"Logotipo oficial da paloalto",
-  //   isLittle: true,
-  // },
-  // {
-  //   id:6,
-  //   img: "/assets/brands/commvault.svg",
-  //   dark: "/assets/brands/dark/commvault.svg",
-  //   alt:"Logotipo oficial da commvault",
-  //   isLittle: true,
-  // },
+  {
+    id:5,
+    img: "/assets/brands/imperva.svg",
+    dark: "/assets/brands/dark/imperva.svg",
+    alt:"Logotipo oficial da paloalto",
+    isLittle: true,
+  },
+  {
+    id:6,
+    img: "/assets/brands/commvault.svg",
+    dark: "/assets/brands/dark/commvault.svg",
+    alt:"Logotipo oficial da commvault",
+    isLittle: true,
+  },
   {
     id: 7,
     img: "/assets/brands/seceon.svg",
@@ -175,7 +175,7 @@ export default function Home() {
       <WhyUsSection />
       <ProtectYourInvestSection />
       <BrandsSection title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" brandsStyle="flex-wrap" />
-      <ServicesSection title="Proteção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
+      <ServicesSection title="Protecção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
       {/* <DepoimentsSection /> */}
       <CertsSection 

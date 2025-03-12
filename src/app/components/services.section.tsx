@@ -14,7 +14,7 @@ const ITEMS = [
       alt:"Icone de Equipe Especializada",
     },
     title:"Segurança Defensiva",
-    description:"Protegemos sistemas contra ameaças, detectámos e mitigamos incidentes com soluções adaptadas às necessidades da sua organização.",
+    description:"Protegemos sistemas contra ameaças, detectamos e mitigamos incidentes com soluções adaptadas às necessidades da sua organização.",
   },
   {
     id:2,
@@ -40,7 +40,7 @@ const ITEMS = [
       src: "/assets/icons/Medal.svg",
       alt:"Icone de Escudo",
     },
-    title:"Conscientização",
+    title:"Formação e Consciencialização",
     description:"Capacitamos equipas e utilizadores com formação para reduzir riscos cibernéticos de forma proativa.",
   }
 ]

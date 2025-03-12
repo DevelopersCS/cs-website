@@ -1,7 +1,5 @@
 import { Moon, Sun } from "@phosphor-icons/react"
-import { motion } from "motion/react"
 import Link from "next/link"
-import { Link as ReactScrollLink } from 'react-scroll'
 
 type IMenu = {
     id: number,
@@ -27,7 +25,7 @@ const MENU: IMenu[] = [
     {
         id: 2,
         content: 'Serviços',
-        target: 'services'
+        target: 'servicos'
     },
     {
         id: 3,
@@ -36,11 +34,11 @@ const MENU: IMenu[] = [
     },
     {
         id: 4,
-        content: 'Contacte-nos',
-        target: '/'
+        content: 'Fale Connosco',
+        target: '/fale-connosco'
     }, {
         id: 5,
-        content: 'Cybersecur',
+        content: 'Sobre a Cybersecur',
         target: '/'
     },
 ]

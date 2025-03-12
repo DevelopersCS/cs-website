@@ -60,7 +60,7 @@ export function TeamSection() {
             <div className="max-w-[1216px] w-full mx-auto">
                 <div className="w-full lg:px-0 px-4 flex-col lg:flex-row flex max-w-[1216px] gap-3 items-center justify-between pb-[56px]">
                     <h2 className={"font-bold text-center lg:text-left text-3xl dark:text-white text-black"}>Liderança Que <br /> Inspira Segurança</h2>
-                    <p className={"text-base text-[#4F4F4F] dark:text-[#A4B1CD] font-normal lg:max-w-[404px] text-center lg:text-left w-full"}>Conheça as mentes por trás da nossa missão de proteger o seu negócio</p>
+                    <p className={"text-base text-[#4F4F4F] dark:text-[#A4B1CD] font-normal lg:max-w-[404px] text-center lg:text-left w-full"}>Conheça as mentes por de trás da nossa missão de proteger o seu negócio</p>
                 </div>
                 <div className="gap-6 grid grid-cols-1 lg:grid-cols-4">
                     {MEMBERS.map(({ id, avatar, description, name, role }) => (

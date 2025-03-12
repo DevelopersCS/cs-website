@@ -9,7 +9,7 @@ const ITEMS = [
       src: "/assets/icons/UsersThree.svg",
       alt:"Icone de Equipe Especializada",
     },
-    title:"Equipe Especializada",
+    title:"Equipa Especializada",
     description:"Profissionais especializados com experiência em proteger empresas de vários sectores.",
   },
   {
@@ -34,7 +34,7 @@ const ITEMS = [
 const WhyUsSection = () => {
 
   return (
-    <BaseSection rootStyle="bg-[#F9F9F9]" title="O que nos deferencia?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
+    <BaseSection rootStyle="bg-[#F9F9F9]" title="O que nos diferencia?" titleStyle="md:max-w-[50%] max-w-[100%] md:text-4xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 h-full">
       {
         ITEMS.map(({id, description,icon, title}, index)=>(
