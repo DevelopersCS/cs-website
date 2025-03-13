@@ -132,7 +132,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                     <p className="text-[#A4B1CD] font-medium text-sm lg:text-base">{description2}</p>
                     {
                         tabs && (
-                            <div className="flex justify-center items-center max-w-full px-4 overflow-scroll" style={{ scrollbarWidth: 'none', WebkitScrollbar: 'none' }}>
+                            <div className="flex justify-center items-center max-w-full px-4 no-scrollbar overflow-scroll" >
                                 <ul className="flex gap-4 w-full p-4">
                                     {tabs.map((tab) => (
                                         <li key={tab.id}>

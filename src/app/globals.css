@@ -53,6 +53,15 @@
   }
 
 }
+.no-scrollbar {
+  scrollbar-width: none;
+  /* Para Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Para Chrome, Safari e Edge */
+}
 
 body {
   color: var(--foreground);
