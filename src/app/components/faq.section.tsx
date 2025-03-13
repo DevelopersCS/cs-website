@@ -4,76 +4,171 @@ import BaseSection from "./base.section";
 import ItemCard from "./item.card";
 import Image from "next/image";
 
-const FAQS = [
+interface answerType {
+  content: string,
+  items: {
+    title: string,
+    description: string,
+  }[]
+}
+interface FAQType {
+  id: string,
+  question: string,
+  content?: string,
+  answer?: answerType
+}
+
+const FAQS: FAQType[] = [
   {
     id: "01",
     question: "O que é a Cybersecur?",
-    answer:
-      "A CyberSecur é uma empresa 100% focada em Estratégia de Defesa Cibernética e Riscos Corporativos ligados às Novas Tecnologias.O foco principal é fornecer suporte local e em língua portuguesa, garantindo uma comunicação eficiente e um atendimento personalizado aos nossos clientes.A nossa competência em segurança da informação e cibersegurança é baseada em boas práticas alinhadas às principais normas internacionais, para assegurar a excelência na execução de todos os serviços.",
+    content:
+      "A CyberSecur é uma empresa 100% focada em Estratégia de Defesa Cibernética e Riscos Corporativos ligados às Novas Tecnologias.",
   },
   {
     id: "02",
     question: "Quais serviços a Cybersecur oferece?",
-    answer:
-      "A Cybersecur oferece serviços como auditoria de segurança, consultoria em cibersegurança, monitoramento de redes, testes de invasão (pentests) e treinamento para equipes.",
+    answer: {
+      content: "A CyberSecur disponibiliza um portfólio completo de serviços, incluindo",
+      items: [
+        {
+          title: "Segurança Defensiva",
+          description: ""
+        },
+        {
+          title: "Segurança Ofensiva",
+          description: ""
+        },
+        {
+          title: "Consciencialização e Formação",
+          description: ""
+        },
+        {
+          title: "Consultoria e Outsourcing",
+          description: ""
+        }
+      ]
+    },
   },
   {
     id: "03",
-    question: "Em que mercados ou regiões a CyberSecur actua?",
-    answer:
-      "A CyberSecur actua em Angola, estando localizada em Luanda, onde oferece soluções de cibersegurança para empresas e organizações.",
+    question: "O que é segurança defensiva e como funciona? ",
+    content:
+      "A Segurança Defensiva protege sistemas, redes e dados contra ataques cibernéticos por meio de firewalls, monitorização contínua, deteção de ameaças e resposta a incidentes, prevenindo e mitigando riscos antes que comprometam a organização.",
   },
   {
     id: "04",
-    question: "Como posso entrar em contacto com a CyberSecur?",
-    answer:
-      "Atendemos empresas de diversos setores, como financeiro, saúde, tecnologia, educação e governo, personalizando soluções para cada necessidade.",
+    question: "Quais os benefícios dos serviços de segurança ofensiva?",
+    answer: {
+      content: "Os principais benefícios incluem:",
+      items: [
+        {
+          title: "Identificação de vulnerabilidades antes que sejam exploradas por atacantes.",
+          description: ""
+        },
+        {
+          title: "Melhoria das defesas através de relatórios detalhados e planos de mitigação.",
+          description: ""
+        },
+        {
+          title: "Conformidade com regulamentos e padrões de segurança.",
+          description: ""
+        }
+      ]
+    },
   },
   {
     id: "05",
-    question: "O que é segurança defensiva e como funciona? ",
-    answer:
-      "A Segurança Defensiva envolve a implementação de medidas para proteger sistemas, redes e dados contra ataques cibernéticos. Inclui soluções como firewalls, monitorização contínua, detecção de ameaças e resposta a incidentes. O objectivo é prevenir, identificar e mitigar riscos antes que possam comprometer a segurança da organização.",
+    question: "5.	Como podem ajudar a minha empresa a implementar um SGSI baseado na ISO 27001?",
+    answer: {
+      content: "A nossa equipa de consultores certificados acompanha todas as fases da implementação do SGSI (Sistema de Gestão de Segurança da Informação), incluindo:",
+      items: [
+        {
+          title:"Diagnóstico inicial para avaliar o nível de maturidade da segurança da informação da empresa",
+          description:"",
+        },
+        {
+          title: "Definição de políticas, procedimentos e controlos alinhados com a ISO 27001",
+          description: "",
+        },
+        {
+          title: "Gestão de riscos e identificação de vulnerabilidades",
+          description: "",
+        },
+        {
+          title: "Formação para colaboradores e preparação para auditorias de certificação",
+          description: "",
+        }
+      ]
+    }
   },
   {
     id: "06",
-    question: "Quais os benefícios dos serviços de segurança ofensiva?",
-    answer:
-      "A Segurança Ofensiva foca-se em testar a resistência das defesas de uma empresa através de técnicas como testes de intrusão (pentests) e análises de vulnerabilidades.Os principais benefícios incluem: •	Identificação de vulnerabilidades antes que sejam exploradas por atacantes.•	Melhoria das defesas através de relatórios detalhados e planos de mitigação.•	Conformidade com regulamentos e padrões de segurança.",
+    question: "A vossa equipa é certificada para prestar consultoria em segurança e conformidade?",
+    answer:{
+      content:"Os nossos consultores possuem certificações reconhecidas internacionalmente, incluindo:",
+      items: [
+        {
+          title:"CISSP (Certified Information Systems Security Professional)",
+          description:""
+        },
+        {
+          title: "ISO 27001 Lead Implementer e Lead Auditor",
+          description: ""
+        },
+        {
+          title: "Certified in Cybersecurity (CC) – ISC",
+          description: ""
+        },
+        {
+          title: "EXIN DPO",
+          description: ""
+        },
+        {
+          title: "EC-Council Network Security Specialist",
+          description: ""
+        },
+        {
+          title: "CompTIA Security+",
+          description: ""
+        }
+      ]
+    }
   },
   {
     id: "07",
-    question: "Como funcionam os programas de conscientização e Consultoria?",
-    answer:
-      "Seguimos rigorosos padrões de segurança e conformidade, como a ISO 27001, garantindo que todos os dados dos clientes sejam tratados com a máxima confidencialidade.",
+    question: "Quais tecnologias e ferramentas são utilizadas nos serviços?",
+    content:
+      "A CyberSecur utiliza ferramentas avançadas de cibersegurança, incluindo Soluções SIEM, EDR, firewalls, IDS/IPS, análise de tráfego de rede, inteligência artificial para deteção de ameaças e testes de penetração.",
   },
   {
     id: "08",
-    question: "A CyberSecur realiza consultorias personalizadas?",
-    answer:
-      "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
-  },
-  {
-    id: "09",
-    question: "Quais tecnologias e ferramentas são utilizadas nos serviços?",
-    answer:
-      "Sim, oferecemos treinamentos personalizados para equipes, ajudando a educar funcionários sobre boas práticas de segurança digital.",
-  },
-  {
-    id: "10",
     question: "Não encontrei a resposta para a minha questão. Como posso contactar a CyberSecur?",
-    answer:
-      "Caso a sua dúvida não tenha sido esclarecida, entre em contacto connosco através do e-mail info@cybersecur.co.ao, telefone [+244 924 101 146], ou visite o nosso website www.cybersecur.co.ao",
+    answer: {
+      content: "Caso a sua dúvida não tenha sido esclarecida, entre em contacto connosco através de:",
+      items: [
+        {
+          title:"telefone: [+244 924 101 146]",
+          description: ""
+        },
+        {
+          title: "email: info@cybersecur.co.ao",
+          description: ""
+        },
+      ]
+    }
   },
 ];
 
 const FAQItem = ({
   question,
   answer,
+  content,
   id,
 }: {
   question: string;
-  answer: string;
+  content?: string;
+  answer?: answerType;
   id: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +177,7 @@ const FAQItem = ({
   return (
     <div className="border dark:border-[#A4B1CD]  border-x-0 border-y-0 border-t-[0.5px] dark:border-opacity-20 last:border-b-2 w-full">
       <button
-        className="lg:p-4 py-4 transition-all cursor-pointer w-full"
+        className="lg:p-4 py-4 !pb-0 transition-all cursor-pointer w-full"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between items-center w-full py-1">
@@ -110,7 +205,26 @@ const FAQItem = ({
             : "0px",
         }}
       >
-        <p className="mt-2 text-gray-400 text-start p-4 lg:max-w-[75%]">{answer}</p>
+        {
+          content && <p className="mt-2 text-gray-800 dark:text-gray-300 text-start p-4 lg:max-w-[75%]">
+            {
+              content
+            }
+          </p>
+        }
+
+        {
+          answer && <div className="mt-2 text-gray-800 dark:text-gray-300 text-start p-4 lg:max-w-[75%]">
+            {answer.content}
+            <ul className="list-disc pl-7">
+            {
+              answer.items.map(({title})=>(
+                <li key={title} className="">{title}</li>
+              ))
+            }
+            </ul>
+          </div>
+        }
       </div>
     </div>
   );
@@ -125,7 +239,7 @@ const FAQSection = () => {
       <div className="w-full h-full">
         <div className="space-y-4 w-full">
           {FAQS.map((faq, index) => (
-            <FAQItem key={faq.id} id={faq.id} question={faq.question} answer={faq.answer} />
+            <FAQItem key={faq.id} id={faq.id} question={faq.question} answer={faq.answer} content={faq.content} />
           ))}
         </div>
       </div>

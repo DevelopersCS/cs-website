@@ -1,3 +1,4 @@
+"use client"
 import BaseSection from "./base.section";
 import {motion} from "framer-motion"
 

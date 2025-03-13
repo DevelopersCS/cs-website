@@ -12,7 +12,7 @@ const HeadlineContactusSection = () => {
                         Tem dúvidas sobre segurança digital? Gostaria de saber como podemos ajudá-lo a proteger o seu negócio contra ameaças cibernéticas?
                     </p>
                 </div>
-                <Image alt="Homem da linha de atendimento com o headphone" className="rounded-lg" width={1216} height={508} src={"/assets/images/operador.jpg"} />
+                <Image priority alt="Homem da linha de atendimento com o headphone" className="rounded-lg" width={1216} height={508} src={"/assets/images/operador.jpg"} />
             </div>
         </section>
     );

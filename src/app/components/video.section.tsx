@@ -104,6 +104,23 @@ export function VideoSection() {
     //     };
     // }, []);
 
+    const [cookiesAccepted, setCookiesAccepted] = useState(false);
+
+    useEffect(() => {
+        const consentCookie = document.cookie.includes('user-consent=true');
+        if (consentCookie) {
+            setCookiesAccepted(true);
+        }
+    }, []);
+    if (!cookiesAccepted) {
+        <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
+            <h1 className="text-4xl dark:text-white text-black font-bold pb-5">CyberSecur Summit</h1>
+            <div id="video-container" className="w-full max-w-[1216px] aspect-video mx-auto relative overflow-hidden">
+                <p>Para assistir ao vídeo, por favor, aceite os cookies.</p>
+            </div>
+        </section>
+    }
+
     return (
         <section className="w-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
             <h1 className="text-4xl dark:text-white text-black font-bold pb-5">CyberSecur Summit</h1>

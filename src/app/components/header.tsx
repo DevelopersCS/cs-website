@@ -42,9 +42,9 @@ const Header = () => {
             <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/">
               Notícias e Artigos
             </Link>
-            <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/fale-connosco">
+            {/* <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/fale-connosco">
               Fale Connosco
-            </Link>
+            </Link> */}
             <ThemeToggleButton />
 
           </div>
@@ -52,7 +52,7 @@ const Header = () => {
           {/* Botão de Menu Hambúrguer (Mobile) */}
           <div className='flex gap-6'>
             <Link className="text-black hover:scale-95 transition-all hover:bg-opacity-80 hover:bg-[#5fbfff] bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-2 rounded-lg hidden minMobile:flex" href="/fale-connosco">
-              Saiba Mais
+              Fale Connosco
             </Link>
             <HamburgerButton className={"lg:hidden text-black dark:text-white"} onClick={toggleMenu} isOpen={isMenuOpen}/>
           </div>

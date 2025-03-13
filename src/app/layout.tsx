@@ -1,4 +1,3 @@
-
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from "./components/header";
@@ -34,8 +33,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
 
   return (
     <>

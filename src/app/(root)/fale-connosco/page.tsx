@@ -37,7 +37,7 @@ const ContactInfo = () => {
 
   return (
     <address className="w-full max-w-[596px] flex flex-col gap-4 not-italic">
-      <h1 className="font-bold xl:text-5xl text-2xl dark:text-white text-start">Entre em contato</h1>
+      <h2 className="font-bold xl:text-5xl text-2xl dark:text-white text-start">Entre em contato</h2>
       <ul className="flex flex-col gap-4">
         {contactDetails.map(({ icon: Icon, label, value }, index) => (
           <li key={index} className="flex gap-2 items-center">
