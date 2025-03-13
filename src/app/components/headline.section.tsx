@@ -3,7 +3,6 @@ import Link from "next/link";
 import { BrandsSection } from "./brands.section";
 import {motion} from "framer-motion"
 
-
 const BRANDS = [
   {
     id:1,
@@ -93,7 +92,7 @@ const HeadlineSection = () => {
           >
               Soluções de cibersegurança para empresas que priorizam a segurança dos seus dados e a confiança dos seus clientes.
           </motion.p>
-          <Link className="button-animate md:w-[300px] max-w-full text-center text-lg font-medium text-black bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-xl hover:scale-95 transition-all hover:bg-opacity-80" href="/contato">
+          <Link className="button-animate md:w-[300px] max-w-full text-center text-lg font-medium text-black bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-xl hover:scale-95 transition-all hover:bg-opacity-80" href="/fale-connosco">
             Fale Connosco
           </Link>
         </div>
