@@ -73,7 +73,7 @@ export default function AboutPage() {
     <>
       <SmoothScroll />
       <HeadlineAboutSection />
-      <div className="bg-blue-600 dark:white py-12 h-full">
+      <div className="bg-[#25A8FF] dark:white py-12 h-full">
         <div
           className={`flex max-w-[1216px] py-12 mx-auto w-full h-full items-center gap-14 lg:px-6 xl:px-0 flex-col-reverse lg:flex-row-reverse`}
 
@@ -88,13 +88,13 @@ export default function AboutPage() {
             />
           </div>
           <div className="flex flex-col gap-6 order-1 max-w-full w-full px-6 lg:px-0">
-            <h1 className="dark:text-white text-black font-bold text-[30px] leading-[120%]">
+            <h1 className=" font-bold text-[30px] leading-[120%]">
               Sobre Nós
             </h1>
-            <p className="dark:text-white text-black opacity-75">
-              Na CyberSecur, a segurança cibernética não é apenas um serviço, é a nossa missão. Somos uma empresa 100% focada em Defesa Cibernética e Gestão de Riscos Tecnológicos, protegendo organizações contra ameaças digitais em constante evolução.
+            <p className="">
+              Na CyberSecur, a segurança cibernética não é apenas um serviço, é a nossa missão. Somos uma empresa 100% focada em Defesa Cibernética e Gestão de Riscos Tecnológicos, protegendo organizações contra ameaças digitais em constante evolução. <br />
               Acreditamos que a melhor defesa é o conhecimento, por isso investimos continuamente na formação das nossas equipas – tanto internas como de outsourcing – para que estejam sempre à frente das últimas tendências e ameaças em segurança cibernética.
-              Na CyberSecur, a segurança não é apenas um requisito, é uma cultura. Mantemos um ambiente de aprendizado contínuo e inovação, assegurando que o negócio dos nossos clientes estejam sempre protegidos com as soluções mais avançadas do mercado.
+             <br /> Na CyberSecur, a segurança não é apenas um requisito, é uma cultura. Mantemos um ambiente de aprendizado contínuo e inovação, assegurando que o negócio dos nossos clientes estejam sempre protegidos com as soluções mais avançadas do mercado.
             </p>
           </div>
         </div>

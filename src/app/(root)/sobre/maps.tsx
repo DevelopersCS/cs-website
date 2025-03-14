@@ -9,9 +9,9 @@ const MapsSection = () => {
             <div className="flex flex-col gap-4 items-center w-full">
                 <div className="w-full lg:max-w-[596px] flex flex-col gap-4">
                     <h1 className="font-bold xl:text-4xl text-2xl dark:text-white text-black lg:text-center">Onde Estamos</h1>
-                    <p className="font-medium text-[#5E5E5F] text-base dark:text-[#A4B1CD] lg:text-center">
+                    {/* <p className="font-medium text-[#5E5E5F] text-base dark:text-[#A4B1CD] lg:text-center">
                         Veja nossa localização no mapa abaixo e venha tomar um café para falarmos sobre segurança digital.
-                    </p>
+                    </p> */}
                 </div>
                 <div className="w-full max-w-[1000px] bg-orange-300 mt-6 rounded-lg">
                     {/* <MapProvider>

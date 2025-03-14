@@ -66,7 +66,7 @@ const HeadlineSection = () => {
               opacity: { duration: 1, delay: 0.5 * 1, ease: "easeInOut" }
             }}
             >
-              Proteja Seu Negócio com Segurança de Alto Nível
+              Proteja o futuro do seu negócio com segurança de confiança
           </motion.span>
           <motion.h1 
             className="font-bold dark:text-white text-black lg:text-5xl md:text-4xl text-[32px] leading-[120%]"
@@ -78,10 +78,10 @@ const HeadlineSection = () => {
               opacity: { duration: 1.3, delay: 0.5 * 2, ease: "easeInOut" }
             }}
           >
-            Defenda seus dados e operações com nossa expertise.
+            Defenda os seus dados e operações com nossa expertise.
             </motion.h1>
           <motion.p 
-            className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#1a1a1a] text-opacity-100 text-red-300! "
+            className="lg:text-lg text-base font-normal leading-[150%] dark:text-white text-[#1a1a1a] text-opacity-100 text-red-300! dark:text-opacity-75"
             initial={{ translateY: 10, opacity: 0, }}
             whileInView={{ translateY: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -90,7 +90,7 @@ const HeadlineSection = () => {
               opacity: { duration: 1.1, delay: 0.5 * 3, ease: "easeInOut" }
             }}
           >
-              Soluções de cibersegurança para empresas que priorizam a segurança dos seus dados e a confiança dos seus clientes.
+            Antecipe-se às ameaças e proteja os seus dados confidenciais com as estratégias eficazes de cibersegurança.
           </motion.p>
           <Link className="button-animate md:w-[300px] max-w-full text-center text-lg font-medium text-black bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-xl hover:scale-95 transition-all hover:bg-opacity-80" href="/fale-connosco">
             Fale Connosco

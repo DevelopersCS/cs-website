@@ -21,19 +21,19 @@ let MENU:MenuType[] = [
       links: [
         {
           id: "menu-1-link-1",
-          href: "#",
+          href: "/assets/docs/Politica_de_Privacidade_e_Protecao_de_Dados.pdf",
           text: "Política De Privacidade",
         },
         {
           id: "menu-1-link-2",
-          href: "#",
+          href: "/termos-de-servico",
           text: "Termos De Serviços",
         },
-        {
-          id: "menu-1-link-3",
-          href: "#",
-          text: "Carreiras",
-        },
+        // {
+        //   id: "menu-1-link-3",
+        //   href: "#",
+        //   text: "Carreiras",
+        // },
       ],
     },
     {
@@ -43,24 +43,24 @@ let MENU:MenuType[] = [
       links: [
         {
           id: "menu-2-link-1",
-          href: "#",
+          href: "/",
           text: "Página Inicial",
         },
         {
           id: "menu-2-link-2",
-          href: "#",
-          text: "Sobre Nós",
+          href: "/sobre",
+          text: "Sobre A Cybersecur",
         },
         {
           id: "menu-2-link-3",
-          href: "#",
+          href: "/servicos",
           text: "Serviços",
         },
-        {
-          id: "menu-2-link-4",
-          href: "#",
-          text: "Carreiras",
-        },
+        // {
+        //   id: "menu-2-link-4",
+        //   href: "#",
+        //   text: "Carreiras",
+        // },
       ],
     },
     {
@@ -70,22 +70,22 @@ let MENU:MenuType[] = [
       links: [
         {
           id: "menu-3-link-1",
-          href: "#",
+          href: "/servicos#segura-defensiva",
           text: "Segurança Defensiva",
         },
         {
           id: "menu-3-link-2",
-          href: "#",
-          text: "Segurança Ofensiva",
+          href: "/servicos#cybersecur-soc",
+          text: "Cybersecur SOC",
         },
         {
           id: "menu-3-link-3",
-          href: "#",
-          text: "Consultoria",
+          href: "/servicos#consultorias",
+          text: "Consultorias",
         },
         {
           id: "menu-3-link-4",
-          href: "#",
+          href: "/servicos#formacoes",
           text: "Formações",
         },
       ],

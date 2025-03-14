@@ -5,7 +5,7 @@ const DEFENSIVE_OBJECT = {
     title: "Segurança Defensiva",
     cover: "/assets/images/girl-tablet.webp",
     description2: "Ferramentas líderes no mercado para proteger sua organização contra ameaças digitais.",
-    subTitle: "Construindo Barreiras Intransponíveis",
+    subTitle: "",
     description: "Defenda seus sistemas contra ameaças cibernéticas com soluções robustas que garantem proteção contínua e resiliência organizacional.",
     tabs: [
         {
@@ -78,7 +78,7 @@ const DEFENSIVE_OBJECT = {
         },
         {
             id: 4,
-            title: "Seceon aiSIEM",
+            title: "Monitorização de Eventos (SIEM)",
             slides: [
                 {
                     image: '/assets/images/seceon.jpg',
@@ -98,7 +98,7 @@ const DEFENSIVE_OBJECT = {
                 {
                     image: '/assets/images/rapid7.jpg',
                     title: 'Rapid7 Metasploit',
-                    description: 'permite a identificação de vulnerabilidades, simulação de ataques e validação da eficácia dos controlos de segurança. de forma estratégica facilita a automação de testes e a formação de equipas em técnicas de exploração.'
+                    description: 'Permite a identificação de vulnerabilidades, simulação de ataques e validação da eficácia dos controlos de segurança de forma estratégica, facilita a automação de testes e a formação de equipas em técnicas de exploração.'
                 }
             ]
         }

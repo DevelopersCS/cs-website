@@ -8,7 +8,7 @@ const sectionData = [
         id: 1,
         imageSrc: '/assets/images/team-working-postit.webp',
         imageAlt: 'Equipe trabalhando',
-        title: 'Vantagens Principais dos nossos Serviços de Consultoria e Outsourcing',
+        title: '',
         subtitle: 'Nossos serviços são projectados para oferecer',
         listItems: [
             { title: 'Identificação e Mitigação de Riscos', description: 'Avaliação precisa de vulnerabilidades e implementação de acções corretivas para minimizar ameaças cibernéticas.' },
@@ -25,9 +25,10 @@ const sectionData = [
         imageAlt: 'Equipe trabalhando',
         title: 'Serviços Oferecidos',
         listItems: [
-            { title: "Gestão de Projectos de Segurança", description: 'Planeamento, execução e monitorização de iniciativas de cibersegurança.' },
-            { title: "Outsourcing de Especialistas", description: 'Alocação de profissionais qualificados para reforçar a sua equipa de TI.' },
-            { title: "Análise e Planeamento Estratégico", description: 'Identificação de riscos e definição de prioridades em segurança.' },
+            { title: "Sistemas de Gestão de Segurança da Informação (SGSI)", description: 'Alinhados com a ISO/IEC 27001 e normas relacionadas.' },
+            { title: "Identificação, avaliação e optimização dos processos", description: 'com base nos níveis de maturidade do Capability Maturity Model Integrated.' },
+            { title: "Desenvolvimento e implementação de Programas de Segurança da Informação (PSI)", description: 'Para estruturar boas práticas e soluções de segurança.' },
+            { title: "Consultoria em Gestão de Riscos de Segurança da Informação", description: 'Para assegurar a identificação e mitigação de riscos.' },
         ],
         reverse: true
     },
@@ -52,6 +53,7 @@ const ConsultSection = () => {
 
     return (
         <section
+            id="consultorias"
             className="dark:bg-[#06070A] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">
@@ -60,7 +62,7 @@ const ConsultSection = () => {
                         Consultoria e Outsourcing <br /> em segurança da informação
                     </h1>
                     <p className="dark:text-[#A4B1CD] text-[#5E5E5F] text-base text-center leading-[120%] font-medium">
-                        Fortaleça a sua organização com soluções estratégicas e serviços de outsourcing especializados, garantindo conformidade e protecção avançada contra ameaças cibernéticas.
+                        Fortaleça a sua organização com soluções estratégicas e serviços de outsourcing, para garantir conformidade e protecção avançada contra ameaças cibernéticas.
                     </p>
                 </div>
                 <div className="flex flex-col gap-32">

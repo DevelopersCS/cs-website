@@ -58,7 +58,7 @@ const FAQS: FAQType[] = [
   },
   {
     id: "04",
-    question: "Quais os benefícios dos serviços de segurança ofensiva?",
+    question: "Quais são os benefícios dos serviços de segurança ofensiva?",
     answer: {
       content: "Os principais benefícios incluem:",
       items: [
@@ -79,7 +79,7 @@ const FAQS: FAQType[] = [
   },
   {
     id: "05",
-    question: "5.	Como podem ajudar a minha empresa a implementar um SGSI baseado na ISO 27001?",
+    question: "Como podem ajudar a minha empresa a implementar um SGSI baseado na ISO 27001?",
     answer: {
       content: "A nossa equipa de consultores certificados acompanha todas as fases da implementação do SGSI (Sistema de Gestão de Segurança da Informação), incluindo:",
       items: [

@@ -175,7 +175,7 @@ export default function Home() {
       <WhyUsSection />
       <ProtectYourInvestSection />
       <BrandsSection title="Soluções ao seu dispor" brands={BRANDS} className="flex-wrap px-[24px] py-24 bg-white dark:bg-black" brandsStyle="flex-wrap" />
-      <ServicesSection title="Protecção Inteligente para Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
+      <ServicesSection title="Protecção Inteligente para o Seu Negócio" description="Serviços avançados de cibersegurança para fortalecer a segurança e a confiança digital da sua empresa." />
       <VideoSection />
       {/* <DepoimentsSection /> */}
       <CertsSection 

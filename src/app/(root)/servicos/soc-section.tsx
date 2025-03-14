@@ -2,12 +2,12 @@ import ContentWithImageSection from "./ContentWithImageSection";
 
 const sectionData = {
     id: 1,
-    imageSrc: '/assets/images/team-working-postit.webp',
+    imageSrc: '/assets/images/80949.jpg',
     imageAlt: 'Equipe trabalhando',
     title: 'Por que escolher o nosso serviço Cybersecur SOC?',
     listItems: [
         { title: 'Monitoramento 24/7'},
-        { title: 'Visibilidade de Ameaças'},
+        { title: 'Detecção de Ameaças'},
         { title: 'Dashboards'},
         { title: 'Remediação'},
         { title: 'Planos e Subscrição'},
@@ -20,6 +20,7 @@ const SOCSection = () => {
 
     return (
         <section
+            id="cybersecur-soc"
             className="dark:bg-[#06070A] py-10 dark:text-[#A4B1CD] w-full bg-white text-black relative min-h-screen flex items-start"
         >
             <div className="max-w-[1216px] mx-auto w-full flex flex-col gap-10">

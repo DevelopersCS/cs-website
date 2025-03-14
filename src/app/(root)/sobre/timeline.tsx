@@ -7,11 +7,11 @@ const milestones = [
     { year: "2021", title: "1.ª edição do CyberSecur Summit", description: "Organizamos o primeiro grande evento de segurança digital em Angola." },
     { year: "2021", title: "1.ª edição do CyberSecur CTF", description: "Nos tornamos referência global em segurança digital com competições de hacking ético." },
     { year: "2022", title: "Implementação da solução Imperva no BPC", description: "Fortalecemos a segurança do sistema bancário com tecnologias avançadas." },
-    { year: "2022", title: "Lançamento do projeto SecLab", description: "Criamos um laboratório especializado para pesquisa em cibersegurança." },
+    { year: "2022", title: "Lançamento do projecto SecLab", description: "Criamos um laboratório especializado para pesquisa em cibersegurança." },
     { year: "2022", title: "Caminhada contra o cancro da próstata 'Estou nesta caminhada contigo'", description: "Participamos de ações sociais em prol da saúde masculina." },
     { year: "2023", title: "3.ª edição do CyberSecur Summit", description: "Expandimos o evento com palestrantes internacionais e mais participantes." },
     { year: "2024", title: "5.º aniversário da CyberSecur", description: "Celebramos cinco anos de inovação e segurança digital." },
-    { year: "2025", title: "5.ª edição do CyberSecur Summit", description: "Projetamos um evento ainda maior e mais impactante." },
+    { year: "2025", title: "5.ª edição do CyberSecur Summit", description: "Projectamos um evento ainda maior e mais impactante." },
 ];
 
 export default function Timeline() {

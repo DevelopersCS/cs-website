@@ -47,7 +47,7 @@ const MENU: IMenu[] = [
 const MenuMobile = ({ isOpen = false, isDarkMode, toggleTheme, toggleMenu }: MenuMobileTypes) => {
     return (
         <div className={`dark:bg-black bg-white duration-700 lg:hidden absolute left-0 top-[78px] flex gap-8 flex-col transition-all h-dvh overflow-x-scroll py-8 ${isOpen ? 'w-full px-6 pointer-events-auto z-50' : 'w-0 px-0 pointer-events-none z-[-1]'}`}>
-            <nav className={`flex flex-col gap-4 lg:hidden duration-1000 delay-75 ${isOpen ? "opacity-100" :"opacity-0"}`}>
+            <nav className={`flex flex-col lg:hidden duration-1000 delay-75 ${isOpen ? "opacity-100" :"opacity-0"}`}>
                 {MENU.map(({ content, id, target }) => (
                     <div
                         // initial={{ opacity: 0, y: 10 }}

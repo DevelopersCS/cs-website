@@ -21,7 +21,7 @@ const HeadlineServiceSection = () => {
             {/* Conteúdo por cima do vídeo */}
             <div className="text-white z-10 max-w-[900px] flex gap-6 text-center w-full flex-col items-center justify-center px-6">
                 <h1 className="font-bold text-white text-center lg:text-5xl md:text-4xl text-[32px] leading-[120%]">
-                    A proteção que a sua empresa precisa para enfrentar o mundo digital
+                    A protecção que a sua empresa precisa para enfrentar o mundo digital
                 </h1>
                 <p className="lg:text-lg text-center text-base font-normal leading-[150%] text-white text-opacity-70">
                     Soluções em segurança da informação e conformidade com ISO/IEC 27001, <br />

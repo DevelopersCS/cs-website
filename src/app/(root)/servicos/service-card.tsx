@@ -62,7 +62,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
 
     const activeSlides = tabs ? tabs.find(tab => tab.id === activeTab)?.slides : [];
     return (
-        <section className="w-full flex items-center justify-center py-12 bg-white dark:bg-[#06070A]">
+        <section className="w-full flex items-center justify-center py-12 bg-white dark:bg-[#06070A]" id="segura-defensiva">
             <div className="max-w-[1216px] w-full gap-8 mx-auto flex items-center flex-col justify-center">
                 <div className="flex flex-col gap-2 lg:max-w-[640px] w-full max-w-[80%] text-center py-4">
                     <div className="flex flex-col">
@@ -139,7 +139,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                             <button
                                                 aria-label="Button"
                                                 onClick={() => handleTabClick(tab.id)}
-                                                className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium text-sm transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-black' : 'bg-[#0E141D] text-white'}`}>
+                                                className={`flex justify-center w-fit px-6 py-3 items-center text-center font-medium text-sm transition-colors duration-300 rounded-lg ${activeTab === tab.id ? 'bg-[#25A8FF] text-white' : 'bg-[#0E141D] text-white'}`}>
                                                 <p className="whitespace-nowrap"> {tab.title}</p>
                                             </button>
                                         </li>
@@ -155,7 +155,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                 // disabled={currentSlide === 0}
                                 aria-label="Button"
                                 onClick={prevSlide}
-                                className={`flex justify-center w-fit px-4 py-3 items-center text-center font-medium text-black transition-colors duration-300 ease-custom border border-opacity-20 rounded-lg ${true ? 'bg-[#25A8FF] border-[#25A8FF]' : 'bg-[#0E141D] border-[#0E141D]'}`}
+                                className={`flex justify-center w-fit px-4 py-3 items-center text-center font-medium text-white transition-colors duration-300 ease-custom border border-opacity-20 rounded-lg ${true ? 'bg-[#25A8FF] border-[#25A8FF]' : 'bg-[#0E141D] border-[#0E141D]'}`}
                             >
                                 <CaretLeft size={18} weight={"bold"} />
                             </button>
@@ -165,7 +165,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                 // disabled={currentSlide > tabs[activeTab]?.slides.length - 1}
                                 aria-label="Button"
                                 onClick={nextSlide}
-                                className={`flex justify-center w-fit px-4 py-3 items-center text-center font-medium text-black transition-colors duration-150 ease-custom border border-opacity-20  rounded-lg ${true ? 'bg-[#25A8FF] border-[#25A8FF]' : 'bg-[#0E141D] border-[#0E141D]'}`}
+                                className={`flex justify-center w-fit px-4 py-3 items-center text-center font-medium text-white transition-colors duration-150 ease-custom border border-opacity-20  rounded-lg ${true ? 'bg-[#25A8FF] border-[#25A8FF]' : 'bg-[#0E141D] border-[#0E141D]'}`}
                             >
                                 <CaretRight size={18} weight={"bold"} />
                             </button>
