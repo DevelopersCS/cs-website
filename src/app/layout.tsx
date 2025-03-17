@@ -4,6 +4,8 @@ import Header from "./components/header";
 import { Footer } from "./components/footer";
 import { ThemeProvider } from './context/ThemeContext';
 import { Metadata } from 'next';
+import CookieBanner from './components/cookie-banner';
+import { CookieProvider } from '@/providers/CookieContext';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -34,9 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
   return (
     <>
       <ThemeProvider>
+        <CookieProvider>
         <html lang="en">
           <body
             className={`${inter.className} antialiased`}
@@ -48,8 +52,10 @@ export default function RootLayout({
                   <Footer />
                 </div>
             </main>
+              <CookieBanner />
           </body>
         </html>
+      </CookieProvider>
       </ThemeProvider>
     </>
   );

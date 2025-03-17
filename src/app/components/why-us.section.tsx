@@ -1,3 +1,4 @@
+"use client"
 import BaseSection from "./base.section";
 import ItemCard from "./item.card";
 import { cardAnimation } from "./protect-investi.section";

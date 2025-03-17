@@ -24,8 +24,7 @@ const HeadlineServiceSection = () => {
                     A protecção que a sua empresa precisa para enfrentar o mundo digital
                 </h1>
                 <p className="lg:text-lg text-center text-base font-normal leading-[150%] text-white text-opacity-70">
-                    Soluções em segurança da informação e conformidade com ISO/IEC 27001, <br />
-                    personalizadas para sua organização
+                    Soluções em segurança da informação em conformidade com normas <br /> e regulamentos nacionais e internacionais, personalizadas para a sua organização
                 </p>
                 <div className="min-h-[70px] flex flex-col md:flex-row gap-6 w-full items-center justify-center">
                     <Link

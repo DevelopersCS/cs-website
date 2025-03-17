@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { BrandsSection } from "./brands.section";
@@ -35,6 +36,13 @@ const BRANDS = [
     dark: "/assets/brands/logo-apd.svg",
     img: "/assets/brands/dark/logo-apd.svg",
     alt:"Logotipo oficial da APD",
+    isLittle: true,
+  },
+  {
+    id: 13,
+    img: "/assets/brands/nossa-seguros.svg",
+    dark: "/assets/brands/dark/nossa-seguros.svg",
+    alt: "Logotipo oficial da Nossa Seguros",
     isLittle: true,
   }
 ]

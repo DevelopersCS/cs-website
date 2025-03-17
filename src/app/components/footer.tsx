@@ -1,19 +1,31 @@
-import { link } from "fs";
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import CookieBanner from "./cookie-banner";
+import { useCookieBanner } from "@/providers/CookieContext";
 
 type MenuType = {
+  id: string,
+  isContact: boolean,
+  title: string,
+  links: {
     id: string,
-    isContact: boolean,
-    title: string,
-    links: {
-        id: string,
-        href: string,
-        text: string,
-        email?: string,
-        phone?: string
-    }[]
+    href: string,
+    text: string,
+    email?: string,
+    target?: string,
+    rel?: string,
+    phone?: string,
+    action?: () => void
+  }[]
 }
-let MENU:MenuType[] = [
+
+  
+
+export function Footer () {
+  const { setShowCookieBanner } = useCookieBanner();
+
+  let MENU: MenuType[] = [
     {
       id: "menu-1",
       isContact: false,
@@ -23,11 +35,21 @@ let MENU:MenuType[] = [
           id: "menu-1-link-1",
           href: "/assets/docs/Politica_de_Privacidade_e_Protecao_de_Dados.pdf",
           text: "Política De Privacidade",
+          target: "_blank",
+          rel: "noopener noreferrer",
         },
         {
           id: "menu-1-link-2",
           href: "/termos-de-servico",
           text: "Termos De Serviços",
+        },
+        {
+          id: "menu-1-link-3",
+          text: "Alterar preferências de Cookies",
+          href: "",
+          action: () => {
+            setShowCookieBanner(true)
+          }
         },
         // {
         //   id: "menu-1-link-3",
@@ -49,7 +71,7 @@ let MENU:MenuType[] = [
         {
           id: "menu-2-link-2",
           href: "/sobre",
-          text: "Sobre A Cybersecur",
+          text: "Sobre Nós",
         },
         {
           id: "menu-2-link-3",
@@ -99,15 +121,21 @@ let MENU:MenuType[] = [
           id: "menu-4-link-1",
           href: "",
           text: "Zona Financeira do Patriota Edifício Gorongosa 1º andar Talatona, Luanda, Angola",
-          email: "info@cybersecur.co.ao",
-          phone: "+244 924 101 146",
+        },
+        {
+          id: "menu-4-link-2",
+          href: "mailto:info@cybersecur.co.ao",
+          text: "Email: info@cybersecur.co.ao",
+        },
+        {
+          id: "menu-4-link-3",
+          href: "tel:+244924101146",
+          text: "Telefone: +244924101146",
         },
       ],
     },
   ];
-  
 
-export function Footer () {
     return (
         <footer 
         className="w-full clear-both h-[800px] mb-[-100px] flex items-center justify-center mx-auto relative dark:bg-[#0E141D] py-24 bottom-0 bg-white"
@@ -130,20 +158,33 @@ export function Footer () {
                                     <li key={item.id}>
                                         <div className="flex flex-col max-w-[298px]">
                                             <h2 className="dark:text-white text-black mb-3 font-semibold text-lg">{item.title}</h2>
-                                            {
-                                                item.links.map((link)=>(
-                                                    <div key={link.id}>
-                                                        {
-                                                            link.href != "" ? 
-                                                        <Link href={link.href} className="dark:text-[#A4B1CD] text-[#5E5E5F] underline fon-regular text-base">{link.text}</Link> :
-                                                        <span className="dark:text-[#A4B1CD] text-[#5E5E5F] fon-regular text-base">{link.text}</span>
-                                                        }
-                                                        {link.phone && <span className="text-[#25A8FF]"><br /><span className="dark:text-white text-black">Telefone: </span>{link.phone}</span>}
-                                                        {link.email && <span className="text-[#25A8FF]"><br /><span className="dark:text-white text-black">E-Mail: </span>{link.email}</span>}
-                                                    </div>
-                                                ))
-                                            }
-                                            
+                                      {
+                                        item.links.map((link) => (
+                                          <div key={link.id}>
+                                            {link.href && !link.action ? (
+                                              <Link
+                                                href={link.href}
+                                                className="text-[#25A8FF] underline font-regular text-base"
+                                                target={link.target ?? ""}
+                                                rel={link.rel ?? ""}
+                                              >
+                                                {link.text}
+                                              </Link>
+                                            ) : link.action ? (
+                                              <button
+                                                onClick={link.action}
+                                                className="text-[#25A8FF] underline font-regular text-base"
+                                              >
+                                                {link.text}
+                                              </button>
+                                            ) : (
+                                              <span className="dark:text-[#A4B1CD] text-[#5E5E5F] font-regular text-base">
+                                                {link.text}
+                                              </span>
+                                            )}
+                                          </div>
+                                        ))
+                                      }
                                         </div>
                                     </li>
                                 ))

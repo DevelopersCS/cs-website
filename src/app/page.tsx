@@ -1,7 +1,6 @@
-"use client"
+// "use client"
 import { BrandsSection } from "./components/brands.section";
 import FAQSection from "./components/faq.section";
-import { Footer } from "./components/footer";
 import HeadlineSection from "./components/headline.section";
 import ProtectYourInvestSection from "./components/protect-investi.section";
 import { SecurityForYourBussinessSection } from "./components/securityForYourBussiness.section";
@@ -9,15 +8,10 @@ import ServicesSection from "./components/services.section";
 import { TeamSection } from "./components/team.section";
 import { VideoSection } from "./components/video.section";
 import WhyUsSection from "./components/why-us.section";
-import { ThemeContext } from "./context/ThemeContext";
-import Lenis from "lenis";
 import SmoothScroll from "@/hooks/smooth-scroll";
-import SEO from "./components/SEO";
-import { getAllPosts, getPostBySlug, Post } from "@/lib/posts";
-import { RecentPosts } from "./components/blog/recentPosts";
-import { NextSeo } from "next-seo";
-import { Metadata } from "next";
 import { CertsSection } from "./components/cert.section";
+import { Metadata } from "next";
+
 
 
 const BRANDS = [
@@ -166,8 +160,29 @@ const CERTS = [
 ]
 
 
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Início | Cybersecur",
+    description: "A Cybersecur oferece soluções avançadas em segurança digital para proteger sua empresa contra ameaças cibernéticas.",
+    keywords: ["Cyber Security", "Pentest", "Segurança Digital", "Proteção de Dados"],
+    openGraph: {
+      title: "Início | Cybersecur",
+      description: "A Cybersecur oferece soluções avançadas em segurança digital para proteger sua empresa contra ameaças cibernéticas.",
+      url: "https://cybersecur.co.ao",
+      images: [
+        {
+          url: "https://cybersecur.co.ao/home-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Cybersecur - Segurança Digital",
+        },
+      ],
+    },
+  };
+};
+
 export default function Home() {
-  
+
   return (
     <>
       <SmoothScroll />

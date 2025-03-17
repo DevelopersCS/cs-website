@@ -37,7 +37,7 @@ const Header = () => {
               Serviços
             </Link>
             <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/sobre">
-              Sobre a Cybersecur
+              Sobre Nós
             </Link>
             {/* <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/">
               Notícias e Artigos

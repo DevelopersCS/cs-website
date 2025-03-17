@@ -38,7 +38,7 @@ const MENU: IMenu[] = [
         target: '/fale-connosco'
     }, {
         id: 5,
-        content: 'Sobre a Cybersecur',
+        content: 'Sobre Nós',
         target: '/'
     },
 ]

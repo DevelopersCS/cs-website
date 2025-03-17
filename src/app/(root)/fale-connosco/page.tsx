@@ -25,25 +25,35 @@ const content = [
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: "Fale Connosco | Cybersecur",
-    description: "Entre em contato conosco para obter mais informações sobre segurança cibernética e proteção digital.",
-    keywords: ["Cyber Security", "Pentest", "Segurança Digital", "Proteção de Dados", "Firewall", "Ataques Cibernéticos"],
+    title: "Sobre Nós | Cybersecur",
+    description: "Saiba mais sobre a Cybersecur, nossa missão, visão e compromisso com a segurança cibernética.",
+    keywords: [
+      "Cyber Security", 
+      "Pentest", 
+      "Segurança Digital", 
+      "Proteção de Dados", 
+      "Firewall", 
+      "Ataques Cibernéticos", 
+      "Cybersecur", 
+      "Consultoria em Segurança"
+    ],
     robots: "index, follow",
     openGraph: {
-      title: "Fale Connosco | Cybersecur",
-      description: "Entre em contato conosco para obter mais informações sobre segurança cibernética e proteção digital.",
-      url: "https://cybersecur.co.ao/contact",
+      title: "Sobre Nós | Cybersecur",
+      description: "Saiba mais sobre a Cybersecur, nossa missão, visão e compromisso com a segurança cibernética.",
+      url: "https://cybersecur.co.ao/fale-connosco",
       images: [
         {
-          url: "https://cybersecur.co.ao/contact-og.jpg",
+          url: "https://cybersecur.co.ao/fale-connosco-og.jpg",
           width: 1200,
           height: 630,
-          alt: "Cybersecur Contact",
+          alt: "Sobre a Cybersecur",
         },
       ],
     },
   };
 };
+
 
 const ContactInfo = () => {
   const contactDetails = [

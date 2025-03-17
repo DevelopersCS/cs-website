@@ -5,32 +5,40 @@ import HeadlineAboutSection from "./headline";
 import { Calendar, DeviceMobileCamera, Envelope, Headset, MapPinArea } from "@phosphor-icons/react/dist/ssr";
 import ItemsSection from "./items";
 import MapsSection from "./maps";
-import Timeline from "./timeline";
-import ContentWithImageSection from "../servicos/ContentWithImageSection";
 import Image from "next/image";
 
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: "Fale Connosco | Cybersecur",
-    description: "Entre em contato conosco para obter mais informações sobre segurança cibernética e proteção digital.",
-    keywords: ["Cyber Security", "Pentest", "Segurança Digital", "Proteção de Dados", "Firewall", "Ataques Cibernéticos"],
+    title: "Sobre Nós | Cybersecur",
+    description: "Saiba mais sobre a Cybersecur, nossa missão, visão e compromisso com a segurança cibernética.",
+    keywords: [
+      "Cyber Security",
+      "Pentest",
+      "Segurança Digital",
+      "Proteção de Dados",
+      "Firewall",
+      "Ataques Cibernéticos",
+      "Cybersecur",
+      "Consultoria em Segurança"
+    ],
     robots: "index, follow",
     openGraph: {
-      title: "Fale Connosco | Cybersecur",
-      description: "Entre em contato conosco para obter mais informações sobre segurança cibernética e proteção digital.",
-      url: "https://cybersecur.co.ao/contact",
+      title: "Sobre Nós | Cybersecur",
+      description: "Saiba mais sobre a Cybersecur, nossa missão, visão e compromisso com a segurança cibernética.",
+      url: "https://cybersecur.co.ao/sobre",
       images: [
         {
-          url: "https://cybersecur.co.ao/contact-og.jpg",
+          url: "https://cybersecur.co.ao/sobre-og.jpg",
           width: 1200,
           height: 630,
-          alt: "Cybersecur Contact",
+          alt: "Sobre a Cybersecur",
         },
       ],
     },
   };
 };
+
 
 const ContactInfo = () => {
   const contactDetails = [
@@ -103,7 +111,7 @@ export default function AboutPage() {
         title="Nossos Princípios" 
         description="" 
       />
-      <Timeline />
+      {/*<Timeline />*/}
       <MapsSection />
       <FAQSection />
     </>

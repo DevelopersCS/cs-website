@@ -7,8 +7,8 @@ export const cardAnimation = (delayMultiplier: any) => ({
   whileInView: { translateY: 0, opacity: 1 },
   viewport: { once: true },
   transition: {
-    translateY: { duration: 0.1, delay: 0.5 * delayMultiplier, ease: "easeOut" },
-    opacity: { duration: 1.5, delay: 0.5 * delayMultiplier, ease: "easeInOut" }
+    translateY: { duration: 0.1, delay: 0.2 * delayMultiplier, ease: "easeOut" },
+    opacity: { duration: 0.8, delay: 0.4 * delayMultiplier, ease: "easeInOut" }
   }
 });
 

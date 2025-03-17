@@ -1,7 +1,28 @@
-import { MapComponent } from "@/app/components/maps";
-import { MapProvider } from "@/providers/map-provider";
+"use client"
+import { MapPinSimple } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 
 const MapsSection = () => {
+    const [cookieConsent, setCookieConsent] = useState("rejected");
+
+    useEffect(() => {
+        const consent = localStorage.getItem("cookieConsent");
+        if (consent) {
+            setCookieConsent(consent);
+            console.log("cookieConsent", consent);
+        }
+    }, []);
+    if (cookieConsent === "rejected") {
+        return (
+            <section className="w-full  h-full dark:bg-black py-24 bg-[#F9F9F9] items-center flex flex-col">
+                <div id="video-container" className="w-full bg-slate-700 lg:rounded-xl max-w-[1216px] aspect-video mx-auto relative overflow-hidden flex items-center justify-center flex-col">
+                    <MapPinSimple className="text-white text-6xl" />
+                    <p>Para ver o mapa, por favor, aceite os cookies.</p>
+                    <button onClick={() => setCookieConsent("accepted")} className="bg-[#25A8FF] text-white p-3 rounded-lg mt-5">Aceitar Cookies</button>
+                </div>
+            </section>
+        )
+    }
     return (
         <section
             className="dark:bg-[#06070A] bg-white px-6 dark:text-[#A4B1CD] h-full w-full relative py-[140px] pb-[100px] flex justify-center lg:items-center items-start flex-col overflow-hidden"

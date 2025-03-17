@@ -1,4 +1,34 @@
+import { Metadata } from 'next';
 import React from 'react';
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Termos de Serviço | Cybersecur",
+    description: "Leia nossos Termos de Serviço e entenda como protegemos seus dados e garantimos a segurança digital.",
+    keywords: [
+      "Cyber Security",
+      "Termos de Serviço",
+      "Política de Privacidade",
+      "Proteção de Dados",
+      "Compliance",
+      "Segurança Digital"
+    ],
+    robots: "index, follow",
+    openGraph: {
+      title: "Termos de Serviço | Cybersecur",
+      description: "Leia nossos Termos de Serviço e entenda como protegemos seus dados e garantimos a segurança digital.",
+      url: "https://cybersecur.co.ao/termos-de-servico",
+      images: [
+        {
+          url: "https://cybersecur.co.ao/termos-de-servico-og.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Termos de Serviço da Cybersecur",
+        },
+      ],
+    },
+  };
+};
 
 const TermsOfService = () => {
   return (
