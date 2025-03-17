@@ -20,7 +20,7 @@ export const generateMetadata = (): Metadata => {
       url: "https://cybersecur.co.ao/termos-de-servico",
       images: [
         {
-          url: "https://cybersecur.co.ao/termos-de-servico-og.jpg",
+          url: "https://cybersecur.co.ao/assets/og.jpg",
           width: 1200,
           height: 630,
           alt: "Termos de Serviço da Cybersecur",
