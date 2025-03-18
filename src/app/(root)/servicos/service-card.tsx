@@ -187,7 +187,7 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                                 key={slide.image}
                                                 alt={slide.title}
                                                 priority={index === 0}
-                                                loading="lazy"
+                                                loading={index === 0 ? 'eager' : 'lazy'}
                                             />
                                         </div>
                                         <div className="flex flex-col gap-4 justify-start items-start w-full text-start">

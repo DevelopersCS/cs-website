@@ -1,8 +1,8 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import BaseSection from "./base.section";
-import ItemCard from "./item.card";
 import Image from "next/image";
+import Link from "next/link";
 
 interface answerType {
   content: string,
@@ -148,11 +148,11 @@ const FAQS: FAQType[] = [
       content: "Caso a sua dúvida não tenha sido esclarecida, entre em contacto connosco através de:",
       items: [
         {
-          title:"telefone: [+244 924 101 146]",
+          title:"+244924101146]",
           description: ""
         },
         {
-          title: "email: info@cybersecur.co.ao",
+          title: "info@cybersecur.co.ao",
           description: ""
         },
       ]
@@ -219,7 +219,26 @@ const FAQItem = ({
             <ul className="list-disc pl-7">
             {
               answer.items.map(({title})=>(
-                <li key={title} className="">{title}</li>
+                <li key={title} className="">
+                  {title.includes("@") ? (
+                    <>
+                      Email:{" "}
+                      <Link href={`mailto:${title}`} className="text-[#25A8FF] underline">
+                        {title}
+                      </Link>
+                    </>
+                  ) : title.includes("+244924101146") ? (
+                    <>
+                      Telefone:{" "}
+                      <Link href={`tel:${title}`} className="text-[#25A8FF] underline">
+                        {title}
+                      </Link>
+                    </>
+                  ) : (
+                    title
+                  )}
+                </li>
+
               ))
             }
             </ul>

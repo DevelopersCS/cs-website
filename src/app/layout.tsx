@@ -6,6 +6,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { Metadata } from 'next';
 import CookieBanner from './components/cookie-banner';
 import { CookieProvider } from '@/providers/CookieContext';
+import ButtonUp from './components/buttonUp';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function RootLayout({
                 </div>
             </main>
               <CookieBanner />
+              <ButtonUp />
           </body>
         </html>
       </CookieProvider>

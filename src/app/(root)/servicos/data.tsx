@@ -91,7 +91,7 @@ const DEFENSIVE_OBJECT = {
                     description: 'Recolhe e analisa registos para detectar e responder a incidentes de segurança.'
                 },
                 {
-                    image: '/assets/images/Darktrace.jpg',
+                    image: '/assets/images/darktrace.jpg',
                     title: 'Darktrace',
                     description: 'Utiliza inteligência artificial para monitorizar ameaças em tempo real, detectar e responder a comportamentos anómalos de forma autónoma e proactiva. Proporciona uma protecção contínua e adaptável, que reforça a segurança em ambientes dinâmicos e modernos.'
                 },
