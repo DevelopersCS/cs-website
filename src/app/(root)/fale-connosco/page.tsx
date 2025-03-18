@@ -87,7 +87,7 @@ const SupportCard = ({ title, description, Icon }: { title: string; description:
       {/* <Headset color="#25A8FF" aria-hidden="true" /> */}
       {Icon}
     </div>
-    <h3 className="font-medium text-2xl dark:text-white text-black">{title}</h3>
+    <h3 className="font-medium text-2xl dark:text-white text-white">{title}</h3>
     <p className="dark:text-[#A4B1CD] text-base leading-[130%] font-normal text-[#5E5E5F]">{description}</p>
   </div>
 );

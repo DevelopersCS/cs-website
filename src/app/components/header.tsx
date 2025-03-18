@@ -45,13 +45,12 @@ const Header = () => {
             {/* <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/fale-connosco">
               Fale Connosco
             </Link> */}
-            <ThemeToggleButton />
-
           </div>
 
           {/* Botão de Menu Hambúrguer (Mobile) */}
-          <div className='flex gap-6'>
-            <Link className="text-black hover:scale-95 transition-all hover:bg-opacity-80 hover:bg-[#5fbfff] bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-2 rounded-lg hidden lg:flex" href="/fale-connosco">
+          <div className='flex gap-2'>
+            <ThemeToggleButton />
+            <Link className="text-white hover:scale-95 transition-all hover:bg-opacity-80 hover:bg-[#5fbfff] bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-2 rounded-lg hidden lg:flex" href="/fale-connosco">
               Fale Connosco
             </Link>
             <HamburgerButton className={"lg:hidden text-black dark:text-white"} onClick={toggleMenu} isOpen={isMenuOpen}/>

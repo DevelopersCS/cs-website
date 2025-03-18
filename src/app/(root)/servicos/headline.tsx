@@ -28,7 +28,7 @@ const HeadlineServiceSection = () => {
                 </p>
                 <div className="min-h-[70px] flex flex-col md:flex-row gap-6 w-full items-center justify-center">
                     <Link
-                        className="hover:scale-95 transition-all hover:bg-opacity-80 md:w-[300px] flex justify-center items-center h-full max-w-full text-center font-medium text-black bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-lg"
+                        className="hover:scale-95 transition-all hover:bg-opacity-80 md:w-[300px] flex justify-center items-center h-full max-w-full text-center font-medium text-white bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-lg"
                         href="/fale-connosco"
                     >
                         Fale Connosco

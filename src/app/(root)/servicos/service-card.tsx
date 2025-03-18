@@ -1,7 +1,6 @@
 
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import {motion} from "framer-motion"
 import { CaretLeft, CaretRight } from "@phosphor-icons/react/dist/ssr";
@@ -185,9 +184,10 @@ const ServiceGetting = ({ title, description, cover, subTitle, title2, descripti
                                                 className="max-w-[492px] max-h-[295px] w-full h-full object-cover"
                                                 width={935.86}
                                                 height={580}
-                                                priority
-                                                
+                                                key={slide.image}
                                                 alt={slide.title}
+                                                priority={index === 0}
+                                                loading="lazy"
                                             />
                                         </div>
                                         <div className="flex flex-col gap-4 justify-start items-start w-full text-start">

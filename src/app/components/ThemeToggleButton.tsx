@@ -12,8 +12,8 @@ const ThemeToggleButton = () => {
     const { isDarkMode, toggleTheme } = themeContext;
 
     return (
-        <button className='bg-slate-900 px-3 py-2 rounded-sm flex items-center gap-2' onClick={toggleTheme}>
-            {!isDarkMode ? "Modo Escuro" : "Modo Claro"}
+        <button className='bg-slate-900 px-6 py-2 rounded-lg flex items-center gap-2' onClick={toggleTheme}>
+            {!isDarkMode ? <p className='hidden'>Modo Escuro</p> : <p className='hidden'>Modo Escuro</p>}
             {!isDarkMode ? <Moon color='#fff' /> : <Sun color='#fff' />}
         </button>
     );

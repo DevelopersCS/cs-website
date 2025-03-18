@@ -106,19 +106,19 @@ const DEFENSIVE_OBJECT = {
     items: [
         {
             id: 1,
-            Icon: <SecurityCamera size={24} color="#010400" />,
+            Icon: <SecurityCamera size={24} color="#fff" />,
             title: "Monitoramento e Detecção de Ameaças",
             description: "Identificamos e mitigamos vulnerabilidades em tempo real, prevenindo riscos."
         },
         {
             id: 2,
-            Icon: <Graph size={24} color="#010400" />,
+            Icon: <Graph size={24} color="#fff" />,
             title: "Resposta a Incidentes",
             description: "Implementamos planos proativos para restaurar operações críticas com mínimo impacto."
         },
         {
             id: 3,
-            Icon: <UserFocus size={24} color="#010400" />,
+            Icon: <UserFocus size={24} color="#fff" />,
             title: "Gestão de Identidade e Acessos",
             description: "Controlamos acessos para proteger dados e prevenir acessos indevidos."
         },
