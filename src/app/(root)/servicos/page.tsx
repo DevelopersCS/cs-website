@@ -13,11 +13,11 @@ import { RecentPosts } from "@/app/components/blog/recentPosts";
 export const generateMetadata = (): Metadata => {
   return {
     title: "Serviços | Cybersecur",
-    description: "Conheça nossos serviços de segurança cibernética e proteção digital.",
+    description: "Com uma abordagem inovadora, protegemos a sua empresa contra ameaças cibernéticas e oferecemos consultoria estratégica para enfrentar os desafios tecnológicos.",
     keywords: ["Cyber Security", "Pentest", "Segurança Digital"],
     openGraph: {
       title: "Serviços | Cybersecur",
-      description: "Conheça nossos serviços de segurança cibernética e proteção digital.",
+      description: "Com uma abordagem inovadora, protegemos a sua empresa contra ameaças cibernéticas e oferecemos consultoria estratégica para enfrentar os desafios tecnológicos.",
       url: "https://cybersecur.co.ao/services",
       images: [
         {

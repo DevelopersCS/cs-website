@@ -163,11 +163,11 @@ const CERTS = [
 export const generateMetadata = (): Metadata => {
   return {
     title: "Início | Cybersecur",
-    description: "A Cybersecur oferece soluções avançadas em segurança digital para proteger sua empresa contra ameaças cibernéticas.",
+    description: "CyberSecur! Transformamos cibersegurança em cultura organizacional.",
     keywords: ["Cyber Security", "Pentest", "Segurança Digital", "Proteção de Dados"],
     openGraph: {
       title: "Início | Cybersecur",
-      description: "A Cybersecur oferece soluções avançadas em segurança digital para proteger sua empresa contra ameaças cibernéticas.",
+      description: "CyberSecur! Transformamos cibersegurança em cultura organizacional.",
       url: "https://cybersecur.co.ao",
       images: [
         {

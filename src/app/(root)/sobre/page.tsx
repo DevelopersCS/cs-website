@@ -11,7 +11,7 @@ import Image from "next/image";
 export const generateMetadata = (): Metadata => {
   return {
     title: "Sobre Nós | Cybersecur",
-    description: "Saiba mais sobre a Cybersecur, nossa missão, visão e compromisso com a segurança cibernética.",
+    description: "Protegemos e fortalecemos o ambiente digital das empresas com expertise em segurança cibernética e consultoria estratégica.",
     keywords: [
       "Cyber Security",
       "Pentest",

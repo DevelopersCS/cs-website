@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from "./components/header";
@@ -56,6 +57,7 @@ export default function RootLayout({
               <CookieBanner />
               <ButtonUp />
           </body>
+            <GoogleAnalytics gaId="G-XYZ" />
         </html>
       </CookieProvider>
       </ThemeProvider>
