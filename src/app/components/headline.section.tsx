@@ -100,7 +100,7 @@ const HeadlineSection = () => {
           >
             Antecipe-se às ameaças e proteja os seus dados confidenciais com as estratégias eficazes de cibersegurança.
           </motion.p>
-          <Link className="button-animate md:w-[300px] max-w-full text-center text-lg font-medium text-black bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-xl hover:scale-95 transition-all hover:bg-opacity-80" href="/fale-connosco">
+          <Link className="button-animate md:w-[300px] max-w-full text-center text-lg font-medium text-white bg-[#25A8FF] duration-300 border border-opacity-20 border-[#25A8FF] px-6 py-4 rounded-xl hover:scale-95 transition-all hover:bg-opacity-80" href="/fale-connosco">
             Fale Connosco
           </Link>
         </div>

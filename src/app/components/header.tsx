@@ -16,27 +16,33 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-black fixed z-50 top-0 left-0 right-0 text-white border-t-[1.5px] border-[#ccc] shadow-sm h-[80px] flex justify-center items-center">
+    <header className="dark:bg-slate-950 border-0 border-b-[1.5px] border-opacity-35 bg-white fixed z-50 top-0 left-0 right-0 text-white border-[#ccc] dark:border-slate-800 shadow-sm h-[80px] flex justify-center items-center">
       <div className="max-w-[1216px] mx-auto px-4 w-full">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link className="text-[#A4B1CD] text-opacity-80 hover:text-blue-500" href="/">
-              <Image className='max-w-[70%]' src={"assets/brands/cybersecur-logo.svg"} width={200} height={200} alt='Logo CyberSecur' />
+              <Image
+                className='max-w-[70%]'
+                src={themeContext?.isDarkMode ? 'assets/brands/cybersecur-logo.svg' : 'assets/brands/dark/cybersecur-logo.svg'}
+                width={200}
+                height={200}
+                alt='Logo CyberSecur'
+              />
             </Link>
             {/* <h1 className="text-xl font-semibold">CyberSecur</h1> */}
           </div>
 
           {/* Menu para Desktop */}
           <div className="hidden lg:flex gap-4 items-center">
-            <Link className="text-[#A4B1CD] text-opacity-80 hover:text-white" href="/">
+            <Link className='text-black dark:text-white text-opacity-75 dark:text-opacity-75' href="/">
               Página Inicial
             </Link>
             
-            <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/servicos">
+            <Link className='text-black dark:text-white text-opacity-75 dark:text-opacity-75' href="/servicos">
               Serviços
             </Link>
-            <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/sobre">
+            <Link className='text-black dark:text-white text-opacity-75 dark:text-opacity-75' href="/sobre">
               Sobre Nós
             </Link>
             {/* <Link className="text-[#A4B1CD] text-opacity-80  hover:text-white" href="/">
