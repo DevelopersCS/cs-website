@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://cybersecur.com/sitemap.xml
+
+# Host
+Host: https://cybersecur.co.ao
+
+# Sitemaps
+Sitemap: https://cybersecur.co.ao/sitemap.xml
