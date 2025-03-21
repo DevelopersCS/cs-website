@@ -57,7 +57,9 @@ export default function RootLayout({
               <CookieBanner />
               <ButtonUp />
           </body>
-            <GoogleAnalytics gaId="G-ZS4NCMQWQJ" />
+            <GoogleAnalytics 
+              gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "G-ZS4NCMQWQJ"}
+            />
         </html>
       </CookieProvider>
       </ThemeProvider>
